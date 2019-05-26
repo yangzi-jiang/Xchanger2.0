@@ -15,6 +15,7 @@
 		64B385A3229AD22500767E7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B385A1229AD22500767E7F /* LaunchScreen.storyboard */; };
 		64B385AE229AD22500767E7F /* Xchanger2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B385AD229AD22500767E7F /* Xchanger2_0Tests.swift */; };
 		64B385B9229AD22500767E7F /* Xchanger2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B385B8229AD22500767E7F /* Xchanger2_0UITests.swift */; };
+		64B385C9229B016600767E7F /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B385C8229B016600767E7F /* SigninViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		64B385B4229AD22500767E7F /* Xchanger2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Xchanger2.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B385B8229AD22500767E7F /* Xchanger2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xchanger2_0UITests.swift; sourceTree = "<group>"; };
 		64B385BA229AD22500767E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64B385C8229B016600767E7F /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		64B38594229AD22300767E7F /* Xchanger2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				64B385C7229B013200767E7F /* SigninPage */,
 				64B385C6229AD27C00767E7F /* WelcomePage */,
 				64B38595229AD22300767E7F /* AppDelegate.swift */,
 				64B38597229AD22300767E7F /* ViewController.swift */,
@@ -134,6 +137,14 @@
 			children = (
 			);
 			path = WelcomePage;
+			sourceTree = "<group>";
+		};
+		64B385C7229B013200767E7F /* SigninPage */ = {
+			isa = PBXGroup;
+			children = (
+				64B385C8229B016600767E7F /* SigninViewController.swift */,
+			);
+			path = SigninPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B385C9229B016600767E7F /* SigninViewController.swift in Sources */,
 				64B38598229AD22300767E7F /* ViewController.swift in Sources */,
 				64B38596229AD22300767E7F /* AppDelegate.swift in Sources */,
 				64B3859E229AD22300767E7F /* Xchanger2_0.xcdatamodeld in Sources */,
