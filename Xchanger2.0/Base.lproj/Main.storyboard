@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="1000.8" y="-304.43349753694582"/>
         </scene>
-        <!--View Controller-->
+        <!--Signin View Controller-->
         <scene sceneID="tbU-Ao-ulp">
             <objects>
-                <viewController id="W7c-1n-Nde" sceneMemberID="viewController">
+                <viewController id="W7c-1n-Nde" customClass="SigninViewController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHn-bP-tlT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,6 +222,9 @@
                                 <rect key="frame" x="290" y="691" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Linkedin"/>
+                                <connections>
+                                    <segue destination="tNJ-AI-C1E" kind="show" id="Mfh-jC-Wy5"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="*******" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crX-JI-g3V">
                                 <rect key="frame" x="30" y="297" width="315" height="21"/>
@@ -245,6 +248,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gx1-eC-0FW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2330.4000000000001" y="-303.69458128078821"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wyj-H6-McD">
+            <objects>
+                <viewController id="tNJ-AI-C1E" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dH1-Ju-U2A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n7Y-A0-p3p">
+                                <rect key="frame" x="0.0" y="87" width="375" height="725"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="H3F-BU-AOL" kind="embed" id="JXO-8d-UJM"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTf-Py-4uj">
+                                <rect key="frame" x="16" y="51" width="24" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="back"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4ev-9t-6GS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8MK-Wm-byo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3582" y="982"/>
+        </scene>
+        <!--Linkedin View Controller-->
+        <scene sceneID="UC7-l6-Owb">
+            <objects>
+                <viewController id="H3F-BU-AOL" customClass="LinkedinViewController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ge3-Ry-fqI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="E7d-yL-E17"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CYe-QR-uZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4590" y="983"/>
         </scene>
     </scenes>
     <resources>
