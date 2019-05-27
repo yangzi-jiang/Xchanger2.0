@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18F1750852B91B324B616FBD /* Pods_Xchanger2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE133709599B87907B7CDC63 /* Pods_Xchanger2_0UITests.framework */; };
 		64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */; };
+		6436B518229B67070031F7A1 /* LinkedInIntegrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */; };
 		64B38596229AD22300767E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B38595229AD22300767E7F /* AppDelegate.swift */; };
 		64B38598229AD22300767E7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B38597229AD22300767E7F /* ViewController.swift */; };
 		64B3859B229AD22300767E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B38599229AD22300767E7F /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		037A930CDF176DF036400D0D /* Pods-Xchanger2.0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0Tests.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0Tests/Pods-Xchanger2.0Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4ACBA3ACF0B394FF3DB60832 /* Pods-Xchanger2.0UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0UITests.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0UITests/Pods-Xchanger2.0UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInOAuth.swift; sourceTree = "<group>"; };
+		6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInIntegrate.swift; sourceTree = "<group>"; };
 		64B38592229AD22300767E7F /* Xchanger2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xchanger2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B38595229AD22300767E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64B38597229AD22300767E7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				64B385CE229B15C500767E7F /* LinkedinViewController.swift */,
 				64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */,
+				6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */,
 			);
 			path = LinkedinPage;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				64B385C9229B016600767E7F /* SigninViewController.swift in Sources */,
 				64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */,
 				64B38598229AD22300767E7F /* ViewController.swift in Sources */,
+				6436B518229B67070031F7A1 /* LinkedInIntegrate.swift in Sources */,
 				64B38596229AD22300767E7F /* AppDelegate.swift in Sources */,
 				64B3859E229AD22300767E7F /* Xchanger2_0.xcdatamodeld in Sources */,
 				64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */,

@@ -223,7 +223,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Linkedin"/>
                                 <connections>
-                                    <segue destination="tNJ-AI-C1E" kind="show" id="Mfh-jC-Wy5"/>
+                                    <segue destination="tNJ-AI-C1E" kind="show" id="lVl-z4-nFb"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="*******" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crX-JI-g3V">
@@ -276,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8MK-Wm-byo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3582" y="982"/>
+            <point key="canvasLocation" x="3343" y="55"/>
         </scene>
         <!--Linkedin View Controller-->
         <scene sceneID="UC7-l6-Owb">
@@ -291,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYe-QR-uZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4590" y="983"/>
+            <point key="canvasLocation" x="4292" y="55"/>
         </scene>
     </scenes>
     <resources>

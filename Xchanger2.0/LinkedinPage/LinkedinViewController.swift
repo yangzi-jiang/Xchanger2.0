@@ -9,17 +9,9 @@
 import UIKit
 import WebKit
 
-// Constant for Linkedin API
 
-let clientID = "78xbpu2g4mnja9"
-let clientSecret = "aZzWyS3XEOppi7ye"
 let accessTokenEndPoint = "https://www.linkedin.com/oauth/v2/accessToken"
-let authorizationTokenEndPoint = "https://www.linkedin.com/uas/oauth2/authorization"
-
-// Set the web view
-
-
-class LinkedinViewController: UIViewController {
+class LinkedinViewController: UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
     
@@ -28,6 +20,8 @@ class LinkedinViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        webView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
+        webView.navigationDelegate = self
         startAuthorization()
     }
     
@@ -56,13 +50,82 @@ class LinkedinViewController: UIViewController {
         
         print(authorizationURL)
         // Create a URL request and load it in the web view
-        webView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
         self.view = webView
         let linkedinURL = URL(string: authorizationURL)
         let request = URLRequest(url: linkedinURL!)
+//
         webView.load(request)
-
+        
     }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+        let url = navigationAction.request.url!
+        
+        if url.host == "com.appcoda.linkedin.oauth"{
+            let urlParts = url.absoluteString.components(separatedBy: "?")
+            let code = urlParts[1].components(separatedBy: "=")[1].replacingOccurrences(of: "&state" , with: "")
+            print(code)
+            
+            getAccessToken(token: code)
+        }
+        
+        decisionHandler(.allow)
+    }
+    
+    func getAccessToken(token: String){
+        
+        let grantType = "authorization_code"
+        
+         let redirectURL = "https://com.appcoda.linkedin.oauth/oauth".addingPercentEncoding(withAllowedCharacters: NSCharacterSet.alphanumerics)
+        
+        
+        // Set the POST parameters.
+        var postParams = "grant_type=\(grantType)&"
+        postParams += "code=\(token)&"
+        postParams += "redirect_uri=\(redirectURL!)&"
+        postParams += "client_id=\(clientID)&"
+        postParams += "client_secret=\(clientSecret)"
+        
+        let requestdata = postParams.data(using: .utf8)
+        var request = URLRequest(url: URL(string: accessTokenEndPoint)!)
+        
+        request.httpMethod = "POST"
+        request.httpBody = requestdata
+        
+        request.addValue("application/x-www-form-urlencoded;", forHTTPHeaderField: "Content-Type")
+        
+        let session = URLSession(configuration: URLSessionConfiguration.default)
+        
+        
+        let task: URLSessionDataTask = session.dataTask(with: request){ (data, response, error) -> Void in
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                print(httpResponse.statusCode)
+                if (String(httpResponse.statusCode) == "200"){
+                    do {
+                        
+                        
+                        
+                        let dataDictionary  = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                        
+                        let accessToken = dataDictionary?["access_token"] as! String
+                        
+                        
+                        // Quit this view controller
+                    } catch {
+                        print("Could not convert JSON data into a dictionary.")
+                        
+                    }
+                }
+            }
+            
+        }
+        
+        task.resume()
+    }
+    
+    
     
    
 }
