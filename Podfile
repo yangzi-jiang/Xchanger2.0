@@ -6,7 +6,7 @@ target 'Xchanger2.0' do
   use_frameworks!
 
 
-
+  pod 'RealmSwift'
 
   target 'Xchanger2.0Tests' do
     inherit! :search_paths

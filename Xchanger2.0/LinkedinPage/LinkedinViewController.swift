@@ -111,8 +111,17 @@ class LinkedinViewController: UIViewController, WKNavigationDelegate {
                         
                         let accessToken = dataDictionary?["access_token"] as! String
                         
+                        //Save the access token
+                        
+                        UserDefaults.standard.set(accessToken, forKey: "LIAccessToken")
+                        UserDefaults.standard.synchronize()
                         
                         // Quit this view controller
+                        DispatchQueue.main.async {
+                            self.parent?.performSegue(withIdentifier: "success", sender: self.parent)
+                        }
+                        
+                
                     } catch {
                         print("Could not convert JSON data into a dictionary.")
                         
