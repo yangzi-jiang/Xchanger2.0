@@ -193,6 +193,9 @@
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="f3T-Dp-bAS" eventType="touchUpInside" id="Ykw-wo-ZEi"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="9Z6-X2-JQC">
                                 <rect key="frame" x="104" y="85" width="165" height="165"/>
@@ -209,13 +212,34 @@
                         <viewLayoutGuide key="safeArea" id="PMw-5M-Jcw"/>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="E9W-eW-ohu" id="IgM-sj-uZo"/>
+                        <outlet property="firstNameField" destination="8Bw-iC-vph" id="RtB-wN-Bqu"/>
                         <outlet property="image" destination="9Z6-X2-JQC" id="kAc-V1-gri"/>
                         <outlet property="imageButton" destination="o9J-W9-deH" id="ZeC-Se-p4y"/>
+                        <outlet property="lastNameField" destination="Txp-Ds-yTD" id="uCL-g9-oGX"/>
+                        <outlet property="password" destination="fmU-e4-S7n" id="IAN-iB-k32"/>
+                        <outlet property="phoneNumber" destination="6Zz-I9-iOs" id="bkh-2o-NCl"/>
+                        <segue destination="Hu2-40-eE3" kind="show" identifier="success" id="rCb-9c-Bno"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2KW-sX-w2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="694"/>
+            <point key="canvasLocation" x="871" y="831"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6O3-QS-Iqp">
+            <objects>
+                <viewController id="Hu2-40-eE3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6iH-Sc-va0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1U0-7G-YMb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j1L-md-XyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2330" y="1727"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="F95-Yh-GAk">
