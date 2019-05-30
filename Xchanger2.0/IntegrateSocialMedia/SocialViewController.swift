@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol SocialProfileCellDelegate:class {
+    
+        // Declare a delegate function holding a reference to `UICollectionViewCell` instance
+        func collectionViewCell(_ cell: UICollectionViewCell, buttonTapped: UIButton)
+}
 class SocialViewController: UIViewController {
 
     @IBOutlet weak var socialProfiles: UICollectionView!
@@ -35,16 +40,7 @@ class SocialViewController: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    //  Perform seque and change the url depending on what social media it is coming from 
 
 }
 
@@ -56,7 +52,14 @@ extension SocialViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = socialProfiles.dequeueReusableCell(withReuseIdentifier: "socialProfile", for: indexPath) as? SocialProfile
         
+        cell!.addButtonTapAction = {
+            // Perform action here
+        }
         cell?.button.setImage(pictureArray[indexPath.row], for: .normal)
         return cell!
     }
+    
+  
 }
+
+

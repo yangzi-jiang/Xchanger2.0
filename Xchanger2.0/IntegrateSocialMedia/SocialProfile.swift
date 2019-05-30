@@ -12,5 +12,16 @@ class SocialProfile: UICollectionViewCell {
    
     @IBOutlet weak var button: UIButton!
     
+    weak var delegate: SocialProfileCellDelegate?
+    
+    static let reuseIdentifier = "socialProfile"
+
+    
+    @IBAction func onAddToCartPressed(_ sender: Any) {
+        addButtonTapAction?()
+    }
+
+    var addButtonTapAction : (()->())?
+    
     
 }
