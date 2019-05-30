@@ -11,6 +11,7 @@
 import UIKit
 import RealmSwift
 import Foundation
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
@@ -46,6 +47,55 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
+        if (emailField.text == "") {
+            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
+        } else if (firstNameField.text == ""){
+            let alertController = UIAlertController(title: "Error", message: "Please enter your first name.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+        } else if (lastNameField.text == ""){
+            let alertController = UIAlertController(title: "Error", message: "Please enter your last name.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+        } else if (phoneNumber.text == ""){
+            let alertController = UIAlertController(title: "Error", message: "Please enter your phone number.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+        } else if (password.text == "") {
+            let alertController = UIAlertController(title: "Error", message: "Please enter your password.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+        } else {
+            // Good to sign up
+            Auth.auth().createUser(withEmail: emailField.text!, password: password.text!) { (authresult, error) in
+                
+                if (error != nil){
+                    // there is an error
+                } else {
+                    self.performSegue(withIdentifier: "success", sender: self)
+                }
+            }
+            
+        }
+       
     }
 }
 

@@ -10,7 +10,12 @@
 		18F1750852B91B324B616FBD /* Pods_Xchanger2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE133709599B87907B7CDC63 /* Pods_Xchanger2_0UITests.framework */; };
 		64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */; };
 		6436B518229B67070031F7A1 /* LinkedInIntegrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */; };
+		644A5044229F4B1000E59547 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A5043229F4B1000E59547 /* SocialViewController.swift */; };
+		644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A5045229F4CF000E59547 /* SocialProfile.swift */; };
 		649E20F3229CC69B00815AB7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649E20F2229CC69B00815AB7 /* SignUpViewController.swift */; };
+		649E20F5229F1CA400815AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */; };
+		649E20F6229F23FA00815AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */; };
+		649E20F7229F23FA00815AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */; };
 		64B38596229AD22300767E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B38595229AD22300767E7F /* AppDelegate.swift */; };
 		64B38598229AD22300767E7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B38597229AD22300767E7F /* ViewController.swift */; };
 		64B3859B229AD22300767E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B38599229AD22300767E7F /* Main.storyboard */; };
@@ -47,7 +52,10 @@
 		4ACBA3ACF0B394FF3DB60832 /* Pods-Xchanger2.0UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0UITests.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0UITests/Pods-Xchanger2.0UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInOAuth.swift; sourceTree = "<group>"; };
 		6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInIntegrate.swift; sourceTree = "<group>"; };
+		644A5043229F4B1000E59547 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		644A5045229F4CF000E59547 /* SocialProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialProfile.swift; sourceTree = "<group>"; };
 		649E20F2229CC69B00815AB7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64B38592229AD22300767E7F /* Xchanger2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xchanger2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B38595229AD22300767E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64B38597229AD22300767E7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		644A503E229F4A4900E59547 /* IntegrateSocialMedia */ = {
+			isa = PBXGroup;
+			children = (
+				644A5043229F4B1000E59547 /* SocialViewController.swift */,
+				644A5045229F4CF000E59547 /* SocialProfile.swift */,
+			);
+			path = IntegrateSocialMedia;
+			sourceTree = "<group>";
+		};
 		649E20F1229CC5E100815AB7 /* SignUpPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +151,7 @@
 		64B38594229AD22300767E7F /* Xchanger2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				644A503E229F4A4900E59547 /* IntegrateSocialMedia */,
 				649E20F1229CC5E100815AB7 /* SignUpPage */,
 				64B385CD229B15AA00767E7F /* LinkedinPage */,
 				64B385C7229B013200767E7F /* SigninPage */,
@@ -144,6 +162,7 @@
 				64B3859F229AD22500767E7F /* Assets.xcassets */,
 				64B385A1229AD22500767E7F /* LaunchScreen.storyboard */,
 				64B385A4229AD22500767E7F /* Info.plist */,
+				649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */,
 				64B3859C229AD22300767E7F /* Xchanger2_0.xcdatamodeld */,
 			);
 			path = Xchanger2.0;
@@ -324,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64B385A3229AD22500767E7F /* LaunchScreen.storyboard in Resources */,
+				649E20F5229F1CA400815AB7 /* GoogleService-Info.plist in Resources */,
 				64B385A0229AD22500767E7F /* Assets.xcassets in Resources */,
 				64B3859B229AD22300767E7F /* Main.storyboard in Resources */,
 			);
@@ -333,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649E20F6229F23FA00815AB7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649E20F7229F23FA00815AB7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,15 +421,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -443,12 +471,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */,
 				64B385C9229B016600767E7F /* SigninViewController.swift in Sources */,
 				64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */,
 				649E20F3229CC69B00815AB7 /* SignUpViewController.swift in Sources */,
 				64B38598229AD22300767E7F /* ViewController.swift in Sources */,
 				6436B518229B67070031F7A1 /* LinkedInIntegrate.swift in Sources */,
 				64B38596229AD22300767E7F /* AppDelegate.swift in Sources */,
+				644A5044229F4B1000E59547 /* SocialViewController.swift in Sources */,
 				64B3859E229AD22300767E7F /* Xchanger2_0.xcdatamodeld in Sources */,
 				64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */,
 			);

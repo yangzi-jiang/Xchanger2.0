@@ -7,6 +7,8 @@ target 'Xchanger2.0' do
 
 
   pod 'RealmSwift'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
   target 'Xchanger2.0Tests' do
     inherit! :search_paths
