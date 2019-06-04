@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FacebookCore
+import FacebookLogin
+import FBSDKLoginKit
 
 protocol SocialProfileCellDelegate:class {
     
@@ -19,7 +22,7 @@ class SocialViewController: UIViewController {
     
     var pictureArray = [UIImage] ()
     
-    let facebookImage = #imageLiteral(resourceName: "Oval Copy-1")
+//    let facebookImage = #imageLiteral(resourceName: "Oval Copy-1")
     let linkedinImage = #imageLiteral(resourceName: "Oval Copy 5")
     let googleImage = #imageLiteral(resourceName: "Oval Copy 3")
     let instagramImage = #imageLiteral(resourceName: "instagram_PNG11")
@@ -31,7 +34,7 @@ class SocialViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        pictureArray.append(facebookImage)
+//        pictureArray.append(facebookImage)
         pictureArray.append(instagramImage)
         pictureArray.append(googleImage)
         pictureArray.append(linkedinImage)
@@ -46,15 +49,40 @@ class SocialViewController: UIViewController {
 
 extension SocialViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = socialProfiles.dequeueReusableCell(withReuseIdentifier: "socialProfile", for: indexPath) as? SocialProfile
-        
+    
         cell!.addButtonTapAction = {
-            // Perform action here
+            if (indexPath.row == 0){
+                self.performSegue(withIdentifier: "instagram", sender: self)
+//  Deprecated for the fact that Davidson doesn't allow url's to be shared.
+//                let loginManager = LoginManager()
+//                loginManager.logIn(permissions: [ .publicProfile ], viewController: self) {
+//                    loginResult in
+//                    switch loginResult {
+//                    case .failed(let error):
+//                        print(error)
+//                    case .cancelled:
+//                        print("User cancelled login.")
+//                    case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+//                        print("Logged in!")
+//                        let connection = GraphRequestConnection()
+//
+//                        connection.add(GraphRequest(graphPath: "/me?fields=uid"), completionHandler: { (httpResponse, result, error) in
+//                            print(httpResponse!)
+//                            print(result!)
+//                        })
+//
+//                        connection.start()
+//
+//                    }
+//                }
+            }
         }
+        
         cell?.button.setImage(pictureArray[indexPath.row], for: .normal)
         return cell!
     }

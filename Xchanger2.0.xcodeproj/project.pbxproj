@@ -26,6 +26,7 @@
 		64B385B9229AD22500767E7F /* Xchanger2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B385B8229AD22500767E7F /* Xchanger2_0UITests.swift */; };
 		64B385C9229B016600767E7F /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B385C8229B016600767E7F /* SigninViewController.swift */; };
 		64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B385CE229B15C500767E7F /* LinkedinViewController.swift */; };
+		64CE946222A6AC7800E6A4C5 /* InstagramWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CE946122A6AC7800E6A4C5 /* InstagramWebController.swift */; };
 		735D50ED3527AD28A150B523 /* Pods_Xchanger2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA7B7E8B2EE999FB8DE7838 /* Pods_Xchanger2_0Tests.framework */; };
 		F1AA193ABA295BF798E5941B /* Pods_Xchanger2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DFE47702CA7729025F38A1 /* Pods_Xchanger2_0.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		64B385BA229AD22500767E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64B385C8229B016600767E7F /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		64B385CE229B15C500767E7F /* LinkedinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedinViewController.swift; sourceTree = "<group>"; };
+		64CE946122A6AC7800E6A4C5 /* InstagramWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramWebController.swift; sourceTree = "<group>"; };
 		712FEAE39A36019A4D068AA6 /* Pods-Xchanger2.0UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0UITests.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0UITests/Pods-Xchanger2.0UITests.release.xcconfig"; sourceTree = "<group>"; };
 		86CEA1009F2743C9AF5697A6 /* Pods-Xchanger2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		8CA7B7E8B2EE999FB8DE7838 /* Pods_Xchanger2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xchanger2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 		64B38594229AD22300767E7F /* Xchanger2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				64CE945E22A6ABAD00E6A4C5 /* IntegrateInstagram */,
 				644A503E229F4A4900E59547 /* IntegrateSocialMedia */,
 				649E20F1229CC5E100815AB7 /* SignUpPage */,
 				64B385CD229B15AA00767E7F /* LinkedinPage */,
@@ -209,6 +212,14 @@
 				6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */,
 			);
 			path = LinkedinPage;
+			sourceTree = "<group>";
+		};
+		64CE945E22A6ABAD00E6A4C5 /* IntegrateInstagram */ = {
+			isa = PBXGroup;
+			children = (
+				64CE946122A6AC7800E6A4C5 /* InstagramWebController.swift */,
+			);
+			path = IntegrateInstagram;
 			sourceTree = "<group>";
 		};
 		9313BA66F1E53EA6CE3F4CDC /* Pods */ = {
@@ -421,6 +432,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -431,6 +448,12 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -474,6 +497,7 @@
 				644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */,
 				64B385C9229B016600767E7F /* SigninViewController.swift in Sources */,
 				64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */,
+				64CE946222A6AC7800E6A4C5 /* InstagramWebController.swift in Sources */,
 				649E20F3229CC69B00815AB7 /* SignUpViewController.swift in Sources */,
 				64B38598229AD22300767E7F /* ViewController.swift in Sources */,
 				6436B518229B67070031F7A1 /* LinkedInIntegrate.swift in Sources */,
@@ -658,6 +682,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Xchanger2.0/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -678,6 +706,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Xchanger2.0/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (

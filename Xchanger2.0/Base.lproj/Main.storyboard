@@ -312,11 +312,36 @@
                     </view>
                     <connections>
                         <outlet property="socialProfiles" destination="ECe-ET-wRX" id="4h0-rl-xSp"/>
+                        <segue destination="X0m-g4-DQ3" kind="show" identifier="instagram" id="RBp-p6-ZSa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1L-md-XyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2664.8000000000002" y="1758.6206896551726"/>
+            <point key="canvasLocation" x="2857" y="2254"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ldf-mo-7bw">
+            <objects>
+                <viewController id="X0m-g4-DQ3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kVU-2B-NAF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EA5-aG-UG7">
+                                <rect key="frame" x="0.0" y="87" width="375" height="725"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="sYa-Yr-uXN" kind="embed" id="6qd-xo-9p9"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WcS-ll-yDc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQB-cQ-pGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4539" y="2652"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="F95-Yh-GAk">
@@ -495,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDI-Tg-soC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7628" y="797"/>
+            <point key="canvasLocation" x="7711" y="236"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wyj-H6-McD">
@@ -543,6 +568,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYe-QR-uZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7551" y="1542"/>
+        </scene>
+        <!--Instagram Web Controller-->
+        <scene sceneID="4kq-S5-QH9">
+            <objects>
+                <viewController id="sYa-Yr-uXN" customClass="InstagramWebController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3yU-u5-dyT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EpQ-dp-c8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6257" y="3159"/>
         </scene>
     </scenes>
     <resources>
