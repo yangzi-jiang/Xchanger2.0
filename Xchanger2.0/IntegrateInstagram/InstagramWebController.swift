@@ -109,7 +109,7 @@ class InstagramWebController: UIViewController, WKNavigationDelegate {
                         
                         
                         UserDefaults.standard.set(dictionary["username"], forKey: "IGUserProfile")
-                    UserDefault.standard.set("https://www.instagram.com/\(dictionary["username"])/", forKey: "IGUserURL")
+                    UserDefaults.standard.set("https://www.instagram.com/\(dictionary["username"]!)/", forKey: "IGUserURL")
                         
                         UserDefaults.standard.synchronize()
 //

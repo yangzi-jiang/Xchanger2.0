@@ -58,28 +58,8 @@ extension SocialViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell!.addButtonTapAction = {
             if (indexPath.row == 0){
                 self.performSegue(withIdentifier: "instagram", sender: self)
-//  Deprecated for the fact that Davidson doesn't allow url's to be shared.
-//                let loginManager = LoginManager()
-//                loginManager.logIn(permissions: [ .publicProfile ], viewController: self) {
-//                    loginResult in
-//                    switch loginResult {
-//                    case .failed(let error):
-//                        print(error)
-//                    case .cancelled:
-//                        print("User cancelled login.")
-//                    case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-//                        print("Logged in!")
-//                        let connection = GraphRequestConnection()
-//
-//                        connection.add(GraphRequest(graphPath: "/me?fields=uid"), completionHandler: { (httpResponse, result, error) in
-//                            print(httpResponse!)
-//                            print(result!)
-//                        })
-//
-//                        connection.start()
-//
-//                    }
-//                }
+            } else if (indexPath.row == 3){
+                self.performSegue(withIdentifier: "github", sender: self)
             }
         }
         

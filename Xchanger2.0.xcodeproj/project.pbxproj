@@ -16,6 +16,7 @@
 		649E20F5229F1CA400815AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */; };
 		649E20F6229F23FA00815AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */; };
 		649E20F7229F23FA00815AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */; };
+		64B1027A22A7E4EE0040ADC8 /* GitHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1027922A7E4EE0040ADC8 /* GitHubViewController.swift */; };
 		64B38596229AD22300767E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B38595229AD22300767E7F /* AppDelegate.swift */; };
 		64B38598229AD22300767E7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B38597229AD22300767E7F /* ViewController.swift */; };
 		64B3859B229AD22300767E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B38599229AD22300767E7F /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		644A5045229F4CF000E59547 /* SocialProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialProfile.swift; sourceTree = "<group>"; };
 		649E20F2229CC69B00815AB7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		64B1027922A7E4EE0040ADC8 /* GitHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubViewController.swift; sourceTree = "<group>"; };
 		64B38592229AD22300767E7F /* Xchanger2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xchanger2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B38595229AD22300767E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64B38597229AD22300767E7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 			path = SignUpPage;
 			sourceTree = "<group>";
 		};
+		64B1027822A7E48C0040ADC8 /* IntegrateGitHub */ = {
+			isa = PBXGroup;
+			children = (
+				64B1027922A7E4EE0040ADC8 /* GitHubViewController.swift */,
+			);
+			path = IntegrateGitHub;
+			sourceTree = "<group>";
+		};
 		64B38589229AD22300767E7F = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		64B38594229AD22300767E7F /* Xchanger2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				64B1027822A7E48C0040ADC8 /* IntegrateGitHub */,
 				64CE945E22A6ABAD00E6A4C5 /* IntegrateInstagram */,
 				644A503E229F4A4900E59547 /* IntegrateSocialMedia */,
 				649E20F1229CC5E100815AB7 /* SignUpPage */,
@@ -497,6 +508,7 @@
 				644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */,
 				64B385C9229B016600767E7F /* SigninViewController.swift in Sources */,
 				64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */,
+				64B1027A22A7E4EE0040ADC8 /* GitHubViewController.swift in Sources */,
 				64CE946222A6AC7800E6A4C5 /* InstagramWebController.swift in Sources */,
 				649E20F3229CC69B00815AB7 /* SignUpViewController.swift in Sources */,
 				64B38598229AD22300767E7F /* ViewController.swift in Sources */,
