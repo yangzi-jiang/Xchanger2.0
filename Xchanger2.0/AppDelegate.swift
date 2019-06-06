@@ -11,6 +11,7 @@ import CoreData
 import Firebase
 import FacebookCore
 import FBSDKCoreKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

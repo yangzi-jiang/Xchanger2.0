@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hu2-40-eE3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qh3-hg-TBR">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -219,7 +219,7 @@
                         <outlet property="lastNameField" destination="Txp-Ds-yTD" id="uCL-g9-oGX"/>
                         <outlet property="password" destination="fmU-e4-S7n" id="IAN-iB-k32"/>
                         <outlet property="phoneNumber" destination="6Zz-I9-iOs" id="bkh-2o-NCl"/>
-                        <segue destination="Hu2-40-eE3" kind="show" identifier="success" id="rCb-9c-Bno"/>
+                        <segue destination="qh3-hg-TBR" kind="show" identifier="success" id="rCb-9c-Bno"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2KW-sX-w2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -265,6 +265,9 @@
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                 </variation>
+                                <connections>
+                                    <action selector="startConnecting:" destination="Hu2-40-eE3" eventType="touchUpInside" id="TXI-vo-fn4"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ECe-ET-wRX">
                                 <rect key="frame" x="0.0" y="611" width="375" height="96"/>
@@ -310,15 +313,43 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1U0-7G-YMb"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ikm-5W-J54"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="socialProfiles" destination="ECe-ET-wRX" id="4h0-rl-xSp"/>
                         <segue destination="X0m-g4-DQ3" kind="show" identifier="instagram" id="RBp-p6-ZSa"/>
                         <segue destination="96W-jy-ZEq" kind="show" identifier="github" id="33H-Sy-5CG"/>
+                        <segue destination="RlN-SJ-uz4" kind="show" identifier="linkedin" id="hT7-6Q-v9z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1L-md-XyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="2776"/>
+            <point key="canvasLocation" x="2079.1999999999998" y="2775.3694581280788"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pAi-kX-I1F">
+            <objects>
+                <viewController id="RlN-SJ-uz4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KpP-eH-vhM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="61N-U9-21h">
+                                <rect key="frame" x="0.0" y="77" width="375" height="725"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="44k-rj-atS" kind="embed" id="it0-W8-Jlr"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oGa-fG-Czd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AoV-ie-hwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2977" y="1904"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="kJg-pu-bYI">
@@ -342,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bS-5k-av7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3586" y="2258"/>
+            <point key="canvasLocation" x="3916" y="2751.7241379310344"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ldf-mo-7bw">
@@ -366,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQB-cQ-pGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3585" y="3189"/>
+            <point key="canvasLocation" x="2975" y="3559"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="F95-Yh-GAk">
@@ -545,7 +576,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDI-Tg-soC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7711" y="236"/>
+            <point key="canvasLocation" x="6546" y="-1453"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wyj-H6-McD">
@@ -577,7 +608,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8MK-Wm-byo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5610" y="956"/>
+            <point key="canvasLocation" x="4415" y="-963"/>
         </scene>
         <!--Linkedin View Controller-->
         <scene sceneID="UC7-l6-Owb">
@@ -592,7 +623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYe-QR-uZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7551" y="1542"/>
+            <point key="canvasLocation" x="6543" y="-363"/>
         </scene>
         <!--Instagram Web Controller-->
         <scene sceneID="4kq-S5-QH9">
@@ -607,7 +638,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EpQ-dp-c8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5930" y="3421"/>
+            <point key="canvasLocation" x="4201" y="3592"/>
         </scene>
         <!--Git Hub View Controller-->
         <scene sceneID="Wc9-ch-EPq">
@@ -617,11 +648,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="57b-kN-psR"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6G-oF-ec6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6602" y="2448"/>
+            <point key="canvasLocation" x="5356" y="2784.6059113300494"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="crZ-jT-2SL">
+            <objects>
+                <viewController id="jMr-60-3dU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bqI-Qp-pBo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5Uz-ug-eOc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t43-Wu-tDC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7777" y="3624"/>
+        </scene>
+        <!--Integrate Linked In View Controller-->
+        <scene sceneID="wN0-V0-vcD">
+            <objects>
+                <viewController id="44k-rj-atS" customClass="IntegrateLinkedInViewController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hIF-aW-pVv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="nqZ-wo-rmx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lgs-nv-y40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4414" y="1904"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8wf-Sj-9FZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qh3-hg-TBR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uq0-Jc-R1d">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hu2-40-eE3" kind="relationship" relationship="rootViewController" id="b6J-kv-qNk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2e-8b-aIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.8" y="2775.3694581280788"/>
         </scene>
     </scenes>
     <resources>

@@ -30,7 +30,7 @@ class GitHubViewController: UIViewController, WKNavigationDelegate {
     }
     
     func startAuthorization(){
-        let scope = "i"
+        let scope = "user"
         let redirectURI = "https://com.appcoda.github.oauth/oauth"
         let allowSignUp = "true"
         
@@ -96,7 +96,16 @@ class GitHubViewController: UIViewController, WKNavigationDelegate {
                         
                         let accessToken = dataArray[0].components(separatedBy: "=")[1]
                         
-                        print(accessToken)
+                        
+                        
+                        UserDefaults.standard.set(accessToken, forKey: "GHAccessToken")
+                        UserDefaults.standard.synchronize()
+                        
+                        DispatchQueue.main.async {
+                            self.navigationController?.setNavigationBarHidden(true, animated: false)
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                        
                         
                     } catch {
                         print("Could not convert JSON data into a dictionary.")
