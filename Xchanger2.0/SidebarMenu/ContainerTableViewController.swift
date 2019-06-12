@@ -31,6 +31,15 @@ class ContainerTableViewController: UITableViewController {
         return 4
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0: break
+        case 1: NotificationCenter.default.post(name: NSNotification.Name("ShowContacts"), object: nil)
+        case 2: NotificationCenter.default.post(name: NSNotification.Name("ShowSettings"), object: nil)
+        case 3: break
+        default: break
+        }
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

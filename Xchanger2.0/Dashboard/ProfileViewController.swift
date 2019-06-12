@@ -23,6 +23,12 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set notifications for changing pages
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showSettings), name: NSNotification.Name("ShowSettings"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showContacts), name: NSNotification.Name("ShowContacts"), object: nil)
+        
         // Create a QR Code with User ID
         let data = appUserID.data(using: .ascii, allowLossyConversion: false)
         let filter = CIFilter(name: "CIQRCodeGenerator")
@@ -83,8 +89,20 @@ class ProfileViewController: UIViewController {
     }
 
     @IBAction func sidebarTapped(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
+    }
+    
+    func showProfile(){
         
-        print("pressed")
+    }
+    
+    @objc func showContacts(){
+        self.performSegue(withIdentifier: "contacts", sender: self)
+        NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
+    }
+    
+    @objc func showSettings(){
+        self.performSegue(withIdentifier: "settings", sender: self)
         NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
     }
     

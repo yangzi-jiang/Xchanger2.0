@@ -785,6 +785,8 @@
                         <outlet property="myName" destination="sz4-Mr-eAv" id="ANP-Yr-ycg"/>
                         <outlet property="myProfilePicture" destination="95M-UP-4EV" id="A3m-Y4-7DI"/>
                         <outlet property="myQRCode" destination="VNv-Df-P6N" id="CAU-5O-wee"/>
+                        <segue destination="662-pE-tyJ" kind="show" identifier="contacts" id="2dp-29-4eN"/>
+                        <segue destination="QZ6-7Q-yu9" kind="show" identifier="settings" id="HZ6-80-kiS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2it-1v-C2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -810,10 +812,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="pF2-26-0d7"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSH-PB-pCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11092" y="1203.6945812807883"/>
+            <point key="canvasLocation" x="8850" y="2078"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dwR-N3-A9l">
@@ -837,7 +840,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="681-hm-eLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12380" y="1213.3004926108374"/>
+            <point key="canvasLocation" x="10095" y="2078"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EIa-bC-wgv">
