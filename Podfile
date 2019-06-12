@@ -12,6 +12,8 @@ target 'Xchanger2.0' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   pod 'Alamofire'
   target 'Xchanger2.0Tests' do
     inherit! :search_paths

@@ -11,6 +11,9 @@ import UIKit
 //import FacebookLogin
 //import FBSDKLoginKit
 import Alamofire
+import Firebase
+import FirebaseDatabase
+
 
 
 protocol SocialProfileCellDelegate:class {
@@ -32,6 +35,9 @@ class SocialViewController: UIViewController {
     let githubImage = #imageLiteral(resourceName: "Oval Copy 4")
 //    let wechatImage = #imageLiteral(resourceName: "Oval Copy 6")
 
+    var ref: DatabaseReference!
+    
+    let userID = Auth.auth().currentUser!.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,15 +49,32 @@ class SocialViewController: UIViewController {
         pictureArray.append(linkedinImage)
         pictureArray.append(githubImage)
 //        pictureArray.append(wechatImage)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+     self.navigationController?.setNavigationBarHidden(true, animated: false)
         
+         ref = Database.database().reference()
+        
+    }
+    
+    func updateSwift(){
+        
+        let IGURL = UserDefaults.standard.string(forKey: "IGUserURL") as! String
+        let GHURL = UserDefaults.standard.string(forKey: "GHUserURL") as! String
+        
+        // Update
+        
+        print("called")
+        self.ref.child("users/\(userID)/IGUserURL").setValue(IGURL)
+        self.ref.child("users/\(userID)/GHUserURL").setValue(GHURL)
+    
     }
     
     //  Perform seque and change the url depending on what social media it is coming from 
     @IBAction func startConnecting(_ sender: Any) {
         // Push user's three profiles to the database.
-        print("here")
+        
         var IGURL = UserDefaults.standard.string(forKey: "IGUserURL")
+        
+        appInstagramURL = IGURL!
         
         // GHAccessToken
         let url = URL(string: "https://api.github.com/user")
@@ -76,34 +99,18 @@ class SocialViewController: UIViewController {
                 .responseJSON { response in
                     let JSONresponse = response.result.value as! NSDictionary
                     
-                    print(JSONresponse["html_url"]!)
+                let GHUserHTML = JSONresponse["html_url"]!
+                    
+                appGithubURL = GHUserHTML as! String
+            
+                UserDefaults.standard.set(GHUserHTML, forKey: "GHUserURL")
+                
+                self.updateSwift()
+                self.performSegue(withIdentifier: "registrationSuccess", sender: self)
             }
         }
-    
-
-//        request.httpMethod = "GET"
-
-//        request.addValue(" token \(accessToken!))", forHTTPHeaderField: "Authorization")
-//        request.addValue(" application/vnd.github.v3+json", forHTTPHeaderField: "Accept")
-//        request.addValue(" Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 YaBrowser/16.3.0.7146 Yowser/2.5 Safari/537.36", forHTTPHeaderField: "User-Agent")
-//
-//        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
-//            guard error == nil else {
-//                print(error!)
-//                return
-//            }
-//            guard let data = data else {
-//                print("Data is empty")
-//                return
-//            }
-//
-//            let json = try! JSONSerialization.jsonObject(with: data, options: [])
-//            print(json)
-//        }
-//
-//        task.resume()
-        
     }
+    
     
 }
 
