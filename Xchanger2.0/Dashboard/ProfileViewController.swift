@@ -29,6 +29,8 @@ class ProfileViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(showContacts), name: NSNotification.Name("ShowContacts"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(showProfile), name: NSNotification.Name("ShowProfile"), object: nil)
+        
         // Create a QR Code with User ID
         let data = appUserID.data(using: .ascii, allowLossyConversion: false)
         let filter = CIFilter(name: "CIQRCodeGenerator")
@@ -92,8 +94,8 @@ class ProfileViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
     }
     
-    func showProfile(){
-        
+    @objc func showProfile(){
+        NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
     }
     
     @objc func showContacts(){
