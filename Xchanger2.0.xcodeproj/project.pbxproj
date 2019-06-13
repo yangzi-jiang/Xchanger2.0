@@ -15,6 +15,9 @@
 		644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A5045229F4CF000E59547 /* SocialProfile.swift */; };
 		647AD52022B1700A00C6D6A1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD51F22B1700A00C6D6A1 /* ContainerViewController.swift */; };
 		647AD52222B1702500C6D6A1 /* ContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD52122B1702500C6D6A1 /* ContainerTableViewController.swift */; };
+		647AD52522B1C5E000C6D6A1 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD52422B1C5E000C6D6A1 /* QRCodeReader.swift */; };
+		647AD52922B1CC5F00C6D6A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD52822B1CC5F00C6D6A1 /* SettingsViewController.swift */; };
+		647AD52B22B1CC8E00C6D6A1 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD52A22B1CC8E00C6D6A1 /* ContactsViewController.swift */; };
 		64826DAD22AC65290047196A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64826DAC22AC65290047196A /* ProfileViewController.swift */; };
 		649E20F3229CC69B00815AB7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649E20F2229CC69B00815AB7 /* SignUpViewController.swift */; };
 		649E20F5229F1CA400815AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */; };
@@ -63,6 +66,9 @@
 		644A5045229F4CF000E59547 /* SocialProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialProfile.swift; sourceTree = "<group>"; };
 		647AD51F22B1700A00C6D6A1 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		647AD52122B1702500C6D6A1 /* ContainerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContainerTableViewController.swift; path = /Users/altantutar/Documents/GitHub/Xchanger2.0/Xchanger2.0/SidebarMenu/ContainerTableViewController.swift; sourceTree = "<absolute>"; };
+		647AD52422B1C5E000C6D6A1 /* QRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
+		647AD52822B1CC5F00C6D6A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		647AD52A22B1CC8E00C6D6A1 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		64826DAC22AC65290047196A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		649E20F2229CC69B00815AB7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -147,6 +153,30 @@
 			path = SidebarMenu;
 			sourceTree = "<group>";
 		};
+		647AD52322B1C5CF00C6D6A1 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				647AD52422B1C5E000C6D6A1 /* QRCodeReader.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		647AD52622B1CC0100C6D6A1 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				647AD52A22B1CC8E00C6D6A1 /* ContactsViewController.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		647AD52722B1CC1200C6D6A1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				647AD52822B1CC5F00C6D6A1 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		649E20F1229CC5E100815AB7 /* SignUpPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +218,9 @@
 		64B38594229AD22300767E7F /* Xchanger2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				647AD52722B1CC1200C6D6A1 /* Settings */,
+				647AD52622B1CC0100C6D6A1 /* Contacts */,
+				647AD52322B1C5CF00C6D6A1 /* QR */,
 				647AD51E22B16FE900C6D6A1 /* SidebarMenu */,
 				64BFF68622AAE11A00D56121 /* Dashboard */,
 				643BB8C622A9583D003C3E9A /* IntegrateLinkedin */,
@@ -547,6 +580,8 @@
 			files = (
 				644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */,
 				64B385C9229B016600767E7F /* SigninViewController.swift in Sources */,
+				647AD52522B1C5E000C6D6A1 /* QRCodeReader.swift in Sources */,
+				647AD52B22B1CC8E00C6D6A1 /* ContactsViewController.swift in Sources */,
 				64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */,
 				647AD52222B1702500C6D6A1 /* ContainerTableViewController.swift in Sources */,
 				64B1027A22A7E4EE0040ADC8 /* GitHubViewController.swift in Sources */,
@@ -561,6 +596,7 @@
 				644A5044229F4B1000E59547 /* SocialViewController.swift in Sources */,
 				64B3859E229AD22300767E7F /* Xchanger2_0.xcdatamodeld in Sources */,
 				64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */,
+				647AD52922B1CC5F00C6D6A1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

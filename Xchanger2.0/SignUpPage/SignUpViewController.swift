@@ -143,20 +143,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                     appUserName = self.firstNameField.text! + " " + self.lastNameField.text!
                     
                     
-                    // Upload QRcode to the cloud
-                    
-//                    let storageRefQR = Storage.storage().reference().child("qr_codes").child(Auth.auth().currentUser!.uid)
-                    
-                    
-//                    if let uploadData = img.jpegData(compressionQuality: 1.0) {
-//                        storageRefQR.putData(uploadData, metadata: nil, completion: { (metadata, error) in
-//                            if error != nil {
-//                                return
-//                            }
-//                        })
-//                    }
-//
-                    
                     // Upload profile picture to the cloud
                     
                     appProfilePicture = self.profilePicture.image!
@@ -168,6 +154,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                             if error != nil {
                                 return
                             }
+                            
+                             
                             self.performSegue(withIdentifier: "success", sender: self)
                         })
                     }

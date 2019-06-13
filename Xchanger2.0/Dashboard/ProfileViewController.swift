@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
+var firstLogin = false
+
 
 
 class ProfileViewController: UIViewController {
@@ -30,6 +32,7 @@ class ProfileViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(showContacts), name: NSNotification.Name("ShowContacts"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(showProfile), name: NSNotification.Name("ShowProfile"), object: nil)
+        
         
         // Create a QR Code with User ID
         let data = appUserID.data(using: .ascii, allowLossyConversion: false)
@@ -65,8 +68,16 @@ class ProfileViewController: UIViewController {
         spinnerIndicator.color = UIColor.black
         spinnerIndicator.startAnimating()
     
-        self.alertController.view.addSubview(spinnerIndicator)
-        self.present(self.alertController, animated: false, completion: nil)
+        
+        if (!firstLogin){
+            self.alertController.view.addSubview(spinnerIndicator)
+            self.present(self.alertController, animated: false, completion: nil)
+            
+        } else {
+            firstLogin = false
+        }
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(dismissAlert), name: NSNotification.Name("ReleaseLoad"), object: nil)
         
     }
     
@@ -80,14 +91,20 @@ class ProfileViewController: UIViewController {
                 } else {
                     if let _data  = data {
                         let myImage:UIImage! = UIImage(data: _data)
+                        
+                            self.alertController.dismiss(animated: true)
+                        
                         self.myProfilePicture.image = myImage
-                        self.alertController.dismiss(animated: true)
                     }
                 }
             }
         } else {
             self.alertController.dismiss(animated:true)
         }
+    }
+    
+    @objc func dismissAlert(){
+        self.alertController.dismiss(animated:true)
     }
 
     @IBAction func sidebarTapped(_ sender: Any) {

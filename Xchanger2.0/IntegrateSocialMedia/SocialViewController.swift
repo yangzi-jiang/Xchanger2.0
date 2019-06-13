@@ -112,6 +112,9 @@ class SocialViewController: UIViewController {
     }
     
     
+    @IBAction func startConnect(_ sender: Any) {
+        firstLogin = true
+    }
 }
 
 extension SocialViewController: UICollectionViewDelegate, UICollectionViewDataSource {
