@@ -813,7 +813,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QnD-zN-AoL">
-                                <rect key="frame" x="0.0" y="44" width="375" height="819"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="863"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="v7K-j6-0cc" kind="embed" id="JCd-Aa-L2R"/>
@@ -1087,7 +1087,7 @@
             <objects>
                 <viewController id="v7K-j6-0cc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o5c-el-Due">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="819"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="863"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gkN-vd-5FJ"/>

@@ -9,8 +9,14 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import CoreLocation
+import MapKit
 
 var firstLogin = false
+
+
+var userLongitude = 0.0
+var userLatitude = 0.0
 
 
 
@@ -19,6 +25,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var myProfilePicture: UIImageView!
     @IBOutlet weak var myName: UILabel!
     @IBOutlet weak var myQRCode: UIImageView!
+    
+    
+    let locationManager = CLLocationManager()
     
      let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
     
@@ -101,6 +110,8 @@ class ProfileViewController: UIViewController {
         } else {
             self.alertController.dismiss(animated:true)
         }
+        
+        checkLocationServices()
     }
     
     @objc func dismissAlert(){
@@ -125,4 +136,58 @@ class ProfileViewController: UIViewController {
         NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
     }
     
+    func setupLocationManager(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+    }
+    
+    func checkLocationServices(){
+        if CLLocationManager.locationServicesEnabled() {
+            setupLocationManager()
+            checkLocationAuthorization()
+            locationManager.requestLocation()
+        } else {
+            // Show alert letting the user know they have to turn this on
+        }
+    }
+    
+    func checkLocationAuthorization(){
+        switch CLLocationManager.authorizationStatus(){
+        case .authorizedWhenInUse:
+            break
+        case .denied:
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            break
+        case .authorizedAlways:
+             break
+//        @unknown default:
+//            <#code#>
+        }
+    }
+    
+}
+
+extension ProfileViewController: CLLocationManagerDelegate {
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        userLatitude = location.coordinate.latitude
+        userLongitude = location.coordinate.longitude
+        
+        print(userLatitude)
+        print(userLongitude)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkLocationAuthorization()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Fail")
+    }
 }
