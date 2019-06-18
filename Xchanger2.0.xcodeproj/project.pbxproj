@@ -65,7 +65,7 @@
 		644A5043229F4B1000E59547 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		644A5045229F4CF000E59547 /* SocialProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialProfile.swift; sourceTree = "<group>"; };
 		647AD51F22B1700A00C6D6A1 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		647AD52122B1702500C6D6A1 /* ContainerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContainerTableViewController.swift; path = /Users/altantutar/Documents/GitHub/Xchanger2.0/Xchanger2.0/SidebarMenu/ContainerTableViewController.swift; sourceTree = "<absolute>"; };
+		647AD52122B1702500C6D6A1 /* ContainerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContainerTableViewController.swift; path = ContainerTableViewController.swift; sourceTree = "<group>"; };
 		647AD52422B1C5E000C6D6A1 /* QRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
 		647AD52822B1CC5F00C6D6A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		647AD52A22B1CC8E00C6D6A1 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
