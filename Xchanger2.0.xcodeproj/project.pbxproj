@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		156EDC7322BD361A00101BFD /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDC7222BD361A00101BFD /* ContactsTableViewController.swift */; };
 		18F1750852B91B324B616FBD /* Pods_Xchanger2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE133709599B87907B7CDC63 /* Pods_Xchanger2_0UITests.framework */; };
 		64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */; };
 		6436B518229B67070031F7A1 /* LinkedInIntegrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		037A930CDF176DF036400D0D /* Pods-Xchanger2.0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0Tests.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0Tests/Pods-Xchanger2.0Tests.release.xcconfig"; sourceTree = "<group>"; };
+		156EDC7222BD361A00101BFD /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		4ACBA3ACF0B394FF3DB60832 /* Pods-Xchanger2.0UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0UITests.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0UITests/Pods-Xchanger2.0UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInOAuth.swift; sourceTree = "<group>"; };
 		6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInIntegrate.swift; sourceTree = "<group>"; };
@@ -65,13 +67,13 @@
 		644A5043229F4B1000E59547 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		644A5045229F4CF000E59547 /* SocialProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialProfile.swift; sourceTree = "<group>"; };
 		647AD51F22B1700A00C6D6A1 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		647AD52122B1702500C6D6A1 /* ContainerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContainerTableViewController.swift; path = ContainerTableViewController.swift; sourceTree = "<group>"; };
+		647AD52122B1702500C6D6A1 /* ContainerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewController.swift; sourceTree = "<group>"; };
 		647AD52422B1C5E000C6D6A1 /* QRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
 		647AD52822B1CC5F00C6D6A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		647AD52A22B1CC8E00C6D6A1 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		64826DAC22AC65290047196A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		649E20F2229CC69B00815AB7 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = GoogleService-Info.plist; sourceTree = "<group>"; };
+		649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64B1027922A7E4EE0040ADC8 /* GitHubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubViewController.swift; sourceTree = "<group>"; };
 		64B38592229AD22300767E7F /* Xchanger2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xchanger2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64B38595229AD22300767E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				647AD52A22B1CC8E00C6D6A1 /* ContactsViewController.swift */,
+				156EDC7222BD361A00101BFD /* ContactsTableViewController.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 			files = (
 				644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */,
 				64B385C9229B016600767E7F /* SigninViewController.swift in Sources */,
+				156EDC7322BD361A00101BFD /* ContactsTableViewController.swift in Sources */,
 				647AD52522B1C5E000C6D6A1 /* QRCodeReader.swift in Sources */,
 				647AD52B22B1CC8E00C6D6A1 /* ContactsViewController.swift in Sources */,
 				64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */,
@@ -773,7 +777,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -797,7 +801,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

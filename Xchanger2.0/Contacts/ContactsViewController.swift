@@ -10,10 +10,17 @@ import UIKit
 
 class ContactsViewController: UIViewController {
 
+//    @IBOutlet weak var textView: UITextView!
+    
+    var text = ""
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        textView.text = text
+    }
     
     @IBAction func goBack(_ sender: Any) {
         navigationController?.popViewController(animated: false)
