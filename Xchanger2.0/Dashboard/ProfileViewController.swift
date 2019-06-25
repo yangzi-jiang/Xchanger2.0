@@ -20,11 +20,27 @@ var userLatitude = 0.0
 
 
 
+
+
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var myProfilePicture: UIImageView!
     @IBOutlet weak var myName: UILabel!
     @IBOutlet weak var myQRCode: UIImageView!
+    
+    // Array of pictures for the toggle buttons
+    var pictureArray = [UIImage] ()
+    
+    //    let facebookImage = #imageLiteral(resourceName: "Oval Copy-1")
+    let phoneImage = #imageLiteral(resourceName: "icons8-shake-phone-100")
+    let emailImage = #imageLiteral(resourceName: "icons8-new-post-100")
+    
+    let linkedinImage = #imageLiteral(resourceName: "Oval Copy 5")
+    //    let googleImage = #imageLiteral(resourceName: "Oval Copy 3")
+    let instagramImage = #imageLiteral(resourceName: "instagram_PNG11")
+    let githubImage = #imageLiteral(resourceName: "Oval Copy 4")
+    
+    //    let wechatImage = #imageLiteral(resourceName: "Oval Copy 6")
     
     
     let locationManager = CLLocationManager()
@@ -71,6 +87,8 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        
      
         let spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
         spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)

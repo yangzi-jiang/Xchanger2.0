@@ -89,14 +89,13 @@ class ContactsTableViewController: UITableViewController {
 
         currentItem = self.finalNames[stringArray[indexPath.row]]!
         
-        print(currentItem)
         performSegue(withIdentifier: "showDetail", sender: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let viewController = segue.destination as? ContactsViewController {
-            viewController.text = currentItem
+        if let destinationViewController = segue.destination as? ContactViewController {
+            
+            destinationViewController.userID = currentItem
         }
     }
-
 }
