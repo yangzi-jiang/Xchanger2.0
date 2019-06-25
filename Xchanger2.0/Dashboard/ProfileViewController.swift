@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import FirebaseDatabase
 import CoreLocation
 import MapKit
 
@@ -19,10 +20,15 @@ var userLongitude = 0.0
 var userLatitude = 0.0
 
 
-
-
-
 class ProfileViewController: UIViewController {
+    
+    // Ticks for representing what to share
+    @IBOutlet weak var phoneTick: UIImageView!
+    @IBOutlet weak var emailTick: UIImageView!
+    @IBOutlet weak var linkedinTick: UIImageView!
+    @IBOutlet weak var githubTick: UIImageView!
+    @IBOutlet weak var instagramTick: UIImageView!
+    
     
     @IBOutlet weak var myProfilePicture: UIImageView!
     @IBOutlet weak var myName: UILabel!
@@ -43,9 +49,16 @@ class ProfileViewController: UIViewController {
     //    let wechatImage = #imageLiteral(resourceName: "Oval Copy 6")
     
     
+    // Declare variables for contact exchange
+    var email = true
+    var phoneNumber = true
+    var linkedin = true
+    var github = true
+    var instagram = true
+
     let locationManager = CLLocationManager()
     
-     let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
+    let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +96,20 @@ class ProfileViewController: UIViewController {
         myProfilePicture.image = appProfilePicture
         myName.text = appUserName
         myQRCode.image = appQRCode
+        
+        var reference = Database.database().reference()
+        
+        reference.child("shares").child(Auth.auth().currentUser!.uid).observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+        
+            // Update variables
+            self.email = ((value?["email"]) != nil)
+            self.github = ((value?["github"]) != nil)
+            self.instagram = ((value?["instagram"]) != nil)
+            self.phoneNumber = ((value?["phone_number"]) != nil)
+            self.github = ((value?["github"]) != nil)
+        
+        }
         
     }
     
@@ -187,6 +214,8 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    @IBAction func phonePressed(_ sender: Any) {
+    }
 }
 
 extension ProfileViewController: CLLocationManagerDelegate {

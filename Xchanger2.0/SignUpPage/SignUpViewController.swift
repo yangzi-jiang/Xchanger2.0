@@ -129,13 +129,21 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                     var ref: DatabaseReference!
                     ref = Database.database().reference()
                     
-                ref.child("full_names").child(Auth.auth().currentUser!.uid).setValue(self.firstNameField.text! + " " + self.lastNameField.text!)
+                    ref.child("full_names").child(Auth.auth().currentUser!.uid).setValue(self.firstNameField.text! + " " + self.lastNameField.text!)
                     
-                ref.child("phone_numbers").child(Auth.auth().currentUser!.uid).setValue(self.phoneNumber.text)
+                    ref.child("phone_numbers").child(Auth.auth().currentUser!.uid).setValue(self.phoneNumber.text)
                     
                     
-                    appPhoneNumber = self.phoneNumber.text!
-                ref.child("emails").child(Auth.auth().currentUser!.uid).setValue(self.emailField.text)
+                        appPhoneNumber = self.phoneNumber.text!
+                    ref.child("emails").child(Auth.auth().currentUser!.uid).setValue(self.emailField.text)
+                    
+                    
+                    // Update the shares branch of the database
+                    ref.child("shares").child(Auth.auth().currentUser!.uid).child("email").setValue(true)
+                    ref.child("shares").child(Auth.auth().currentUser!.uid).child("phone_number").setValue(true)
+                    ref.child("shares").child(Auth.auth().currentUser!.uid).child("linkedin").setValue(true)
+                    ref.child("shares").child(Auth.auth().currentUser!.uid).child("github").setValue(true)
+                    ref.child("shares").child(Auth.auth().currentUser!.uid).child("instagram").setValue(true)
                     
                     appEmail = self.emailField.text!
                     
