@@ -67,8 +67,6 @@ class SigninViewController: UIViewController {
                         })
                     }
                     
-                   
-                    
                     // Succeeded so proceed
                     
                 }
@@ -84,15 +82,15 @@ class SigninViewController: UIViewController {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.destination is SignUpViewController
-//        {
-//            if let vc = segue.destination as? SignUpViewController{
-//                vc.email = emailField.text!
-//                vc.password = passwordField.text!
-//            }
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is SignUpViewController
+        {
+            if let vc = segue.destination as? SignUpViewController{
+                vc.email = emailField.text!
+                vc.password = passwordField.text!
+            }
+        }
+    }
 }
 
 

@@ -16,9 +16,9 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//
-//    var email:String = ""
-//    var password:String = ""
+
+    var email:String = ""
+    var password:String = ""
     
     // Reference to the profile picture
     @IBOutlet weak var profilePicture: UIImageView!
@@ -56,9 +56,9 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.hideKeyboardWhenTappedAround()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
-        // Pass email and passwordField data from login screen
-//        emailField?.text = email
-//        passwordField?.text = password
+//      Pass email and passwordField data from login screen
+        emailField?.text = email
+        passwordField?.text = password
     }
     
     func resizedImage(at url: URL, for size: CGSize) -> UIImage? {
@@ -84,7 +84,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     @IBAction func signUpButtonPressed(_ sender: Any) {
         if (emailField.text == "") {
-            let alertController = UIAlertController(title: "Error", message: "Please enter your email and passwordField.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password.", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
