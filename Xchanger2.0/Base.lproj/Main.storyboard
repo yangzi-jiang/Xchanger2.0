@@ -992,6 +992,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Oval Copy 2"/>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="24o-Ix-X8A">
+                                <rect key="frame" x="0.0" y="309" width="375" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.2254325449" green="0.84573727850000002" blue="0.77796930070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1002,6 +1006,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="myImage" destination="faL-Qr-NKD" id="lUo-Nw-dsy"/>
+                        <outlet property="myMap" destination="24o-Ix-X8A" id="Sj4-dB-wc4"/>
                         <outlet property="myName" destination="5Pt-dP-xF9" id="Bsp-1g-Wqq"/>
                     </connections>
                 </viewController>

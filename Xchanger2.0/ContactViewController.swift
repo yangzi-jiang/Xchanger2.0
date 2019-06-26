@@ -10,8 +10,28 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import FirebaseDatabase
+import MapKit
+
+class Pin: NSObject, MKAnnotation {
+    let title: String?
+    let coordinate: CLLocationCoordinate2D
+    
+    init(title: String, coordinate: CLLocationCoordinate2D) {
+        self.title = title
+        self.coordinate = coordinate
+        
+        super.init()
+    }
+    
+    var subtitle: String? {
+        return title
+    }
+}
 
 class ContactViewController: UIViewController {
+    
+    // Shows where the user's met
+    @IBOutlet weak var myMap: MKMapView!
     
     
     @IBOutlet weak var myImage: UIImageView!
@@ -24,6 +44,10 @@ class ContactViewController: UIViewController {
     var myFullName = String()
 //    var myImage = UIImage()
     var myEmail = String()
+    
+    var longitude = Float()
+    var latitude = Float()
+    
     
     
     var databaseReference = Database.database().reference()
@@ -81,11 +105,33 @@ class ContactViewController: UIViewController {
             }
         }
         
+        var locationReference = databaseReference.child("exchanges").child(Auth.auth().currentUser!.uid)
         
-
+        var locationToShow = CLLocation()
         
-        
-        
-        
+        locationReference.observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let array = value![self.userID] as? NSArray
+            
+            self.longitude = (array?[0] as? Float)!
+            self.latitude = (array?[1] as? Float)!
+            
+            locationToShow = CLLocation(latitude: CLLocationDegrees(self.latitude), longitude: CLLocationDegrees(self.longitude))
+            
+            self.centerMapOnLocation(location: locationToShow)
+            
+            let location = Pin(title: "You and your contact met here!", coordinate: CLLocationCoordinate2D(latitude: CLLocationDegrees(self.latitude), longitude: CLLocationDegrees(self.longitude)))
+            
+            // Create the annotation to show where your contact and you met
+            
+            self.myMap.addAnnotation(location)
+        }
+    }
+    
+    let regionRadius: CLLocationDistance = 1000
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        myMap.setRegion(coordinateRegion, animated: true)
     }
 }
