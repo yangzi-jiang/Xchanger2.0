@@ -300,6 +300,7 @@
                         <outlet property="imageButton" destination="o9J-W9-deH" id="ZeC-Se-p4y"/>
                         <outlet property="lastNameField" destination="Txp-Ds-yTD" id="uCL-g9-oGX"/>
                         <outlet property="password" destination="fmU-e4-S7n" id="IAN-iB-k32"/>
+                        <outlet property="passwordField" destination="fmU-e4-S7n" id="1Nc-z5-R4m"/>
                         <outlet property="phoneNumber" destination="6Zz-I9-iOs" id="bkh-2o-NCl"/>
                         <outlet property="profilePicture" destination="9Z6-X2-JQC" id="Rbg-7F-adh"/>
                         <segue destination="qh3-hg-TBR" kind="show" identifier="success" id="rCb-9c-Bno"/>

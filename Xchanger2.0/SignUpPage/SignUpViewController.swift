@@ -56,7 +56,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.hideKeyboardWhenTappedAround()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
-//        // Pass email and passwordField data from login screen
+        // Pass email and passwordField data from login screen
 //        emailField?.text = email
 //        passwordField?.text = password
     }
