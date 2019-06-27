@@ -31,6 +31,11 @@ class SigninViewController: UIViewController {
         passwordField.isSecureTextEntry = true
     }
 
+//  Trying to set a background opague image
+//    @IBOutlet weak var background: UIImageView!
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithName:@"Illustration1.png"]];
+//    UIImageView.alpha = 0.5; //Alpha runs from 0.0 to 1.0
+    
     @IBAction func loginButtonPressed(_ sender: Any) {
         if (emailField.text!.isValidEmail()){ // Check whether the email is valid
             Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (result, error) in
@@ -51,7 +56,7 @@ class SigninViewController: UIViewController {
                         // Update the user id
                         appUserID = currentUser
                         
-                        var refName = Database.database().reference().root.child("full_names").child(appUserID)
+                        let refName = Database.database().reference().root.child("full_names").child(appUserID)
                         
                         refName.observeSingleEvent(of: .value, with: { (snapshot) in
                             let name = snapshot.value as? String
@@ -61,8 +66,6 @@ class SigninViewController: UIViewController {
                             self.performSegue(withIdentifier: "loginSuccess", sender: self)
                         })
                     }
-                    
-                   
                     
                     // Succeeded so proceed
                     
@@ -76,6 +79,16 @@ class SigninViewController: UIViewController {
             
             //present the alert to the user
             self.present(alert, animated: true)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is SignUpViewController
+        {
+            if let vc = segue.destination as? SignUpViewController{
+                vc.email = emailField.text!
+                vc.password = passwordField.text!
+            }
         }
     }
 }

@@ -16,6 +16,9 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    var email:String = ""
+    var password:String = ""
     
     // Reference to the profile picture
     @IBOutlet weak var profilePicture: UIImageView!
@@ -28,7 +31,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +49,16 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         imageButton.layer.cornerRadius = imageButton.frame.size.width / 2
         imageButton.clipsToBounds = true
         
-        // Process the password field
-        password.isSecureTextEntry = true
+        // Process the passwordField field
+        passwordField.isSecureTextEntry = true
         
         // Release the keyboard when tapping around
         self.hideKeyboardWhenTappedAround()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+//      Pass email and passwordField data from login screen
+        emailField?.text = email
+        passwordField?.text = password
     }
     
     func resizedImage(at url: URL, for size: CGSize) -> UIImage? {
@@ -105,7 +112,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             alertController.addAction(defaultAction)
             
             present(alertController, animated: true, completion: nil)
-        } else if (password.text == "") {
+        } else if (passwordField.text == "") {
             let alertController = UIAlertController(title: "Error", message: "Please enter your password.", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -115,7 +122,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         } else {
             // Good to sign up
             
-            Auth.auth().createUser(withEmail: emailField.text!, password: password.text!) { (authresult, error) in
+            Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (authresult, error) in
                 if (error != nil){
                     // there is an error
                 } else {
