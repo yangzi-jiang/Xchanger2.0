@@ -61,6 +61,9 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // Setup the picker
         industryPicker.delegate = self
         industryPicker.dataSource = self
+        
+        // Release the keyboard when tapping around
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
 //        pictureArray.append(facebookImage)
@@ -98,9 +101,9 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func updateGithub(){
-        var IGURL = UserDefaults.standard.string(forKey: "IGUserURL")
-        appInstagramURL = IGURL!
-        self.updateInstagram()
+        var GitURL = UserDefaults.standard.string(forKey: "GHUserURL")
+        appInstagramURL = GitURL!
+        self.ref.child("users/\(userID)/GitUserURL").setValue(GitURL)
     }
     
     
@@ -158,6 +161,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                     UserDefaults.standard.set(GHUserHTML, forKey: "GHUserURL")
                     
                     self.updateGithub()
+                    self.performSegue(withIdentifier: "registrationSuccess", sender: self)
                         
                 }
             }

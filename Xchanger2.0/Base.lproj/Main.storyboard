@@ -318,7 +318,7 @@
         <!--Social View Controller-->
         <scene sceneID="6O3-QS-Iqp">
             <objects>
-                <viewController id="Hu2-40-eE3" customClass="SocialViewController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hu2-40-eE3" customClass="SocialViewController" customModule="Xchanger2_0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6iH-Sc-va0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

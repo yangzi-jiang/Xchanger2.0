@@ -110,6 +110,39 @@ class ProfileViewController: UIViewController {
             self.instagram = ((value?["instagram"]) != nil)
             self.phoneNumber = ((value?["phone_number"]) != nil)
             self.github = ((value?["github"]) != nil)
+            
+            
+            // Update ticks
+            if (self.email == true){
+                self.emailTick.alpha = 1.0
+            } else {
+                self.emailTick.alpha = 0.0
+            }
+            
+            if (self.github == true){
+                self.githubTick.alpha = 1.0
+            } else {
+                self.githubTick.alpha = 0.0
+            }
+            
+            
+            if (self.linkedin == true){
+                self.linkedinTick.alpha = 1.0
+            } else {
+                self.linkedinTick.alpha = 0.0
+            }
+            
+            if (self.instagram == true){
+                self.instagramTick.alpha = 1.0
+            } else {
+                self.instagramTick.alpha = 0.0
+            }
+            
+            if (self.phoneNumber == true){
+                self.phoneTick.alpha = 1.0
+            } else {
+                self.phoneTick.alpha = 0.0
+            }
         
         }
         
@@ -250,14 +283,20 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    func changeSharesChild(changed: String, boolValue: Bool){
+        Database.database().reference().child(changed).child(Auth.auth().currentUser!.uid).child("phone_number").setValue(boolValue)
+    }
+    
     @IBAction func phonePressed(_ sender: Any) {
         // Turns the tick off if phone is not selected, and turns it on if phone is selected
         if (phoneNumber == true){
             phoneTick.alpha = 0.0
             phoneNumber = false
+            changeSharesChild(changed: "phone_number", boolValue: false)
         } else {
             phoneTick.alpha = 1.0
             phoneNumber = true
+            changeSharesChild(changed: "phone_number", boolValue: true)
         }
     }
     
@@ -266,9 +305,11 @@ class ProfileViewController: UIViewController {
         if (email == true){
             emailTick.alpha = 0.0
             email = false
+            changeSharesChild(changed: "email", boolValue: false)
         } else {
             emailTick.alpha = 1.0
             email = true
+            changeSharesChild(changed: "email", boolValue: true)
         }
     }
     
@@ -277,9 +318,11 @@ class ProfileViewController: UIViewController {
         if (linkedin == true){
             linkedinTick.alpha = 0.0
             linkedin = false
+            changeSharesChild(changed: "linkedin", boolValue: false)
         } else {
             linkedinTick.alpha = 1.0
             linkedin = true
+            changeSharesChild(changed: "linkedin", boolValue: true)
         }
     }
     
@@ -288,9 +331,11 @@ class ProfileViewController: UIViewController {
         if (github == true){
             githubTick.alpha = 0.0
             github = false
+            changeSharesChild(changed: "github", boolValue: false)
         } else {
             githubTick.alpha = 1.0
             github = true
+            changeSharesChild(changed: "github", boolValue: true)
         }
     }
     
@@ -300,14 +345,13 @@ class ProfileViewController: UIViewController {
         if (instagram == true){
             instagramTick.alpha = 0.0
             instagram = false
+            changeSharesChild(changed: "instagram", boolValue: false)
         } else {
             instagramTick.alpha = 1.0
             instagram = true
+            changeSharesChild(changed: "instagram", boolValue: true)
         }
     }
-    
-    
-    
 }
 
 extension ProfileViewController: CLLocationManagerDelegate {
