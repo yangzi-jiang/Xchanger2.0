@@ -14,6 +14,7 @@ import CoreLocation
 import MapKit
 
 var firstLogin = false
+var signUp = false
 
 
 var userLongitude = 0.0
@@ -63,7 +64,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set notifications for changing pages
+       
         
         NotificationCenter.default.addObserver(self, selector: #selector(showSettings), name: NSNotification.Name("ShowSettings"), object: nil)
         
@@ -92,10 +93,7 @@ class ProfileViewController: UIViewController {
         myProfilePicture.layer.cornerRadius = myProfilePicture.frame.size.width / 2
         myProfilePicture.clipsToBounds = true
         
-        // Update the profile page
-        myProfilePicture.image = appProfilePicture
-        myName.text = appUserName
-        myQRCode.image = appQRCode
+        
         
         var reference = Database.database().reference()
         
@@ -110,6 +108,12 @@ class ProfileViewController: UIViewController {
             self.github = ((value?["github"]) != nil)
         
         }
+        
+        // Set notifications for changing pages
+        
+        myProfilePicture.image = appProfilePicture
+        myName.text = appUserName
+        myQRCode.image = appQRCode
         
     }
     
@@ -126,10 +130,19 @@ class ProfileViewController: UIViewController {
         if (!firstLogin){
             self.alertController.view.addSubview(spinnerIndicator)
             self.present(self.alertController, animated: false, completion: nil)
-            
+            firstLogin = true
         } else {
-            firstLogin = false
+            // Update the profile page
+            myProfilePicture.image = appProfilePicture
+            myName.text = appUserName
+            myQRCode.image = appQRCode
         }
+        
+      
+        
+//        if (signUp == true){
+//            signUp = false
+//        }
         
 //        NotificationCenter.default.addObserver(self, selector: #selector(dismissAlert), name: NSNotification.Name("ReleaseLoad"), object: nil)
         
@@ -145,9 +158,8 @@ class ProfileViewController: UIViewController {
                 } else {
                     if let _data  = data {
                         let myImage:UIImage! = UIImage(data: _data)
-                        
-                            self.alertController.dismiss(animated: true)
-                        
+
+                        self.alertController.dismiss(animated: true)
                         self.myProfilePicture.image = myImage
                     }
                 }

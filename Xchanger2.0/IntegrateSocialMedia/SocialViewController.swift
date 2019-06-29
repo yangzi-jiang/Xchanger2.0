@@ -55,6 +55,8 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        firstLogin = true
+        
         // Setup the picker
         industryPicker.delegate = self
         industryPicker.dataSource = self
