@@ -34,6 +34,9 @@ class ContactViewController: UIViewController {
     @IBOutlet weak var myMap: MKMapView!
     
     
+    @IBOutlet weak var industryUILabel: UILabel!
+    @IBOutlet weak var jobtitleUILabel: UILabel!
+    
     @IBOutlet weak var myImage: UIImageView!
     @IBOutlet weak var myName: UILabel!
     // Initialize the contact to be shown
@@ -115,6 +118,7 @@ class ContactViewController: UIViewController {
             }
         }
         
+        
         var locationReference = databaseReference.child("exchanges").child(Auth.auth().currentUser!.uid)
         
         var locationToShow = CLLocation()
@@ -135,6 +139,27 @@ class ContactViewController: UIViewController {
             // Create the annotation to show where your contact and you met
             
             self.myMap.addAnnotation(location)
+        }
+        
+        var industryReference = databaseReference.child("industry")
+        
+            industryReference.observeSingleEvent(of: .value){
+            (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            let industry = value![self.userID] as? String
+                
+            self.industryUILabel.text = industry! + " |"
+            
+        }
+        
+        var jobTitleReference = databaseReference.child("job_titles")
+        
+        jobTitleReference.observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let jobTitle = value![self.userID] as? String
+            
+            self.jobtitleUILabel.text = jobTitle!
         }
     }
     

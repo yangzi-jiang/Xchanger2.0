@@ -162,7 +162,7 @@ class ProfileViewController: UIViewController {
                 } else {
                     if let _data  = data {
                         let myImage:UIImage! = UIImage(data: _data)
-
+                        appProfilePicture = myImage
                         self.alertController.dismiss(animated: true)
                         self.myProfilePicture.image = myImage
                     }
