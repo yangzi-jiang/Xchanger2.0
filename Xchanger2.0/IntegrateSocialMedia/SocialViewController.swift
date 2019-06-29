@@ -14,6 +14,9 @@ import Alamofire
 import Firebase
 import FirebaseDatabase
 
+var githubConnected = false
+var instagramConnected = false
+
 
 
 protocol SocialProfileCellDelegate:class {
@@ -22,11 +25,18 @@ protocol SocialProfileCellDelegate:class {
         func collectionViewCell(_ cell: UICollectionViewCell, buttonTapped: UIButton)
 }
 
-class SocialViewController: UIViewController {
-
+class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
+    var selectedIndustry = String()
+    
+    @IBOutlet weak var industryPicker: UIPickerView!
+    
     @IBOutlet weak var socialProfiles: UICollectionView!
     
     var pictureArray = [UIImage] ()
+    
+    var industries = ["Information Technology", "Marketing", "Human Resources", "Computer Software", "Financial Services", "Staffing and Recruiting", "Internet", "Management Consulting", "Telecommunications", "Retail"]
     
 //    let facebookImage = #imageLiteral(resourceName: "Oval Copy-1")
     let linkedinImage = #imageLiteral(resourceName: "Oval Copy 5")
@@ -37,10 +47,17 @@ class SocialViewController: UIViewController {
 
     var ref: DatabaseReference!
     
+    // Check whether the user connected to his/her social media account
+    
+  
     let userID = Auth.auth().currentUser!.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setup the picker
+        industryPicker.delegate = self
+        industryPicker.dataSource = self
 
         // Do any additional setup after loading the view.
 //        pictureArray.append(facebookImage)
@@ -55,16 +72,35 @@ class SocialViewController: UIViewController {
         
     }
     
-    func updateSwift(){
-        
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return industries.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return industries[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedIndustry = industries[row]
+    }
+    
+    func updateInstagram(){
         let IGURL = UserDefaults.standard.string(forKey: "IGUserURL") as! String
-        let GHURL = UserDefaults.standard.string(forKey: "GHUserURL") as! String
-        
-        // Update
-        
-        print("called")
         self.ref.child("users/\(userID)/IGUserURL").setValue(IGURL)
-        self.ref.child("users/\(userID)/GHUserURL").setValue(GHURL)
+    }
+    
+    func updateGithub(){
+        var IGURL = UserDefaults.standard.string(forKey: "IGUserURL")
+        appInstagramURL = IGURL!
+        self.updateInstagram()
+    }
+    func updateIndustry(){
+        let industry = selectedIndustry
+        self.ref.child("industry/\(userID)").setValue(industry)
     
     }
     
@@ -72,49 +108,57 @@ class SocialViewController: UIViewController {
     @IBAction func startConnecting(_ sender: Any) {
         // Push user's three profiles to the database.
         
-        var IGURL = UserDefaults.standard.string(forKey: "IGUserURL")
+        if (instagramConnected){
         
-        appInstagramURL = IGURL!
+            var IGURL = UserDefaults.standard.string(forKey: "IGUserURL")
+            appInstagramURL = IGURL!
+            self.updateInstagram()
+        }
+        
+        self.updateIndustry()
         
         // GHAccessToken
-        let url = URL(string: "https://api.github.com/user")
-        var request = URLRequest(url: url!)
         
-        let headers: HTTPHeaders = [
-            "Authorization": UserDefaults.standard.string(forKey: "GHAccessToken")!
-        ]
-        
-        let accessToken = UserDefaults.standard.string(forKey: "GHAccessToken") as! String
-        
-        
-        
-        if let myUrl = url {
-            var urlRequest = URLRequest(url: myUrl)
-            urlRequest.httpMethod = HTTPMethod.get.rawValue
+        if (githubConnected){
+            let url = URL(string: "https://api.github.com/user")
+            var request = URLRequest(url: url!)
             
-            urlRequest.addValue(" token \(accessToken)", forHTTPHeaderField: "Authorization")
-            urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+            let headers: HTTPHeaders = [
+                "Authorization": UserDefaults.standard.string(forKey: "GHAccessToken")!
+            ]
             
-            Alamofire.request(urlRequest)
-                .responseJSON { response in
-                    let JSONresponse = response.result.value as! NSDictionary
-                    
-                let GHUserHTML = JSONresponse["html_url"]!
-                    
-                appGithubURL = GHUserHTML as! String
+            let accessToken = UserDefaults.standard.string(forKey: "GHAccessToken") as! String
             
-                UserDefaults.standard.set(GHUserHTML, forKey: "GHUserURL")
+            
+            
+            if let myUrl = url {
+                var urlRequest = URLRequest(url: myUrl)
+                urlRequest.httpMethod = HTTPMethod.get.rawValue
                 
-                self.updateSwift()
-                self.performSegue(withIdentifier: "registrationSuccess", sender: self)
+                urlRequest.addValue(" token \(accessToken)", forHTTPHeaderField: "Authorization")
+                urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+                
+                Alamofire.request(urlRequest)
+                    .responseJSON { response in
+                        let JSONresponse = response.result.value as! NSDictionary
+                        
+                    let GHUserHTML = JSONresponse["html_url"]!
+                        
+                    appGithubURL = GHUserHTML as! String
+                
+                    UserDefaults.standard.set(GHUserHTML, forKey: "GHUserURL")
+                    
+                    self.updateGithub()
+                        
+                }
             }
+        } else {
+            self.performSegue(withIdentifier: "registrationSuccess", sender: self)
         }
     }
     
     
-    @IBAction func startConnect(_ sender: Any) {
-        firstLogin = true
-    }
+
 }
 
 extension SocialViewController: UICollectionViewDelegate, UICollectionViewDataSource {

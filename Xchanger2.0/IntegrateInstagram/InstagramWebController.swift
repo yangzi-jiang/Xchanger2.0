@@ -116,6 +116,8 @@ class InstagramWebController: UIViewController, WKNavigationDelegate {
                         DispatchQueue.main.async {
                                 self.navigationController?.setNavigationBarHidden(true, animated: false)
                             self.navigationController?.popViewController(animated: true)
+                            
+                            instagramConnected = true
                         }
                         
                         

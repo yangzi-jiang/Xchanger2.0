@@ -57,6 +57,15 @@ class ContactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Process the image
+    
+        myImage.layer.borderWidth = 1.0
+        myImage.layer.masksToBounds = false
+        myImage.layer.borderColor = UIColor.white.cgColor
+        myImage.layer.cornerRadius = myImage.frame.size.width / 2
+        myImage.clipsToBounds = true
+        
+        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
 
         
@@ -81,6 +90,7 @@ class ContactViewController: UIViewController {
             self.myEmail = (value?[self.userID] as? String)!
             print(self.myEmail)
         }
+        
         
         // Pull the person's phone number
         

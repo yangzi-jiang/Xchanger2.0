@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJI-pe-Bb2">
-                                <rect key="frame" x="30" y="654" width="315" height="50"/>
+                                <rect key="frame" x="30" y="635" width="315" height="50"/>
                                 <color key="backgroundColor" red="0.38203384051478761" green="0.74220147501998746" blue="0.69339814613362893" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="VCy-sv-leT"/>
@@ -72,7 +72,7 @@
                             <constraint firstItem="9Ff-Gb-0rK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="6eY-MG-xzk"/>
                             <constraint firstItem="9Ff-Gb-0rK" firstAttribute="centerX" secondItem="LmU-xC-6Ey" secondAttribute="centerX" id="7OY-W7-6kY"/>
                             <constraint firstItem="AJI-pe-Bb2" firstAttribute="trailing" secondItem="LmU-xC-6Ey" secondAttribute="trailing" id="C2y-V7-xg5"/>
-                            <constraint firstItem="AJI-pe-Bb2" firstAttribute="top" secondItem="LmU-xC-6Ey" secondAttribute="bottom" constant="40" id="FGY-Ur-Kyn"/>
+                            <constraint firstItem="AJI-pe-Bb2" firstAttribute="top" secondItem="LmU-xC-6Ey" secondAttribute="bottom" constant="21" id="FGY-Ur-Kyn"/>
                             <constraint firstItem="LmU-xC-6Ey" firstAttribute="top" secondItem="Dn7-sZ-UyW" secondAttribute="bottom" constant="35" id="FSF-fv-nTH"/>
                             <constraint firstItem="AJI-pe-Bb2" firstAttribute="leading" secondItem="LmU-xC-6Ey" secondAttribute="leading" id="L53-mz-pd4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dn7-sZ-UyW" secondAttribute="trailing" constant="14" id="PLL-5j-jJU"/>
@@ -80,7 +80,7 @@
                             <constraint firstItem="LmU-xC-6Ey" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Y4W-KU-Fvn"/>
                             <constraint firstItem="Dn7-sZ-UyW" firstAttribute="centerX" secondItem="LmU-xC-6Ey" secondAttribute="centerX" id="b9E-F1-905"/>
                             <constraint firstItem="Dn7-sZ-UyW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="pHg-Tc-OQ5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AJI-pe-Bb2" secondAttribute="bottom" constant="74" id="u3S-9X-B66"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AJI-pe-Bb2" secondAttribute="bottom" constant="93" id="u3S-9X-B66"/>
                             <constraint firstItem="Dn7-sZ-UyW" firstAttribute="top" secondItem="9Ff-Gb-0rK" secondAttribute="bottom" constant="70" id="zMt-hJ-0eQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -319,18 +319,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 11" translatesAutoresizingMaskIntoConstraints="NO" id="ZCZ-g9-G68">
-                                <rect key="frame" x="-50" y="0.0" width="474" height="574"/>
+                                <rect key="frame" x="-52" y="0.0" width="476" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2274509804" green="0.84705882349999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BUILD YOUR PROFILE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unF-NE-aZy">
-                                <rect key="frame" x="102" y="67" width="177" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click to add it to your profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnO-vu-sp0">
                                 <rect key="frame" x="13" y="582" width="206" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -392,6 +384,17 @@
                                     <outlet property="dataSource" destination="Hu2-40-eE3" id="fN4-Ec-OOe"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWm-0J-UJq">
+                                <rect key="frame" x="13" y="383" width="55" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="weO-Gp-HkK">
+                                <rect key="frame" x="32" y="410" width="310" height="148"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1U0-7G-YMb"/>
@@ -400,6 +403,8 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="IndustryPicker" destination="weO-Gp-HkK" id="OoN-tW-zCE"/>
+                        <outlet property="industryPicker" destination="weO-Gp-HkK" id="lLw-5T-JSc"/>
                         <outlet property="socialProfiles" destination="ECe-ET-wRX" id="4h0-rl-xSp"/>
                         <segue destination="X0m-g4-DQ3" kind="show" identifier="instagram" id="RBp-p6-ZSa"/>
                         <segue destination="96W-jy-ZEq" kind="show" identifier="github" id="33H-Sy-5CG"/>
@@ -888,7 +893,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56N-zl-DnK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.2274509804" green="0.84705882349999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.2254325449" green="0.84573727850000002" blue="0.77796930070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqL-NP-vEA">
                                 <rect key="frame" x="7" y="28" width="42" height="42"/>
@@ -922,21 +927,33 @@
                                 <rect key="frame" x="85" y="719" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="icons8-new-post-100"/>
+                                <connections>
+                                    <action selector="emailPressed:" destination="bkV-VP-Kst" eventType="touchUpInside" id="1SQ-pO-UMe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txs-iG-7H2">
                                 <rect key="frame" x="158" y="719" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Oval Copy 5"/>
+                                <connections>
+                                    <action selector="linkedinPressed:" destination="bkV-VP-Kst" eventType="touchUpInside" id="ufk-X6-b4a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeG-me-h1x">
                                 <rect key="frame" x="237" y="719" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Oval Copy 4"/>
+                                <connections>
+                                    <action selector="githubPressed:" destination="bkV-VP-Kst" eventType="touchUpInside" id="Lmt-f7-iSD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weu-ST-d4z">
                                 <rect key="frame" x="310" y="719" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Oval Copy 2"/>
+                                <connections>
+                                    <action selector="instagramPressed:" destination="bkV-VP-Kst" eventType="touchUpInside" id="oyW-dc-5R0"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="diT-vL-Yfj">
                                 <rect key="frame" x="39" y="729" width="19" height="18"/>
@@ -1352,6 +1369,73 @@
             </objects>
             <point key="canvasLocation" x="12386" y="1239"/>
         </scene>
+        <!--Swiping Collection View Controller-->
+        <scene sceneID="Plr-id-2vo">
+            <objects>
+                <collectionViewController id="jhM-mY-gtg" customClass="SwipingCollectionViewController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xqv-6g-o4E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t0Y-DG-3b3">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PageCell" id="kOz-To-AIG">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PageCell1" id="GHm-c9-78k">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PageCell2" id="GCc-zJ-gvo">
+                                <rect key="frame" x="0.0" y="128" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="jhM-mY-gtg" id="pSk-Yh-Tt8"/>
+                            <outlet property="delegate" destination="jhM-mY-gtg" id="KCA-Rg-2Iu"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="4ek-6H-Pb1"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mfb-BV-FHK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="SJh-mU-Sxw"/>
+            </objects>
+            <point key="canvasLocation" x="17040.799999999999" y="1334.4827586206898"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pgn-ok-QYz">
+            <objects>
+                <viewController id="sGw-xc-QFR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2MN-UR-3Ct">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3iN-d8-YQa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfP-UI-YsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16174" y="2126"/>
+        </scene>
         <!--Contacts-->
         <scene sceneID="7PC-kx-BOU">
             <objects>
@@ -1402,6 +1486,24 @@
             </objects>
             <point key="canvasLocation" x="9680.7999999999993" y="2101.4778325123152"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tIl-4p-Mfb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i24-mx-f5x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qYS-2W-IwV">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jhM-mY-gtg" kind="relationship" relationship="rootViewController" id="rmh-dr-edG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueC-Pe-tCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16098.4" y="1334.4827586206898"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Accepted Copy 26" width="26" height="18"/>
@@ -1425,7 +1527,7 @@
         <image name="profile" width="920" height="690"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R6c-4k-DDv"/>
+        <segue reference="KDl-2Z-HhH"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.52549213442112053" green="0.91162288025898475" blue="0.95523184537887573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

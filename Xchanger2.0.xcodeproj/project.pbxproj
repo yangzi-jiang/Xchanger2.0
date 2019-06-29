@@ -14,6 +14,7 @@
 		643BB8C822A9585E003C3E9A /* IntegrateLinkedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643BB8C722A9585E003C3E9A /* IntegrateLinkedInViewController.swift */; };
 		644A5044229F4B1000E59547 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A5043229F4B1000E59547 /* SocialViewController.swift */; };
 		644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A5045229F4CF000E59547 /* SocialProfile.swift */; };
+		644ED76622C6916000B3FEAA /* SwipingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644ED76522C6916000B3FEAA /* SwipingCollectionViewController.swift */; };
 		647AD52022B1700A00C6D6A1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD51F22B1700A00C6D6A1 /* ContainerViewController.swift */; };
 		647AD52222B1702500C6D6A1 /* ContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD52122B1702500C6D6A1 /* ContainerTableViewController.swift */; };
 		647AD52522B1C5E000C6D6A1 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD52422B1C5E000C6D6A1 /* QRCodeReader.swift */; };
@@ -68,6 +69,7 @@
 		643BB8C722A9585E003C3E9A /* IntegrateLinkedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrateLinkedInViewController.swift; sourceTree = "<group>"; };
 		644A5043229F4B1000E59547 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		644A5045229F4CF000E59547 /* SocialProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialProfile.swift; sourceTree = "<group>"; };
+		644ED76522C6916000B3FEAA /* SwipingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingCollectionViewController.swift; sourceTree = "<group>"; };
 		647AD51F22B1700A00C6D6A1 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		647AD52122B1702500C6D6A1 /* ContainerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerTableViewController.swift; sourceTree = "<group>"; };
 		647AD52422B1C5E000C6D6A1 /* QRCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
@@ -150,6 +152,14 @@
 			path = IntegrateSocialMedia;
 			sourceTree = "<group>";
 		};
+		644ED75E22C688AC00B3FEAA /* SwipingDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				644ED76522C6916000B3FEAA /* SwipingCollectionViewController.swift */,
+			);
+			path = SwipingDashboard;
+			sourceTree = "<group>";
+		};
 		647AD51E22B16FE900C6D6A1 /* SidebarMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +235,7 @@
 		64B38594229AD22300767E7F /* Xchanger2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				644ED75E22C688AC00B3FEAA /* SwipingDashboard */,
 				64E3819422C1A9710014C422 /* SingleContact */,
 				647AD52722B1CC1200C6D6A1 /* Settings */,
 				647AD52622B1CC0100C6D6A1 /* Contacts */,
@@ -617,6 +628,7 @@
 				64B3859E229AD22300767E7F /* Xchanger2_0.xcdatamodeld in Sources */,
 				64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */,
 				647AD52922B1CC5F00C6D6A1 /* SettingsViewController.swift in Sources */,
+				644ED76622C6916000B3FEAA /* SwipingCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

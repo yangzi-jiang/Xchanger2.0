@@ -215,7 +215,63 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func phonePressed(_ sender: Any) {
+        // Turns the tick off if phone is not selected, and turns it on if phone is selected
+        if (phoneNumber == true){
+            phoneTick.alpha = 0.0
+            phoneNumber = false
+        } else {
+            phoneTick.alpha = 1.0
+            phoneNumber = true
+        }
     }
+    
+    @IBAction func emailPressed(_ sender: Any) {
+        // Turns the tick off if phone is not selected, and turns it on if phone is selected
+        if (email == true){
+            emailTick.alpha = 0.0
+            email = false
+        } else {
+            emailTick.alpha = 1.0
+            email = true
+        }
+    }
+    
+    @IBAction func linkedinPressed(_ sender: Any) {
+        // Turns the tick off if linkedin is not selected, and turns it on if linkedin is selected
+        if (linkedin == true){
+            linkedinTick.alpha = 0.0
+            linkedin = false
+        } else {
+            linkedinTick.alpha = 1.0
+            linkedin = true
+        }
+    }
+    
+    @IBAction func githubPressed(_ sender: Any) {
+        // Turns the tick off if github is not selected, and turns it on if github is selected
+        if (github == true){
+            githubTick.alpha = 0.0
+            github = false
+        } else {
+            githubTick.alpha = 1.0
+            github = true
+        }
+    }
+    
+    
+    @IBAction func instagramPressed(_ sender: Any) {
+        // Turns the tick off if instagram is not selected, and turns it on if instagram is pressed
+        if (instagram == true){
+            instagramTick.alpha = 0.0
+            instagram = false
+        } else {
+            instagramTick.alpha = 1.0
+            instagram = true
+        }
+    }
+    
+    
+    
 }
 
 extension ProfileViewController: CLLocationManagerDelegate {

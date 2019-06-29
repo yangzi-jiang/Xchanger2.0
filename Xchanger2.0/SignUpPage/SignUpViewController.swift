@@ -33,6 +33,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+     let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,6 +61,10 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
 //      Pass email and passwordField data from login screen
         emailField?.text = email
         passwordField?.text = password
+        
+        
+        
+        
     }
     
     func resizedImage(at url: URL, for size: CGSize) -> UIImage? {
@@ -83,6 +89,13 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     @IBAction func signUpButtonPressed(_ sender: Any) {
+        
+        let spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)
+        spinnerIndicator.color = UIColor.black
+        spinnerIndicator.startAnimating()
+        
+    self.alertController.view.addSubview(spinnerIndicator)
         if (emailField.text == "") {
             let alertController = UIAlertController(title: "Error", message: "Please enter your email and password.", preferredStyle: .alert)
             
@@ -113,7 +126,10 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             present(alertController, animated: true, completion: nil)
         } else if (passwordField.text == "") {
+            
+            
             let alertController = UIAlertController(title: "Error", message: "Please enter your password.", preferredStyle: .alert)
+            
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
@@ -121,13 +137,17 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             present(alertController, animated: true, completion: nil)
         } else {
             // Good to sign up
-            
+    
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (authresult, error) in
                 if (error != nil){
                     // there is an error
                 } else {
-                    
-                    
+DispatchQueue.main.async {
+    
+    self.present(self.alertController, animated: false, completion: nil)
+
+                    }
+
                     let userID = Auth.auth().currentUser?.uid;//user id of the app
                     
                     appUserID = userID!
@@ -164,14 +184,31 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                     
                     let storageRef = Storage.storage().reference().child("profile_pictures").child(Auth.auth().currentUser!.uid)
                     
+    
                     if let uploadData = self.profilePicture.image?.jpegData(compressionQuality: 1.0) {
                         storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
                             if error != nil {
                                 return
                             }
                             
-                             
-                            self.performSegue(withIdentifier: "success", sender: self)
+                            DispatchQueue.main.async {
+                                self.alertController.dismiss(animated: true)
+                                
+                                let alert = UIAlertController(title: "Contact Xchanged", message: "You have added!", preferredStyle: .alert)
+                                
+                                alert.addAction(UIAlertAction(title: "Great!", style: .default, handler: { action in
+                                    //run your function here
+                                    self.performSegue(withIdentifier: "success", sender: self)
+                                }))
+                                
+                                self.present(alert, animated:true)
+                            }
+                            
+                           
+                            
+                            
+                            
+                            
                         })
                     }
                 }
