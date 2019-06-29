@@ -25,7 +25,7 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordField.isSecureTextEntry = true
@@ -82,6 +82,9 @@ class SigninViewController: UIViewController {
         }
     }
     
+    @IBAction func goBack(_ sender: Any) {
+        navigationController?.popViewController(animated: false)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is SignUpViewController
         {

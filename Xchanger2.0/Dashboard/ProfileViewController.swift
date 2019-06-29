@@ -49,6 +49,8 @@ class ProfileViewController: UIViewController {
     
     //    let wechatImage = #imageLiteral(resourceName: "Oval Copy 6")
     
+    @IBOutlet weak var industryUILabel: UILabel!
+    @IBOutlet weak var jobtitleUILabel: UILabel!
     
     // Declare variables for contact exchange
     var email = true
@@ -60,6 +62,8 @@ class ProfileViewController: UIViewController {
     let locationManager = CLLocationManager()
     
     let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -167,6 +171,26 @@ class ProfileViewController: UIViewController {
         } else {
             self.alertController.dismiss(animated:true)
         }
+        
+        // Database References
+        
+        let databaseReference = Database.database().reference()
+        
+        let jobtitlesReference = databaseReference.child("job_titles")
+        let industryReference = databaseReference.child("industry")
+        
+       
+        jobtitlesReference.observeSingleEvent(of: .value) { (snapshot) in
+             let value = snapshot.value as? NSDictionary
+            self.jobtitleUILabel.text = value?[Auth.auth().currentUser?.uid] as! String
+        }
+        
+        industryReference.observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.industryUILabel.text = value?[Auth.auth().currentUser?.uid] as! String + " | "
+        
+        }
+            
         
         checkLocationServices()
     }

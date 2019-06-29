@@ -219,6 +219,11 @@ DispatchQueue.main.async {
     }
     
     
+    @IBAction func goBack(_ sender: Any) {
+        navigationController?.popViewController(animated: false)
+    }
+    
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         //image picker controller helps with picking an image from the library
         var selectedImageFromPicker: UIImage?

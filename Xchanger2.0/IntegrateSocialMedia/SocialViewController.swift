@@ -47,7 +47,8 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     var ref: DatabaseReference!
     
-    // Check whether the user connected to his/her social media account
+
+    @IBOutlet weak var jobTitleField: UITextField!
     
   
     let userID = Auth.auth().currentUser!.uid
@@ -88,6 +89,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedIndustry = industries[row]
+        print(industries[row])
     }
     
     func updateInstagram(){
@@ -100,10 +102,16 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         appInstagramURL = IGURL!
         self.updateInstagram()
     }
+    
+    
     func updateIndustry(){
         let industry = selectedIndustry
         self.ref.child("industry/\(userID)").setValue(industry)
     
+    }
+    
+    func updateJobTitle(){
+        self.ref.child("job_titles/\(userID)").setValue(self.jobTitleField.text)
     }
     
     //  Perform seque and change the url depending on what social media it is coming from 
@@ -118,8 +126,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
         
         self.updateIndustry()
-        
-        // GHAccessToken
+        self.updateJobTitle()
         
         if (githubConnected){
             let url = URL(string: "https://api.github.com/user")
