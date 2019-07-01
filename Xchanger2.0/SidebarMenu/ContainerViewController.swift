@@ -15,7 +15,9 @@ class ContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(toggleBar), name: NSNotification.Name("ToggleBar"), object: nil)
     }
     

@@ -76,6 +76,8 @@ class ProfileViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(showProfile), name: NSNotification.Name("ShowProfile"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(logout), name: NSNotification.Name("Logout"), object: nil)
+        
         
         // Create a QR Code with User ID
         let data = appUserID.data(using: .ascii, allowLossyConversion: false)
@@ -143,6 +145,8 @@ class ProfileViewController: UIViewController {
             } else {
                 self.phoneTick.alpha = 0.0
             }
+            
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         }
         
@@ -175,6 +179,8 @@ class ProfileViewController: UIViewController {
             myQRCode.image = appQRCode
         }
         
+        
+        
       
         
 //        if (signUp == true){
@@ -187,8 +193,9 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         if (appProfilePicture.size.height == 0.0 && appProfilePicture.size.width == 0.0){
-            let reference = Storage.storage().reference().child("profile_pictures").child(appUserID)
+            let reference = Storage.storage().reference().child("profile_pictures").child(Auth.auth().currentUser!.uid)
             
+           
             reference.getData(maxSize: (1024 * 1024 * 1024)) { (data, error) in
                 if let _error = error {
                     print("works")
@@ -223,6 +230,16 @@ class ProfileViewController: UIViewController {
             self.industryUILabel.text = value?[Auth.auth().currentUser?.uid] as! String + " | "
         
         }
+        
+        let namesReference = databaseReference.child("full_names")
+        
+        namesReference.observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.myName.text = value?[Auth.auth().currentUser?.uid] as! String
+            
+        }
+        
+        
             
         
         checkLocationServices()
@@ -372,5 +389,22 @@ extension ProfileViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Fail")
+    }
+    
+    @objc func logout(){
+        
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        self.performSegue(withIdentifier: "unwind", sender: self)
+
+        
+//
+//        self.performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
+
+        
     }
 }

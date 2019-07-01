@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ContainerTableViewController: UITableViewController {
 
@@ -36,10 +37,14 @@ class ContainerTableViewController: UITableViewController {
         case 0: NotificationCenter.default.post(name: NSNotification.Name("ShowProfile"), object: nil)
         case 1: NotificationCenter.default.post(name: NSNotification.Name("ShowContacts"), object: nil)
         case 2: NotificationCenter.default.post(name: NSNotification.Name("ShowSettings"), object: nil)
-        case 3: break
+        case 3:
+            NotificationCenter.default.post(name: NSNotification.Name("Logout"), object: nil)
         default: break
         }
     }
+
+func signOut(){
+}
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
