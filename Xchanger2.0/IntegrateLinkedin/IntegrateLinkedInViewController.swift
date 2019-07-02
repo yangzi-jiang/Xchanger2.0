@@ -15,12 +15,15 @@ class IntegrateLinkedInViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         
+//        self.performSegue(withIdentifier: "manual", sender: self)
+        
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         webView = WKWebView(frame: .zero, configuration: WKWebViewConfiguration())
         webView.navigationDelegate = self
-        startAuthorization()
+        
+//        startAuthorization()
     }
     func startAuthorization(){
         

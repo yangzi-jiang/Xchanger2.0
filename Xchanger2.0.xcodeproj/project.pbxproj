@@ -39,6 +39,7 @@
 		64CE946222A6AC7800E6A4C5 /* InstagramWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CE946122A6AC7800E6A4C5 /* InstagramWebController.swift */; };
 		64D9DCA822BEF8FB0032E7E0 /* RegisteredSocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9DCA722BEF8FB0032E7E0 /* RegisteredSocialProfile.swift */; };
 		64E3819622C1A9990014C422 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E3819522C1A9990014C422 /* ContactViewController.swift */; };
+		64FEEC0C22CB9FF900888312 /* ManuallyIntegrateLinkedin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEEC0B22CB9FF900888312 /* ManuallyIntegrateLinkedin.swift */; };
 		735D50ED3527AD28A150B523 /* Pods_Xchanger2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA7B7E8B2EE999FB8DE7838 /* Pods_Xchanger2_0Tests.framework */; };
 		F1AA193ABA295BF798E5941B /* Pods_Xchanger2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DFE47702CA7729025F38A1 /* Pods_Xchanger2_0.framework */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		64CE946122A6AC7800E6A4C5 /* InstagramWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramWebController.swift; sourceTree = "<group>"; };
 		64D9DCA722BEF8FB0032E7E0 /* RegisteredSocialProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredSocialProfile.swift; sourceTree = "<group>"; };
 		64E3819522C1A9990014C422 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactViewController.swift; path = Xchanger2.0/ContactViewController.swift; sourceTree = SOURCE_ROOT; };
+		64FEEC0B22CB9FF900888312 /* ManuallyIntegrateLinkedin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuallyIntegrateLinkedin.swift; sourceTree = "<group>"; };
 		712FEAE39A36019A4D068AA6 /* Pods-Xchanger2.0UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0UITests.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0UITests/Pods-Xchanger2.0UITests.release.xcconfig"; sourceTree = "<group>"; };
 		86CEA1009F2743C9AF5697A6 /* Pods-Xchanger2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		8CA7B7E8B2EE999FB8DE7838 /* Pods_Xchanger2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xchanger2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				643BB8C722A9585E003C3E9A /* IntegrateLinkedInViewController.swift */,
+				64FEEC0B22CB9FF900888312 /* ManuallyIntegrateLinkedin.swift */,
 			);
 			path = IntegrateLinkedin;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				647AD52522B1C5E000C6D6A1 /* QRCodeReader.swift in Sources */,
 				647AD52B22B1CC8E00C6D6A1 /* ContactsViewController.swift in Sources */,
 				64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */,
+				64FEEC0C22CB9FF900888312 /* ManuallyIntegrateLinkedin.swift in Sources */,
 				647AD52222B1702500C6D6A1 /* ContainerTableViewController.swift in Sources */,
 				64B1027A22A7E4EE0040ADC8 /* GitHubViewController.swift in Sources */,
 				64826DAD22AC65290047196A /* ProfileViewController.swift in Sources */,
