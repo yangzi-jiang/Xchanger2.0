@@ -169,6 +169,17 @@ class ContactViewController: UIViewController {
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         myMap.setRegion(coordinateRegion, animated: true)
     }
+    
+    // Lock Portrait Orientation
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+        
+    }
+    
     @IBAction func phoneClicked(_ sender: Any) {
         let checkPhone = Database.database().reference().child("available").child(Auth.auth().currentUser!.uid).child(self.userID)
         let phoneNumberRef = Database.database().reference().child("phone_numbers")

@@ -68,6 +68,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+        
         // See what is available to share for the current person
         
 //        var available0 = Database.database().reference().root.child("shares").child(Auth.auth().currentUser!.uid)
@@ -205,6 +207,9 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // Lock Portrait Orientation
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+        
         if (appProfilePicture.size.height == 0.0 && appProfilePicture.size.width == 0.0){
             let reference = Storage.storage().reference().child("profile_pictures").child(Auth.auth().currentUser!.uid)
             
@@ -381,6 +386,12 @@ class ProfileViewController: UIViewController {
             instagram = true
             changeSharesChild(changed: "instagram", boolValue: true)
         }
+    }
+    
+  
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+        
     }
 }
 

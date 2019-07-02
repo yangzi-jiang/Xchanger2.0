@@ -99,5 +99,16 @@ func signOut(){
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    // Lock Portrait Orientation
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+        
+    }
 
 }
