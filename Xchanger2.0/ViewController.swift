@@ -12,6 +12,11 @@ var didSignUp = false
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var InitialBackground: UIImageView!
+    @IBOutlet weak var InitialQuestion: UILabel!
+    @IBOutlet weak var SocialButterfly: UIButton!
+    @IBOutlet weak var EventPlanner: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,8 +24,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
+
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
     
-
-
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+        
+    }
 }
 

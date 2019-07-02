@@ -169,4 +169,14 @@ class ContactViewController: UIViewController {
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         myMap.setRegion(coordinateRegion, animated: true)
     }
+    
+    // Lock Portrait Orientation
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+        
+    }
 }
