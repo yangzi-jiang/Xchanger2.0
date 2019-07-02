@@ -478,7 +478,7 @@
                                 <rect key="frame" x="0.0" y="86" width="375" height="725"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="ooV-o0-vhj" kind="embed" id="RCJ-30-USM"/>
+                                    <segue destination="Cpy-0s-Snh" kind="embed" id="ZPf-RD-a7A"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -1336,6 +1336,7 @@
                     </view>
                     <connections>
                         <outlet property="IndustryPickerView" destination="3DO-P2-seg" id="AWn-dR-9Em"/>
+                        <outlet property="industryPickerView" destination="3DO-P2-seg" id="0Vm-b0-eRb"/>
                         <outlet property="myEmail" destination="tZr-NK-Hwf" id="LKw-Qq-iaT"/>
                         <outlet property="myJobTitle" destination="rYM-Fi-8SM" id="EU3-Va-1tJ"/>
                         <outlet property="myPhoneNumber" destination="xB2-Pa-jZK" id="l5W-De-A9F"/>
@@ -1422,12 +1423,27 @@
             </objects>
             <point key="canvasLocation" x="4201" y="3592"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fiG-lq-iTb">
+            <objects>
+                <viewController id="Cpy-0s-Snh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6tn-S9-gc5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xKe-qs-zy9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0IB-rL-Saj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5360.8000000000002" y="2391.5024630541875"/>
+        </scene>
         <!--Git Hub View Controller-->
         <scene sceneID="Wc9-ch-EPq">
             <objects>
                 <viewController id="ooV-o0-vhj" customClass="GitHubViewController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3wl-1J-Bg7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="57b-kN-psR"/>
@@ -1435,7 +1451,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6G-oF-ec6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5356" y="2784.6059113300494"/>
+            <point key="canvasLocation" x="5322" y="3081"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="crZ-jT-2SL">

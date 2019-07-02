@@ -103,6 +103,28 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     @IBAction func updateDatabase(_ sender: Any) {
+        // ref.child("shares").child(Auth.auth().currentUser!.uid).child("instagram").setValue(true)
+        
+        // Update email address
+        var emailAddressReference = reference.child("emails").child(self.myUser as! String)
+        emailAddressReference.setValue(myEmail.text)
+        
+        // Update phone number
+        var phoneNumberReference = reference.child("phone_numbers").child(self.myUser as! String)
+        phoneNumberReference.setValue(myPhoneNumber.text)
+        
+        // Update job title
+        
+        var jobTitleReference = reference.child("job_titles").child(self.myUser as! String)
+        jobTitleReference.setValue(myJobTitle.text)
+        
+        // Update industry
+        let industry = selectedIndustry
+        if (selectedIndustry != ""){
+             reference.child("industry/\(self.myUser as! String)").setValue(industry)
+        }
+       
+    
     }
     
     

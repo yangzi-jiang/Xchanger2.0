@@ -109,7 +109,11 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func updateIndustry(){
         let industry = selectedIndustry
-        self.ref.child("industry/\(userID)").setValue(industry)
+        if (selectedIndustry != ""){
+            self.ref.child("industry/\(userID)").setValue(industry)
+        } else {
+             self.ref.child("industry/\(userID)").setValue(self.industries[0])
+        }
     
     }
     
