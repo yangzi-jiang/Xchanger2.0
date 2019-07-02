@@ -7,17 +7,104 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
-class SettingsViewController: UIViewController {
-
+class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+   
+    
+    // Fields
+    
+    @IBOutlet weak var myEmail: UITextField!
+    @IBOutlet weak var myPhoneNumber: UITextField!
+    @IBOutlet weak var myJobTitle: UITextField!
+    
+    @IBOutlet weak var industryPickerView: UIPickerView!
+    
+    var selectedIndustry = String()
+    
+    var industries = ["Information Technology", "Marketing", "Human Resources", "Computer Software", "Financial Services", "Staffing and Recruiting", "Internet", "Management Consulting", "Telecommunications", "Retail"]
+    
+    var reference = Database.database().reference()
+    var myUser = Auth.auth().currentUser?.uid as? NSString
+    
+    // Update Picker View
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return industries.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return industries[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedIndustry = industries[row]
+        print(industries[row])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setup the picker
+        industryPickerView.delegate = self
+        industryPickerView.dataSource = self
+        
+        var emailAddressReference = reference.child("emails")
+        
+        emailAddressReference.observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.myEmail.text = value![self.myUser] as! String
+        }
+        
+        var phoneNumberReference = reference.child("phone_numbers")
+        
+        phoneNumberReference.observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.myPhoneNumber.text = value![self.myUser] as! String
+        }
+        
+        var jobTitleReference = reference.child("job_titles")
+        
+        jobTitleReference.observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            self.myJobTitle.text = value![self.myUser] as! String
+        }
+        
+        var industryReference = reference.child("industry")
+        
+        industryReference.observeSingleEvent(of: .value) { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            var industry = value![self.myUser] as! String
+            
+            var myIndex = 0
+            
+            for i in 0 ..< self.industries.count {
+                if (self.industries[i] == industry){
+                    myIndex = i
+                }
+            }
+            
+            self.industryPickerView.selectRow(myIndex, inComponent: 0, animated: true)
 
+        }
+        
     }
+    
+    
+
+
 
     @IBAction func goBack(_ sender: Any) {
         navigationController?.popViewController(animated: false)
     }
+    
+    @IBAction func updateDatabase(_ sender: Any) {
+    }
+    
     
 
 }

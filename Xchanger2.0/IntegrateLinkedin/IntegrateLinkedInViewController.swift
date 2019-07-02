@@ -34,7 +34,7 @@ class IntegrateLinkedInViewController: UIViewController, WKNavigationDelegate {
         let state = "linkedin\(Int(NSDate().timeIntervalSince1970))"
         
         // Set preferred scope
-        let scope = "r_liteprofile"
+        let scope = "r_basicprofile"
         
         // Create the authorization URL string for LinkedIn
         
@@ -105,6 +105,7 @@ class IntegrateLinkedInViewController: UIViewController, WKNavigationDelegate {
                         
                         
                         let dataDictionary  = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                        
                         
                         let accessToken = dataDictionary?["access_token"] as! String
                         

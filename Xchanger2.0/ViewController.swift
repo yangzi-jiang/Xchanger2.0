@@ -8,6 +8,8 @@
 
 import UIKit
 
+var didSignUp = false
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

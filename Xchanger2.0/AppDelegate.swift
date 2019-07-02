@@ -30,11 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Auth.auth().addStateDidChangeListener { [weak self] (_, user) in
             if let user = user {
                 // user is already logged in
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! ContainerViewController
-                let navigationController = UINavigationController(rootViewController: newViewController)
-                let appdelegate = UIApplication.shared.delegate as! AppDelegate
-                appdelegate.window!.rootViewController = navigationController
+                if (didSignUp) {
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! ContainerViewController
+                    let navigationController = UINavigationController(rootViewController: newViewController)
+                    let appdelegate = UIApplication.shared.delegate as! AppDelegate
+                    appdelegate.window!.rootViewController = navigationController
+                }
             } else {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "firstPage") as! ViewController

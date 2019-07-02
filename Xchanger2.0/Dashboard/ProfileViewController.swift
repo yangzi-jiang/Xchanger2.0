@@ -399,6 +399,7 @@ extension ProfileViewController: CLLocationManagerDelegate {
             print ("Error signing out: %@", signOutError)
         }
         
+        didSignUp = false
         self.performSegue(withIdentifier: "unwind", sender: self)
 
         
