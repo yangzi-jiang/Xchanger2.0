@@ -137,6 +137,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             present(alertController, animated: true, completion: nil)
         } else {
             // Good to sign up
+            
+            finishedSignUp = true
     
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (authresult, error) in
                 if (error != nil){

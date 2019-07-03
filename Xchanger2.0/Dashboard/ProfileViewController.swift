@@ -407,13 +407,16 @@ extension ProfileViewController: CLLocationManagerDelegate {
     @objc func logout(){
         
         do {
+            didSignUp = false
+            finishedSignUp = false
             try Auth.auth().signOut()
+            self.performSegue(withIdentifier: "unwind", sender: self)
+            
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
         
-        didSignUp = false
-        self.performSegue(withIdentifier: "unwind", sender: self)
+        
 
         
 //

@@ -9,6 +9,7 @@
 import UIKit
 
 var didSignUp = false
+var finishedSignUp = false
 
 class ViewController: UIViewController {
 

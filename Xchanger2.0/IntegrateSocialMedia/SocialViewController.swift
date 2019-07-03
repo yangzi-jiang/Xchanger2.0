@@ -176,6 +176,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     @IBAction func restore(_ sender: Any) {
         didSignUp = true
+        finishedSignUp = true
     }
     
 
