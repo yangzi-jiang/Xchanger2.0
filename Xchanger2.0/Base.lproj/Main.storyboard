@@ -1163,6 +1163,9 @@
                                 <rect key="frame" x="4" y="671" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="icons8-shake-phone-100"/>
+                                <connections>
+                                    <action selector="phoneClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="r5W-z6-Nvr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf7-bl-iFA">
                                 <rect key="frame" x="77" y="671" width="65" height="65"/>
@@ -1343,7 +1346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="681-hm-eLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12096.799999999999" y="2077.8325123152708"/>
+            <point key="canvasLocation" x="13910" y="963"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EIa-bC-wgv">

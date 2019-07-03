@@ -169,4 +169,28 @@ class ContactViewController: UIViewController {
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         myMap.setRegion(coordinateRegion, animated: true)
     }
+    @IBAction func phoneClicked(_ sender: Any) {
+        let checkPhone = Database.database().reference().child("available").child(Auth.auth().currentUser!.uid).child(self.userID)
+        let phoneNumberRef = Database.database().reference().child("phone_numbers")
+        
+        
+        
+        checkPhone.observeSingleEvent(of: .value) { (snapshot) in
+            let dictionary = snapshot.value as? NSDictionary
+            
+            
+            let phoneNumber = dictionary!["phone_number"] as? Bool
+
+            
+            if (phoneNumber!){
+                phoneNumberRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                    let dictionary1 = snapshot.value as? NSDictionary
+                    let phone = dictionary1![self.userID] as? String
+                    guard let number = URL(string: "tel://" + phone!) else { return }
+                    UIApplication.shared.open(number)
+                })
+            }
+        }
+        
+    }
 }

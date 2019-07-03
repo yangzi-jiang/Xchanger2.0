@@ -67,9 +67,34 @@ class QRCodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                     
                     generator.impactOccurred()
-                    var connectPersonId = object.stringValue!
+                    let connectPersonId = object.stringValue!
                     
-                    var refName = Database.database().reference().root.child("full_names").child(connectPersonId)
+                    
+                    // Update what the connected person could see
+                    
+                    let available0 = Database.database().reference().root.child("shares").child(Auth.auth().currentUser!.uid)
+                    
+                    let available1 = Database.database().reference().root.child("available").child(connectPersonId).child(Auth.auth().currentUser!.uid)
+                    
+                    available0.observeSingleEvent(of: .value) { (snapshot) in
+                        let dictionary = snapshot.value as? NSDictionary
+                        available1.setValue(dictionary)
+                    }
+                    
+                    // Update what the current person could see
+                    
+                    let available2 = Database.database().reference().root.child("shares").child(connectPersonId)
+                   
+                    
+                    let available3 = Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child(connectPersonId)
+                    
+                    available2.observeSingleEvent(of: .value) { (snapshot) in
+                        let dictionary = snapshot.value as? NSDictionary
+                        available3.setValue(dictionary)
+                    }
+                    
+                    
+                    let refName = Database.database().reference().root.child("full_names").child(connectPersonId)
                     
                     refName.observeSingleEvent(of: .value, with: { (snapshot) in
                         let name = snapshot.value as? String
@@ -83,7 +108,7 @@ class QRCodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                         self.present(alert, animated: true)
                     })
                     
-                    var ref1 = Database.database().reference().root.child("exchanges").child(Auth.auth().currentUser!.uid).child(connectPersonId)
+                    let ref1 = Database.database().reference().root.child("exchanges").child(Auth.auth().currentUser!.uid).child(connectPersonId)
                     
                     var coordinates = [Float]()
                     coordinates.append(Float(userLongitude))
@@ -93,11 +118,20 @@ class QRCodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                         ref1.setValue(coordinates)
                     })
                     
-                    var ref2 = Database.database().reference().root.child("exchanges").child(connectPersonId).child(Auth.auth().currentUser!.uid)
+                    let ref2 = Database.database().reference().root.child("exchanges").child(connectPersonId).child(Auth.auth().currentUser!.uid)
                     
                     ref2.observeSingleEvent(of: .value, with: { (snapshot) in
                         ref2.setValue(coordinates)
                     })
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
 //                    
 //                    navigationController?.popViewController(animated: false)
                 }
