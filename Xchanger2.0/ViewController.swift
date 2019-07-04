@@ -21,6 +21,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationController?.isNavigationBarHidden = true
+        
+        SocialButterfly.titleLabel?.minimumScaleFactor = 0.5;
+        SocialButterfly.titleLabel?.adjustsFontSizeToFitWidth = true;
+        
+        EventPlanner.titleLabel?.minimumScaleFactor = 0.5;
+        EventPlanner.titleLabel?.adjustsFontSizeToFitWidth = true;
     }
     
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
