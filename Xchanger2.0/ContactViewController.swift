@@ -11,6 +11,7 @@ import Firebase
 import FirebaseStorage
 import FirebaseDatabase
 import MapKit
+import MessageUI
 
 class Pin: NSObject, MKAnnotation {
     let title: String?
@@ -28,7 +29,7 @@ class Pin: NSObject, MKAnnotation {
     }
 }
 
-class ContactViewController: UIViewController {
+class ContactViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     // Shows where the user's met
     @IBOutlet weak var myMap: MKMapView!
@@ -52,6 +53,10 @@ class ContactViewController: UIViewController {
     var latitude = Float()
     
     
+    let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
+    
+    
+    
     
     var databaseReference = Database.database().reference()
     let storageReference = Storage.storage().reference()
@@ -59,6 +64,17 @@ class ContactViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+   
+        let spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)
+        spinnerIndicator.color = UIColor.black
+        spinnerIndicator.startAnimating()
+        
+        
+        self.alertController.view.addSubview(spinnerIndicator)
+        self.present(self.alertController, animated: false, completion: nil)
+        
         
         // Process the image
     
@@ -114,6 +130,8 @@ class ContactViewController: UIViewController {
                 if let _data  = data {
                     let image:UIImage! = UIImage(data: _data)
                     self.myImage.image = image
+                    self.alertController.dismiss(animated:true)
+
                 }
             }
         }
@@ -161,13 +179,70 @@ class ContactViewController: UIViewController {
             
             self.jobtitleUILabel.text = jobTitle!
         }
+        
+    
     }
+    
+
     
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
         myMap.setRegion(coordinateRegion, animated: true)
+    }
+    
+    
+    @IBAction func emailClicked(_ sender: Any) {
+        let checkEmail = Database.database().reference().child("available").child(Auth.auth().currentUser!.uid).child(self.userID)
+        let emailRef = Database.database().reference().child("emails")
+        
+        checkEmail.observeSingleEvent(of: .value) { (snapshot) in
+            let dictionary = snapshot.value as? NSDictionary
+            let email = dictionary!["email"] as? Bool
+            
+            if (email!){
+                emailRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                    let dictionary1 = snapshot.value as? NSDictionary
+                    let email = dictionary1![self.userID] as? String
+                    if MFMailComposeViewController.canSendMail() {
+                        let mail = MFMailComposeViewController()
+                        mail.mailComposeDelegate = self
+                        mail.setToRecipients([email!])
+                        mail.setMessageBody("<p>It was nice to meet you through BOPP!</p>", isHTML: true)
+                        
+                        self.present(mail, animated: true)
+                    } else {
+                        // show failure alert
+                    }
+                })} else {
+                //alert
+            }
+        }
+    }
+    
+    @IBAction func githubClicked(_ sender: Any) {
+        let checkGitHub = Database.database().reference().child("available").child(Auth.auth().currentUser!.uid).child(self.userID)
+        let githubRef = Database.database().reference().child("users").child(self.userID)
+        
+        checkGitHub.observeSingleEvent(of: .value) { (snapshot) in
+            let dictionary = snapshot.value as? NSDictionary
+            let github = dictionary!["github"] as? Bool
+            
+            if (github!){
+                githubRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                    let dictionary1 = snapshot.value as? NSDictionary
+                    let myGithub = dictionary1!["GitUserURL"] as? String
+                    
+                    if let url = URL(string: myGithub!) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                })
+            } else {
+                // alert
+            }
+        }
+        
     }
     @IBAction func phoneClicked(_ sender: Any) {
         let checkPhone = Database.database().reference().child("available").child(Auth.auth().currentUser!.uid).child(self.userID)
@@ -189,8 +264,58 @@ class ContactViewController: UIViewController {
                     guard let number = URL(string: "tel://" + phone!) else { return }
                     UIApplication.shared.open(number)
                 })
+            } else {
+                // alert
             }
         }
         
+    }
+    
+    @IBAction func instagramClicked(_ sender: Any) {
+        let checkInstagram = Database.database().reference().child("available").child(Auth.auth().currentUser!.uid).child(self.userID)
+        let instagramRef = Database.database().reference().child("users").child(self.userID)
+        
+        checkInstagram.observeSingleEvent(of: .value) { (snapshot) in
+            let dictionary = snapshot.value as? NSDictionary
+            let instagram = dictionary!["instagram"] as? Bool
+            
+            if (instagram!){
+                instagramRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                    let dictionary1 = snapshot.value as? NSDictionary
+                    let myInsta = dictionary1!["IGUserURL"] as? String
+                    
+                    if let url = URL(string: myInsta!) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                })
+            } else {
+                // alert
+            }
+        }
+    }
+    @IBAction func linkedinPressed(_ sender: Any) {
+        let checkLinkedin = Database.database().reference().child("available").child(Auth.auth().currentUser!.uid).child(self.userID)
+        let linkedinRef = Database.database().reference().child("users").child(self.userID)
+        
+        checkLinkedin.observeSingleEvent(of: .value) { (snapshot) in
+            let dictionary = snapshot.value as? NSDictionary
+            let linkedin = dictionary!["linkedin"] as? Bool
+            
+            if (linkedin!){
+                linkedinRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                    let dictionary1 = snapshot.value as? NSDictionary
+                    let myLinkedin = dictionary1!["LIUserURL"] as? String
+                    
+                    if let url = URL(string: myLinkedin!) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                })
+            } else {
+                // alert
+            }
+        }
+    }
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
 }

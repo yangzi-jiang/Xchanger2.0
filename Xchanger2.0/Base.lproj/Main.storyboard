@@ -1138,7 +1138,7 @@
         <!--Contact View Controller-->
         <scene sceneID="0lO-jf-JHM">
             <objects>
-                <viewController id="xJw-Yy-g4V" customClass="ContactViewController" customModule="Xchanger2_0" sceneMemberID="viewController">
+                <viewController id="xJw-Yy-g4V" customClass="ContactViewController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c8w-7F-jS7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="746"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1171,21 +1171,33 @@
                                 <rect key="frame" x="77" y="671" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="icons8-new-post-100"/>
+                                <connections>
+                                    <action selector="emailClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="YyD-lB-Ymr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbN-Vr-qRb">
                                 <rect key="frame" x="150" y="671" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Oval Copy 5"/>
+                                <connections>
+                                    <action selector="linkedinPressed:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="KuP-p7-ahg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvY-cU-MBo">
                                 <rect key="frame" x="229" y="671" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Oval Copy 4"/>
+                                <connections>
+                                    <action selector="githubClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="GE5-lQ-Nxq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPd-ny-gMg">
                                 <rect key="frame" x="302" y="671" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="Oval Copy 2"/>
+                                <connections>
+                                    <action selector="instagramClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="TpL-JX-IQh"/>
+                                </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="24o-Ix-X8A">
                                 <rect key="frame" x="0.0" y="309" width="375" height="340"/>

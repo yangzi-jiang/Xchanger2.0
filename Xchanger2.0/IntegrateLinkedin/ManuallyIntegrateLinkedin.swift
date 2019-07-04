@@ -25,7 +25,7 @@ class ManuallyIntegrateLinkedin: ViewController {
         
         
         var reference = Database.database().reference()
-    reference.child("linkedin_profiles").child(user!).setValue(myLinkedinPage.text)
+        reference.child("users").child(user!).child("LIUserURL").setValue(myLinkedinPage.text)
         
         self.navigationController?.popViewController(animated: true)
     }

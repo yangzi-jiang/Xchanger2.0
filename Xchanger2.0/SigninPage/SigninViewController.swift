@@ -35,8 +35,20 @@ class SigninViewController: UIViewController {
 //    @IBOutlet weak var background: UIImageView!
 //    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithName:@"Illustration1.png"]];
 //    UIImageView.alpha = 0.5; //Alpha runs from 0.0 to 1.0
+    let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
     
     @IBAction func loginButtonPressed(_ sender: Any) {
+        
+        
+        let spinnerIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)
+        spinnerIndicator.color = UIColor.black
+        spinnerIndicator.startAnimating()
+        
+        
+        self.alertController.view.addSubview(spinnerIndicator)
+        self.present(self.alertController, animated: false, completion: nil)
+        
         if (emailField.text!.isValidEmail()){ // Check whether the email is valid
             Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (result, error) in
                 // Check whether the user exists in Firebase
@@ -44,6 +56,7 @@ class SigninViewController: UIViewController {
 
                 if (error != nil){
                     // Login failed
+                    self.alertController.dismiss(animated: true, completion: nil)
                     let alert = UIAlertController(title: "Login Failed!", message: "Check your email and password.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     alert.addAction(UIAlertAction(title: "Reset Password", style: .default, handler: nil))
@@ -63,6 +76,7 @@ class SigninViewController: UIViewController {
                             if let fullName = name {
                                 appUserName = fullName
                             }
+                             self.alertController.dismiss(animated: true, completion: nil)
                             self.performSegue(withIdentifier: "loginSuccess", sender: self)
                         })
                     }
