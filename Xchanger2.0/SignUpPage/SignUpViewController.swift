@@ -62,11 +62,15 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         emailField?.text = email
         passwordField?.text = password
         
-        
-        
-        
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        firstNameField.resignFirstResponder()
+        lastNameField.resignFirstResponder()
+        emailField.resignFirstResponder()
+        phoneNumber.resignFirstResponder()
+        passwordField.resignFirstResponder()
+    }
     func resizedImage(at url: URL, for size: CGSize) -> UIImage? {
         guard let image = UIImage(contentsOfFile: url.path) else {
             return nil
@@ -238,6 +242,16 @@ DispatchQueue.main.async {
         
         //dismiss the page whenever user picks the image
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    // Lock Portrait Orientation
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+        
     }
 }
 

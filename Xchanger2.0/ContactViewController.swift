@@ -192,6 +192,17 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
         myMap.setRegion(coordinateRegion, animated: true)
     }
     
+    // Lock Portrait Orientation
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+        
+    }
+    
+    
     
     @IBAction func emailClicked(_ sender: Any) {
         let checkEmail = Database.database().reference().child("available").child(Auth.auth().currentUser!.uid).child(self.userID)

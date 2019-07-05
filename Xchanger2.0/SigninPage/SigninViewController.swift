@@ -25,10 +25,25 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var signUp: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordField.isSecureTextEntry = true
+        
+        login.titleLabel?.numberOfLines = 0;
+        login.titleLabel?.minimumScaleFactor = 0.5
+        login.titleLabel?.adjustsFontSizeToFitWidth = true
+        
+        signUp.titleLabel?.numberOfLines = 0;
+        signUp.titleLabel?.minimumScaleFactor = 0.5
+        signUp.titleLabel?.adjustsFontSizeToFitWidth = true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
     }
 
 //  Trying to set a background opague image
@@ -107,6 +122,16 @@ class SigninViewController: UIViewController {
                 vc.password = passwordField.text!
             }
         }
+    }
+    
+    // Lock Portrait Orientation
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+        
     }
 }
 

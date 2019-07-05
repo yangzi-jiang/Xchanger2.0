@@ -143,4 +143,14 @@ class QRCodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     @IBAction func goBack(_ sender: Any) { navigationController?.popViewController(animated: false)
     }
     
+    
+    // Lock Portrait Orientation
+    override func viewWillAppear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
+        
+    }
 }
