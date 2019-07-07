@@ -24,11 +24,11 @@ class ViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         
 //        SocialButterfly.titleLabel?.numberOfLines = 0;
-        SocialButterfly.titleLabel?.minimumScaleFactor = 0.5
-        SocialButterfly.titleLabel?.adjustsFontSizeToFitWidth = true
+//        SocialButterfly.titleLabel?.minimumScaleFactor = 0.5
+//        SocialButterfly.titleLabel?.adjustsFontSizeToFitWidth = true
 //        EventPlanner.titleLabel?.numberOfLines = 0;
-        EventPlanner.titleLabel?.minimumScaleFactor = 0.5
-        EventPlanner.titleLabel?.adjustsFontSizeToFitWidth = true
+//        EventPlanner.titleLabel?.minimumScaleFactor = 0.5
+//        EventPlanner.titleLabel?.adjustsFontSizeToFitWidth = true
     }
     
     @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
