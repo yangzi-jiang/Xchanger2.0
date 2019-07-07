@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1262,7 +1263,7 @@
                             <constraint firstItem="Weu-ST-d4z" firstAttribute="top" secondItem="WtH-vS-WJZ" secondAttribute="bottom" constant="-15" id="Rws-R0-Gmc"/>
                             <constraint firstItem="A3k-L6-T6I" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gFS-l0-zRo" secondAttribute="trailing" symbolic="YES" id="StI-ox-HVD"/>
                             <constraint firstItem="RQa-xi-dvY" firstAttribute="top" secondItem="95M-UP-4EV" secondAttribute="bottom" priority="250" constant="72.670000000000002" id="T77-Dk-q8X"/>
-                            <constraint firstItem="VNv-Df-P6N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5kQ-T8-Ews" secondAttribute="bottom" constant="8" id="U4Q-Le-d0e"/>
+                            <constraint firstItem="VNv-Df-P6N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5kQ-T8-Ews" secondAttribute="bottom" constant="5" id="U4Q-Le-d0e"/>
                             <constraint firstItem="jeh-mI-tOg" firstAttribute="top" secondItem="diT-vL-Yfj" secondAttribute="bottom" constant="-12" id="Ugq-Ar-vsg"/>
                             <constraint firstItem="A3k-L6-T6I" firstAttribute="top" secondItem="56N-zl-DnK" secondAttribute="top" id="V1N-2q-ORh"/>
                             <constraint firstItem="Txs-iG-7H2" firstAttribute="top" secondItem="cGX-v2-54H" secondAttribute="bottom" constant="21" id="VRg-dR-ekH"/>
@@ -1350,7 +1351,7 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QnD-zN-AoL">
-                                <rect key="frame" x="0.0" y="358" width="430" height="664"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="664"/>
                                 <connections>
                                     <segue destination="v7K-j6-0cc" kind="embed" id="JCd-Aa-L2R"/>
                                 </connections>
@@ -1402,7 +1403,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRf-Hf-GZQ">
-                                <rect key="frame" x="0.0" y="358" width="430" height="664"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="664"/>
                                 <connections>
                                     <segue destination="6nl-t2-kas" kind="embed" id="yrf-mJ-BVD"/>
                                 </connections>
@@ -1447,14 +1448,17 @@
             <objects>
                 <viewController id="xJw-Yy-g4V" customClass="ContactViewController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c8w-7F-jS7">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="664"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faL-Qr-NKD">
-                                <rect key="frame" x="105" y="44" width="220" height="165"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="faL-Qr-NKD">
+                                <rect key="frame" x="140" y="44" width="95" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="faL-Qr-NKD" secondAttribute="height" multiplier="1:1" id="yLv-0m-bz9"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pt-dP-xF9">
-                                <rect key="frame" x="39" y="238" width="352" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pt-dP-xF9">
+                                <rect key="frame" x="39" y="159" width="297" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5Pt-dP-xF9" secondAttribute="height" multiplier="297:31" id="A9U-tN-Ogx"/>
                                 </constraints>
@@ -1462,75 +1466,113 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KS-pF-S8I">
-                                <rect key="frame" x="4" y="671" width="65" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="icons8-shake-phone-100"/>
-                                <connections>
-                                    <action selector="phoneClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="r5W-z6-Nvr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf7-bl-iFA">
-                                <rect key="frame" x="77" y="671" width="65" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="icons8-new-post-100"/>
-                                <connections>
-                                    <action selector="emailClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="YyD-lB-Ymr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbN-Vr-qRb">
-                                <rect key="frame" x="150" y="671" width="65" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Oval Copy 5"/>
-                                <connections>
-                                    <action selector="linkedinPressed:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="KuP-p7-ahg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvY-cU-MBo">
-                                <rect key="frame" x="229" y="671" width="65" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Oval Copy 4"/>
-                                <connections>
-                                    <action selector="githubClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="GE5-lQ-Nxq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPd-ny-gMg">
-                                <rect key="frame" x="302" y="671" width="65" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Oval Copy 2"/>
-                                <connections>
-                                    <action selector="instagramClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="TpL-JX-IQh"/>
-                                </connections>
-                            </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="24o-Ix-X8A">
-                                <rect key="frame" x="0.0" y="309" width="430" height="340"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="24o-Ix-X8A">
+                                <rect key="frame" x="0.0" y="224" width="375" height="326"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8k-lW-ayK">
-                                <rect key="frame" x="3" y="268" width="182" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8k-lW-ayK">
+                                <rect key="frame" x="0.0" y="195" width="180" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yre-Hl-Wsc">
-                                <rect key="frame" x="193" y="268" width="170" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yre-Hl-Wsc">
+                                <rect key="frame" x="195" y="195" width="180" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacingType="standard" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCL-k6-3ct">
+                                <rect key="frame" x="30" y="567" width="315" height="53"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KS-pF-S8I">
+                                        <rect key="frame" x="0.0" y="4.6666666666666288" width="35" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="A8O-Sh-qb0"/>
+                                            <constraint firstAttribute="height" constant="44" id="kZB-82-lUo"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="icons8-shake-phone-100"/>
+                                        <connections>
+                                            <action selector="phoneClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="r5W-z6-Nvr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf7-bl-iFA">
+                                        <rect key="frame" x="68.333333333333329" y="10" width="34" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="HXF-gG-uaZ"/>
+                                            <constraint firstAttribute="width" constant="34" id="QLY-j0-goP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Button" image="icons8-new-post-100"/>
+                                        <connections>
+                                            <action selector="emailClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="YyD-lB-Ymr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbN-Vr-qRb">
+                                        <rect key="frame" x="131" y="4.6666666666666288" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bbN-Vr-qRb" secondAttribute="height" multiplier="1:1" id="2Xz-eh-rqn"/>
+                                            <constraint firstAttribute="width" constant="44" id="PJp-wr-IgQ"/>
+                                            <constraint firstAttribute="height" constant="44" id="Puh-Am-nfc"/>
+                                        </constraints>
+                                        <state key="normal" image="Oval Copy 5"/>
+                                        <connections>
+                                            <action selector="linkedinPressed:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="KuP-p7-ahg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvY-cU-MBo">
+                                        <rect key="frame" x="198.33333333333334" y="4" width="45" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="6O1-xm-M8P"/>
+                                            <constraint firstAttribute="width" constant="45" id="HDO-bu-WPg"/>
+                                            <constraint firstAttribute="width" secondItem="MvY-cU-MBo" secondAttribute="height" multiplier="1:1" id="Hww-AW-LgD"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Oval Copy 4"/>
+                                        <connections>
+                                            <action selector="githubClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="GE5-lQ-Nxq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPd-ny-gMg">
+                                        <rect key="frame" x="262" y="0.0" width="53" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="53" id="E0L-t5-YQr"/>
+                                            <constraint firstAttribute="height" constant="53" id="d3z-ut-ttn"/>
+                                            <constraint firstAttribute="width" secondItem="wPd-ny-gMg" secondAttribute="height" multiplier="1:1" id="ipn-RK-0Ty"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Oval Copy 2"/>
+                                        <connections>
+                                            <action selector="instagramClicked:" destination="xJw-Yy-g4V" eventType="touchUpInside" id="TpL-JX-IQh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.2254325449" green="0.84573727850000002" blue="0.77796930070000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="j9d-td-w4h" firstAttribute="trailing" secondItem="tCL-k6-3ct" secondAttribute="trailing" constant="30" id="1p4-kO-CIF"/>
                             <constraint firstItem="5Pt-dP-xF9" firstAttribute="centerX" secondItem="j9d-td-w4h" secondAttribute="centerX" id="48G-W9-Sbf"/>
+                            <constraint firstItem="j9d-td-w4h" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="24o-Ix-X8A" secondAttribute="bottom" constant="80" id="7aT-CT-Cyj"/>
                             <constraint firstItem="faL-Qr-NKD" firstAttribute="top" secondItem="j9d-td-w4h" secondAttribute="top" id="Cfz-5L-5kY"/>
+                            <constraint firstItem="24o-Ix-X8A" firstAttribute="bottom" secondItem="j9d-td-w4h" secondAttribute="bottom" priority="250" constant="100" id="Dal-HS-Qhl"/>
+                            <constraint firstItem="yre-Hl-Wsc" firstAttribute="top" secondItem="5Pt-dP-xF9" secondAttribute="bottom" constant="5" id="PYo-is-53c"/>
                             <constraint firstItem="faL-Qr-NKD" firstAttribute="centerX" secondItem="24o-Ix-X8A" secondAttribute="centerX" id="TGx-ae-iQa"/>
+                            <constraint firstItem="24o-Ix-X8A" firstAttribute="top" secondItem="yre-Hl-Wsc" secondAttribute="bottom" constant="10" id="TLw-Ai-Lh6"/>
+                            <constraint firstItem="yre-Hl-Wsc" firstAttribute="centerY" secondItem="v8k-lW-ayK" secondAttribute="centerY" id="UPA-gW-MIJ"/>
                             <constraint firstItem="faL-Qr-NKD" firstAttribute="centerX" secondItem="j9d-td-w4h" secondAttribute="centerX" id="Ub3-Dt-L30"/>
+                            <constraint firstItem="tCL-k6-3ct" firstAttribute="top" secondItem="24o-Ix-X8A" secondAttribute="bottom" constant="17" id="W5e-lt-wHt"/>
+                            <constraint firstItem="j9d-td-w4h" firstAttribute="trailing" secondItem="yre-Hl-Wsc" secondAttribute="trailing" id="WD5-f9-B1y"/>
+                            <constraint firstItem="5Pt-dP-xF9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="faL-Qr-NKD" secondAttribute="bottom" constant="5" id="WfT-ae-B2n"/>
                             <constraint firstItem="24o-Ix-X8A" firstAttribute="centerX" secondItem="j9d-td-w4h" secondAttribute="centerX" id="aXl-co-p46"/>
-                            <constraint firstItem="5Pt-dP-xF9" firstAttribute="top" secondItem="faL-Qr-NKD" secondAttribute="bottom" constant="5" id="cDW-zi-bTZ"/>
+                            <constraint firstItem="5Pt-dP-xF9" firstAttribute="top" secondItem="faL-Qr-NKD" secondAttribute="bottom" priority="250" constant="20" id="cDW-zi-bTZ"/>
+                            <constraint firstItem="yre-Hl-Wsc" firstAttribute="width" secondItem="v8k-lW-ayK" secondAttribute="width" id="cE9-8h-2RY"/>
+                            <constraint firstItem="v8k-lW-ayK" firstAttribute="leading" secondItem="j9d-td-w4h" secondAttribute="leading" id="dfi-o0-tpV"/>
+                            <constraint firstItem="tCL-k6-3ct" firstAttribute="bottom" secondItem="j9d-td-w4h" secondAttribute="bottom" constant="-10" id="h7Z-Kj-mQr"/>
+                            <constraint firstItem="j9d-td-w4h" firstAttribute="trailing" secondItem="24o-Ix-X8A" secondAttribute="trailing" id="nAg-6m-i6J"/>
                             <constraint firstItem="24o-Ix-X8A" firstAttribute="leading" secondItem="j9d-td-w4h" secondAttribute="leading" id="pUH-tD-dz2"/>
-                            <constraint firstItem="faL-Qr-NKD" firstAttribute="leading" secondItem="j9d-td-w4h" secondAttribute="leading" constant="105" id="u4g-p9-tyn"/>
+                            <constraint firstItem="tCL-k6-3ct" firstAttribute="leading" secondItem="j9d-td-w4h" secondAttribute="leading" constant="30" id="r1i-17-rRa"/>
+                            <constraint firstItem="faL-Qr-NKD" firstAttribute="leading" secondItem="j9d-td-w4h" secondAttribute="leading" constant="140" id="u4g-p9-tyn"/>
+                            <constraint firstItem="yre-Hl-Wsc" firstAttribute="leading" secondItem="v8k-lW-ayK" secondAttribute="trailing" constant="15" id="uin-yd-eAH"/>
+                            <constraint firstItem="yre-Hl-Wsc" firstAttribute="height" secondItem="v8k-lW-ayK" secondAttribute="height" id="yIp-An-xSH"/>
                             <constraint firstItem="5Pt-dP-xF9" firstAttribute="leading" secondItem="j9d-td-w4h" secondAttribute="leading" constant="39" id="zGV-nw-PzY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j9d-td-w4h"/>
@@ -1548,7 +1590,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpj-HW-ER0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11352.799999999999" y="2100.7389162561576"/>
+            <point key="canvasLocation" x="11351.44927536232" y="2100.3348214285716"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="dwR-N3-A9l">
@@ -1653,9 +1695,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3DO-P2-seg">
-                                <rect key="frame" x="30" y="358" width="370" height="148"/>
+                                <rect key="frame" x="30" y="358" width="315" height="174"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="3DO-P2-seg" secondAttribute="height" multiplier="315:148" id="lM8-O4-jkn"/>
+                                    <constraint firstAttribute="width" secondItem="3DO-P2-seg" secondAttribute="height" multiplier="315:148" constant="-55.337837837837867" id="lM8-O4-jkn"/>
                                 </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCK-XF-NPc">
@@ -1686,6 +1728,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3DO-P2-seg" firstAttribute="trailing" secondItem="smX-st-x4N" secondAttribute="trailing" id="3G3-hY-lI0"/>
                             <constraint firstItem="wCK-XF-NPc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3DO-P2-seg" secondAttribute="bottom" constant="10" id="4mY-Zl-Yr2"/>
                             <constraint firstItem="0BP-ev-cYw" firstAttribute="centerX" secondItem="Zm4-KM-Y1F" secondAttribute="centerX" id="5hr-gs-XTn"/>
                             <constraint firstItem="BHh-qA-uAx" firstAttribute="leading" secondItem="Zm4-KM-Y1F" secondAttribute="leading" id="733-ud-oTA"/>
@@ -1885,14 +1928,14 @@ It’ll be an address that starts with www.linkedin.com/in.
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-SH-KQq">
-                                <rect key="frame" x="33" y="614" width="309.33333333333331" height="2"/>
+                                <rect key="frame" x="33" y="614" width="309" height="2"/>
                                 <color key="backgroundColor" red="0.2274509804" green="0.84705882349999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="g78-R3-Ibi"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="https://www.linkedin.com/in/vanity-name/" adjustsFontForContentSizeCategory="YES" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-oI-pOX">
-                                <rect key="frame" x="33" y="582" width="309.33333333333331" height="24"/>
+                                <rect key="frame" x="33" y="582" width="309" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="gz9-Hc-sF6"/>
                                 </constraints>
@@ -2029,7 +2072,7 @@ It’ll be an address that starts with www.linkedin.com/in.
             <objects>
                 <viewController id="v7K-j6-0cc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o5c-el-Due">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="664"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gkN-vd-5FJ"/>
@@ -2111,15 +2154,15 @@ It’ll be an address that starts with www.linkedin.com/in.
             <objects>
                 <tableViewController id="EMX-9O-rlI" customClass="ContactsTableViewController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C15-df-S7m">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="664"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="JDl-gR-cDl">
-                                <rect key="frame" x="0.0" y="28" width="430" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JDl-gR-cDl" id="UHI-BT-KHW">
-                                    <rect key="frame" x="0.0" y="0.0" width="430" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -2144,7 +2187,7 @@ It’ll be an address that starts with www.linkedin.com/in.
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6nl-t2-kas" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ctH-ox-RBf">
-                        <rect key="frame" x="0.0" y="44" width="430" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
