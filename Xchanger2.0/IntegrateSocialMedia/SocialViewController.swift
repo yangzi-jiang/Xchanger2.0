@@ -125,7 +125,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func updateGithub(){
-        var GitURL = UserDefaults.standard.string(forKey: "GHUserURL")
+        let GitURL = UserDefaults.standard.string(forKey: "GHUserURL")
         appInstagramURL = GitURL!
         self.ref.child("users/\(userID)/GitUserURL").setValue(GitURL)
     }
@@ -151,7 +151,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         if (instagramConnected){
         
-            var IGURL = UserDefaults.standard.string(forKey: "IGUserURL")
+            let IGURL = UserDefaults.standard.string(forKey: "IGUserURL")
             appInstagramURL = IGURL!
             self.updateInstagram()
         }
@@ -161,7 +161,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         if (githubConnected){
             let url = URL(string: "https://api.github.com/user")
-            var request = URLRequest(url: url!)
+            _ = URLRequest(url: url!)
             
             let headers: HTTPHeaders = [
                 "Authorization": UserDefaults.standard.string(forKey: "GHAccessToken")!

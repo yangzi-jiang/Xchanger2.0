@@ -53,32 +53,32 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         industryPickerView.delegate = self
         industryPickerView.dataSource = self
         
-        var emailAddressReference = reference.child("emails")
+        let emailAddressReference = reference.child("emails")
         
         emailAddressReference.observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
             self.myEmail.text = value![self.myUser] as! String
         }
         
-        var phoneNumberReference = reference.child("phone_numbers")
+        let phoneNumberReference = reference.child("phone_numbers")
         
         phoneNumberReference.observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
             self.myPhoneNumber.text = value![self.myUser] as! String
         }
         
-        var jobTitleReference = reference.child("job_titles")
+        let jobTitleReference = reference.child("job_titles")
         
         jobTitleReference.observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
             self.myJobTitle.text = value![self.myUser] as! String
         }
         
-        var industryReference = reference.child("industry")
+        let industryReference = reference.child("industry")
         
         industryReference.observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            var industry = value![self.myUser] as! String
+            let industry = value![self.myUser] as! String
             
             var myIndex = 0
             

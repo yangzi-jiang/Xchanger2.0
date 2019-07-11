@@ -230,12 +230,12 @@ class ProfileViewController: UIViewController {
        
         jobtitlesReference.observeSingleEvent(of: .value) { (snapshot) in
              let value = snapshot.value as? NSDictionary
-            self.jobtitleUILabel.text = value?[Auth.auth().currentUser?.uid] as! String
+            self.jobtitleUILabel.text = value?[Auth.auth().currentUser?.uid as Any] as? String
         }
         
         industryReference.observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            self.industryUILabel.text = value?[Auth.auth().currentUser?.uid] as! String
+            self.industryUILabel.text = value?[Auth.auth().currentUser?.uid as Any] as? String
                 //+ " | "
         
         }
@@ -244,7 +244,7 @@ class ProfileViewController: UIViewController {
         
         namesReference.observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            self.myName.text = value?[Auth.auth().currentUser?.uid] as! String
+            self.myName.text = value?[Auth.auth().currentUser?.uid as Any] as? String
             
         }
         
