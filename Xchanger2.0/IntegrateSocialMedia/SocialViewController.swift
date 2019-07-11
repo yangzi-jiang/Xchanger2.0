@@ -56,6 +56,30 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let ref1 = Database.database().reference().root.child("exchanges").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1")
+        
+        var coordinates = [Float]()
+        coordinates.append(-80.84833526611328)
+        coordinates.append(35.50434875488281)
+        
+        ref1.observeSingleEvent(of: .value, with: { (snapshot) in
+            ref1.setValue(coordinates)
+        })
+        
+        let ref2 = Database.database().reference().root.child("exchanges").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2")
+        
+        ref2.observeSingleEvent(of: .value, with: { (snapshot) in
+            ref2.setValue(coordinates)
+        })
+        
+        let ref3 = Database.database().reference().root.child("exchanges").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23")
+        
+        ref3.observeSingleEvent(of: .value, with: { (snapshot) in
+            ref2.setValue(coordinates)
+        })
+        
+        
         firstLogin = true
         
         // Setup the picker
