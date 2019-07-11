@@ -202,8 +202,6 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
         
     }
     
-    
-    
     @IBAction func emailClicked(_ sender: Any) {
         let checkEmail = Database.database().reference().child("available").child(Auth.auth().currentUser!.uid).child(self.userID)
         let emailRef = Database.database().reference().child("emails")
@@ -253,8 +251,8 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
                 // alert
             }
         }
-        
     }
+    
     @IBAction func phoneClicked(_ sender: Any) {
         let checkPhone = Database.database().reference().child("available").child(Auth.auth().currentUser!.uid).child(self.userID)
         let phoneNumberRef = Database.database().reference().child("phone_numbers")
@@ -312,6 +310,8 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
             let dictionary = snapshot.value as? NSDictionary
             let linkedin = dictionary!["linkedin"] as? Bool
             
+            
+            
             if (linkedin!){
                 linkedinRef.observeSingleEvent(of: .value, with: { (snapshot) in
                     let dictionary1 = snapshot.value as? NSDictionary
@@ -322,10 +322,12 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
                     }
                 })
             } else {
-                // alert
+                // Alert
             }
         }
     }
+    
+    
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }

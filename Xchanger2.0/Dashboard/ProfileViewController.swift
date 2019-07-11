@@ -72,19 +72,6 @@ class ProfileViewController: UIViewController {
         
         // See what is available to share for the current person
         
-//        var available0 = Database.database().reference().root.child("shares").child(Auth.auth().currentUser!.uid)
-//        
-//        var available1 = Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid)
-//        
-//        available0.observeSingleEvent(of: .value) { (snapshot) in
-//            let dictionary = snapshot.value as? NSDictionary
-//            available1.setValue(dictionary)
-//            print(dictionary)
-//        }
-        
-        
-       
-        
         NotificationCenter.default.addObserver(self, selector: #selector(showSettings), name: NSNotification.Name("ShowSettings"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(showContacts), name: NSNotification.Name("ShowContacts"), object: nil)
@@ -198,9 +185,6 @@ class ProfileViewController: UIViewController {
         
       
         
-//        if (signUp == true){
-//            signUp = false
-//        }
         
 //        NotificationCenter.default.addObserver(self, selector: #selector(dismissAlert), name: NSNotification.Name("ReleaseLoad"), object: nil)
         
