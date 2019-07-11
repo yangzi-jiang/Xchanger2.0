@@ -158,6 +158,9 @@ class ProfileViewController: UIViewController {
         myName.text = appUserName
         myQRCode.image = appQRCode
         
+        // Bring InstaTicker to the front
+        self.instagramTick.layer.zPosition = 5;
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -199,7 +202,7 @@ class ProfileViewController: UIViewController {
             
            
             reference.getData(maxSize: (1024 * 1024 * 1024)) { (data, error) in
-                if let _error = error {
+                if let error = error {
                     print("works")
                 } else {
                     if let _data  = data {
