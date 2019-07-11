@@ -232,7 +232,8 @@ class ProfileViewController: UIViewController {
         
         industryReference.observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            self.industryUILabel.text = value?[Auth.auth().currentUser?.uid] as! String + " | "
+            self.industryUILabel.text = value?[Auth.auth().currentUser?.uid] as! String
+                //+ " | "
         
         }
         

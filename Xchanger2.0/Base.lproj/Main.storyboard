@@ -1151,13 +1151,13 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGI-JZ-nZR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGI-JZ-nZR">
                                 <rect key="frame" x="194.66666666666663" y="335.66666666666669" width="172.33333333333337" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1S-wS-gac">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1S-wS-gac">
                                 <rect key="frame" x="7" y="335.66666666666669" width="172.66666666666666" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1469,13 +1469,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="24o-Ix-X8A">
                                 <rect key="frame" x="0.0" y="224" width="375" height="326"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8k-lW-ayK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v8k-lW-ayK">
                                 <rect key="frame" x="0.0" y="195" width="180" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yre-Hl-Wsc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yre-Hl-Wsc">
                                 <rect key="frame" x="195" y="195" width="180" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1871,7 +1871,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work in Progress" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7H0-vJ-AOE">
-                                <rect key="frame" x="12" y="39" width="351" height="35.333333333333343"/>
+                                <rect key="frame" x="12" y="54" width="351" height="35.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7H0-vJ-AOE" secondAttribute="height" multiplier="347:35" id="lED-tA-jXb"/>
                                 </constraints>
@@ -1899,7 +1899,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsJ-3i-v5k">
-                                <rect key="frame" x="16" y="295" width="343" height="181"/>
+                                <rect key="frame" x="16" y="104" width="343" height="181"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1915,27 +1915,21 @@ It’ll be an address that starts with www.linkedin.com/in.
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wrench" translatesAutoresizingMaskIntoConstraints="NO" id="otX-tU-aVY">
-                                <rect key="frame" x="93" y="82" width="189" height="189"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="189" id="u4c-Hr-IKD"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Linkedin URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TeY-Ip-ZD4">
-                                <rect key="frame" x="16" y="549" width="92" height="19"/>
+                                <rect key="frame" x="16" y="335" width="92" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-SH-KQq">
-                                <rect key="frame" x="33" y="614" width="309" height="2"/>
+                                <rect key="frame" x="33" y="400" width="309" height="2"/>
                                 <color key="backgroundColor" red="0.2274509804" green="0.84705882349999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="g78-R3-Ibi"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="https://www.linkedin.com/in/vanity-name/" adjustsFontForContentSizeCategory="YES" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-oI-pOX">
-                                <rect key="frame" x="33" y="582" width="309" height="24"/>
+                                <rect key="frame" x="33" y="368" width="309" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="gz9-Hc-sF6"/>
                                 </constraints>
@@ -1951,12 +1945,10 @@ It’ll be an address that starts with www.linkedin.com/in.
                             <constraint firstItem="R4h-oI-pOX" firstAttribute="centerX" secondItem="xKe-qs-zy9" secondAttribute="centerX" id="4Ji-0h-sB5"/>
                             <constraint firstItem="xKe-qs-zy9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7H0-vJ-AOE" secondAttribute="trailing" id="5bt-9V-aYN"/>
                             <constraint firstItem="7H0-vJ-AOE" firstAttribute="centerX" secondItem="xKe-qs-zy9" secondAttribute="centerX" id="7I8-sd-VZb"/>
-                            <constraint firstItem="xKe-qs-zy9" firstAttribute="top" secondItem="7H0-vJ-AOE" secondAttribute="top" constant="5" id="AiK-09-XQk"/>
+                            <constraint firstItem="xKe-qs-zy9" firstAttribute="top" secondItem="7H0-vJ-AOE" secondAttribute="top" constant="-10" id="AiK-09-XQk"/>
                             <constraint firstItem="RsJ-3i-v5k" firstAttribute="centerX" secondItem="xKe-qs-zy9" secondAttribute="centerX" id="NIq-tH-ehO"/>
-                            <constraint firstItem="otX-tU-aVY" firstAttribute="leading" secondItem="xKe-qs-zy9" secondAttribute="leading" constant="93" id="P6L-TO-7y0"/>
                             <constraint firstItem="gpb-SH-KQq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="R4h-oI-pOX" secondAttribute="leading" id="Q1f-re-b3z"/>
                             <constraint firstItem="TeY-Ip-ZD4" firstAttribute="leading" secondItem="RsJ-3i-v5k" secondAttribute="leading" id="RcX-Pl-LYi"/>
-                            <constraint firstItem="otX-tU-aVY" firstAttribute="top" secondItem="7H0-vJ-AOE" secondAttribute="bottom" constant="7.6666666666666572" id="SoR-is-j3p"/>
                             <constraint firstItem="xKe-qs-zy9" firstAttribute="trailing" secondItem="RsJ-3i-v5k" secondAttribute="trailing" constant="16" id="TQg-WD-lI7"/>
                             <constraint firstItem="9z5-ZF-QiG" firstAttribute="leading" secondItem="xKe-qs-zy9" secondAttribute="leading" constant="30" id="W5w-6s-BMx"/>
                             <constraint firstItem="RsJ-3i-v5k" firstAttribute="leading" secondItem="xKe-qs-zy9" secondAttribute="leading" constant="16" id="YcB-tb-i2Q"/>
@@ -1965,15 +1957,13 @@ It’ll be an address that starts with www.linkedin.com/in.
                             <constraint firstItem="R4h-oI-pOX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xKe-qs-zy9" secondAttribute="leading" id="caB-B0-vgD"/>
                             <constraint firstItem="7H0-vJ-AOE" firstAttribute="leading" secondItem="xKe-qs-zy9" secondAttribute="leading" constant="12" id="d1d-kZ-5IS"/>
                             <constraint firstItem="gpb-SH-KQq" firstAttribute="top" secondItem="R4h-oI-pOX" secondAttribute="bottom" constant="8" symbolic="YES" id="fEy-hy-dyR"/>
-                            <constraint firstItem="9z5-ZF-QiG" firstAttribute="top" secondItem="gpb-SH-KQq" secondAttribute="bottom" constant="10" id="j9t-oX-lKy"/>
+                            <constraint firstItem="9z5-ZF-QiG" firstAttribute="top" secondItem="gpb-SH-KQq" secondAttribute="bottom" constant="224" id="j9t-oX-lKy"/>
                             <constraint firstItem="xKe-qs-zy9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TeY-Ip-ZD4" secondAttribute="trailing" symbolic="YES" id="kGO-md-iOT"/>
                             <constraint firstItem="gpb-SH-KQq" firstAttribute="centerX" secondItem="xKe-qs-zy9" secondAttribute="centerX" id="kpK-jB-yuR"/>
-                            <constraint firstItem="TeY-Ip-ZD4" firstAttribute="top" secondItem="RsJ-3i-v5k" secondAttribute="bottom" priority="250" constant="67" id="nnm-uK-xQx"/>
+                            <constraint firstItem="TeY-Ip-ZD4" firstAttribute="top" secondItem="RsJ-3i-v5k" secondAttribute="bottom" priority="250" constant="50" id="nnm-uK-xQx"/>
                             <constraint firstItem="R4h-oI-pOX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TeY-Ip-ZD4" secondAttribute="leading" id="ok2-7B-Qeq"/>
                             <constraint firstItem="xKe-qs-zy9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9z5-ZF-QiG" secondAttribute="trailing" id="pij-Jf-8xW"/>
-                            <constraint firstItem="otX-tU-aVY" firstAttribute="centerX" secondItem="xKe-qs-zy9" secondAttribute="centerX" id="roh-wV-VHx"/>
                             <constraint firstItem="TeY-Ip-ZD4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RsJ-3i-v5k" secondAttribute="bottom" constant="15" id="sVV-ka-PpZ"/>
-                            <constraint firstItem="RsJ-3i-v5k" firstAttribute="top" secondItem="otX-tU-aVY" secondAttribute="bottom" constant="24" id="yYG-Nv-jee"/>
                             <constraint firstItem="9z5-ZF-QiG" firstAttribute="centerX" secondItem="xKe-qs-zy9" secondAttribute="centerX" id="zxC-Uf-YYh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xKe-qs-zy9"/>
@@ -2256,7 +2246,6 @@ It’ll be an address that starts with www.linkedin.com/in.
         <image name="icons8-screenshot-100" width="33.333332061767578" height="33.333332061767578"/>
         <image name="icons8-shake-phone-100" width="33.333332061767578" height="33.333332061767578"/>
         <image name="profile" width="920" height="690"/>
-        <image name="wrench" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KDl-2Z-HhH"/>
