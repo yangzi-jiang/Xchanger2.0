@@ -76,7 +76,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let ref3 = Database.database().reference().root.child("exchanges").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23")
         
         ref3.observeSingleEvent(of: .value, with: { (snapshot) in
-            ref2.setValue(coordinates)
+            ref3.setValue(coordinates)
         })
         
         
