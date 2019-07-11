@@ -20,6 +20,9 @@ var signUp = false
 var userLongitude = 0.0
 var userLatitude = 0.0
 
+var vSpinner : UIView?
+
+
 
 class ProfileViewController: UIViewController {
     
@@ -257,20 +260,24 @@ class ProfileViewController: UIViewController {
 
     @IBAction func sidebarTapped(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
+        self.showSpinner(onView: self.view)
     }
     
     @objc func showProfile(){
         NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
+        self.removeSpinner()
     }
     
     @objc func showContacts(){
         self.performSegue(withIdentifier: "contacts", sender: self)
         NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
+        self.removeSpinner()
     }
     
     @objc func showSettings(){
         self.performSegue(withIdentifier: "settings", sender: self)
         NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
+        self.removeSpinner()
     }
     
     func setupLocationManager(){
@@ -422,5 +429,29 @@ extension ProfileViewController: CLLocationManagerDelegate {
 //        self.performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
 
         
+    }
+}
+
+extension UIViewController {
+    func showSpinner(onView : UIView) {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.9)
+        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+//            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
+    
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            vSpinner?.removeFromSuperview()
+            vSpinner = nil
+        }
     }
 }

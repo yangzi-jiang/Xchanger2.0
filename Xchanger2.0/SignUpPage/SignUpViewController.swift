@@ -146,7 +146,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (authresult, error) in
                 if (error != nil){
-                    // there is an error
+                    let alert = UIAlertController(title: "Account registration failed!", message: "Please use a different email", preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "Okay!", style: .default, handler: { action in
+                        //run your function here
+                        //                                self.performSegue(withIdentifier: "success", sender: self)
+                    }))
+                    
+                    self.present(alert, animated:true)
                 } else {
 DispatchQueue.main.async {
     
@@ -200,7 +207,7 @@ DispatchQueue.main.async {
                             DispatchQueue.main.async {
                                 self.alertController.dismiss(animated: true)
                                 
-                                let alert = UIAlertController(title: "Contact Xchanged", message: "You have added!", preferredStyle: .alert)
+                                let alert = UIAlertController(title: "Account Registration Successful", message: "You have added!", preferredStyle: .alert)
                                 
                                 alert.addAction(UIAlertAction(title: "Great!", style: .default, handler: { action in
                                     //run your function here

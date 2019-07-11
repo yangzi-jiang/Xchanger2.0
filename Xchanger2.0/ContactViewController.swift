@@ -218,14 +218,19 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
                         let mail = MFMailComposeViewController()
                         mail.mailComposeDelegate = self
                         mail.setToRecipients([email!])
-                        mail.setMessageBody("<p>It was nice to meet you through BOPP!</p>", isHTML: true)
+                        mail.setMessageBody("<p>It was nice to meet you through Butterfly!</p>", isHTML: true)
                         
                         self.present(mail, animated: true)
                     } else {
                         // show failure alert
                     }
                 })} else {
-                //alert
+                let alert = UIAlertController(title: "This contact didn't share their email account with you", message: "Please use other means of contact!", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Great!", style: .default, handler: { action in
+                    //run your function here
+                    //                                self.performSegue(withIdentifier: "success", sender: self)
+                }))
             }
         }
     }
@@ -241,14 +246,29 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
             if (github!){
                 githubRef.observeSingleEvent(of: .value, with: { (snapshot) in
                     let dictionary1 = snapshot.value as? NSDictionary
-                    let myGithub = dictionary1!["GitUserURL"] as? String
-                    
-                    if let url = URL(string: myGithub!) {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    if (dictionary1!["GitUserURL"] != nil){
+                        let myGithub = dictionary1!["GitUserURL"] as? String
+                        
+                        if let url = URL(string: myGithub!) {
+                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        }
+                    } else {
+                        let alert = UIAlertController(title: "This contact didn't share their github account with you", message: "Please use other means of contact!", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Great!", style: .default, handler: { action in
+                            //run your function here
+                            //                                self.performSegue(withIdentifier: "success", sender: self)
+                        }))
                     }
                 })
             } else {
                 // alert
+                let alert = UIAlertController(title: "This contact didn't share their github account with you", message: "Please use other means of contact!", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Great!", style: .default, handler: { action in
+                    //run your function here
+                    //                                self.performSegue(withIdentifier: "success", sender: self)
+                }))
             }
         }
     }
@@ -275,6 +295,14 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
                 })
             } else {
                 // alert
+                let alert = UIAlertController(title: "This contact didn't share their phone number with you", message: "Please use other means of contact!", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Great!", style: .default, handler: { action in
+                    //run your function here
+                    //                                self.performSegue(withIdentifier: "success", sender: self)
+                }))
+                
+                self.present(alert, animated:true)
             }
         }
         
@@ -286,20 +314,41 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
         
         checkInstagram.observeSingleEvent(of: .value) { (snapshot) in
             let dictionary = snapshot.value as? NSDictionary
-            let instagram = dictionary!["instagram"] as? Bool
             
-            if (instagram!){
-                instagramRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                    let dictionary1 = snapshot.value as? NSDictionary
-                    let myInsta = dictionary1!["IGUserURL"] as? String
+            
+                let instagram = dictionary!["instagram"] as? Bool
+                if (instagram!){
+                    instagramRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                        let dictionary1 = snapshot.value as? NSDictionary
+                        if (dictionary1!["IGUserURL"] != nil){
+                            let myInsta = dictionary1!["IGUserURL"] as? String
+                            
+                            
+                            if let url = URL(string: myInsta!) {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                        } else {
+                            let alert = UIAlertController(title: "This contact didn't share their instagram account with you", message: "Please use other means of contact!", preferredStyle: .alert)
+                            
+                            alert.addAction(UIAlertAction(title: "Okay!", style: .default, handler: { action in
+                                //run your function here
+//                                self.performSegue(withIdentifier: "success", sender: self)
+                            }))
+                            
+                            self.present(alert, animated:true)
+                        }
+                    })
+                } else {
+                
+                    let alert = UIAlertController(title: "This contact didn't share their instagram account with you", message: "Please use other means of contact!", preferredStyle: .alert)
                     
-                    if let url = URL(string: myInsta!) {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                    }
-                })
-            } else {
-                // alert
-            }
+                    alert.addAction(UIAlertAction(title: "Okay!", style: .default, handler: { action in
+                        //run your function here
+                        //                                self.performSegue(withIdentifier: "success", sender: self)
+                    }))
+                    
+                    self.present(alert, animated:true)
+                }
         }
     }
     @IBAction func linkedinPressed(_ sender: Any) {
@@ -308,22 +357,45 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
         
         checkLinkedin.observeSingleEvent(of: .value) { (snapshot) in
             let dictionary = snapshot.value as? NSDictionary
-            let linkedin = dictionary!["linkedin"] as? Bool
-            
-            
-            
-            if (linkedin!){
-                linkedinRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                    let dictionary1 = snapshot.value as? NSDictionary
-                    let myLinkedin = dictionary1!["LIUserURL"] as? String
-                    
-                    if let url = URL(string: myLinkedin!) {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+           
+                let linkedin = dictionary!["linkedin"] as? Bool
+                if (linkedin!){
+                    linkedinRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                        let dictionary1 = snapshot.value as? NSDictionary
+                        
+                        
+                        if (dictionary1!["LIUserURL"] != nil) {
+                            let myLinkedin = dictionary1!["LIUserURL"] as? String
+                            
+                            
+                            
+                            if let url = URL(string: myLinkedin!) {
+                                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                            }
+                        } else {
+                            let alert = UIAlertController(title: "This contact didn't share their linkedin account with you", message: "Please use other means of contact!", preferredStyle: .alert)
+                            
+                            alert.addAction(UIAlertAction(title: "Okay!", style: .default, handler: { action in
+                                //run your function here
+                                //                                self.performSegue(withIdentifier: "success", sender: self)
+                            }))
+                            
+                            self.present(alert, animated:true)
+                        }
+                    })
+                }
+                    else {
+                        let alert = UIAlertController(title: "This contact didn't share their linkedin account with you", message: "Please use other means of contact!", preferredStyle: .alert)
+                        
+                        alert.addAction(UIAlertAction(title: "Okay!", style: .default, handler: { action in
+                            //run your function here
+                            //                                self.performSegue(withIdentifier: "success", sender: self)
+                        }))
+                        
+                        self.present(alert, animated:true)
                     }
-                })
-            } else {
-                // Alert
-            }
+                        
+            
         }
     }
     
