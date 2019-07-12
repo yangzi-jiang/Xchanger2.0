@@ -7,6 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15088FD322D8C47700ECADAF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FA422D8C47600ECADAF /* SettingsViewController.swift */; };
+		15088FD422D8C47700ECADAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FA522D8C47600ECADAF /* ViewController.swift */; };
+		15088FD522D8C47700ECADAF /* ContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FA722D8C47600ECADAF /* ContainerTableViewController.swift */; };
+		15088FD622D8C47700ECADAF /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FA822D8C47600ECADAF /* ContainerViewController.swift */; };
+		15088FD722D8C47700ECADAF /* InstagramWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FAA22D8C47600ECADAF /* InstagramWebController.swift */; };
+		15088FD822D8C47700ECADAF /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FAC22D8C47600ECADAF /* ContactsViewController.swift */; };
+		15088FD922D8C47700ECADAF /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FAD22D8C47600ECADAF /* ContactsTableViewController.swift */; };
+		15088FDA22D8C47700ECADAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15088FAE22D8C47600ECADAF /* Assets.xcassets */; };
+		15088FDB22D8C47700ECADAF /* Xchanger2_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15088FAF22D8C47600ECADAF /* Xchanger2_0.xcdatamodeld */; };
+		15088FDC22D8C47700ECADAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15088FB122D8C47600ECADAF /* GoogleService-Info.plist */; };
+		15088FDD22D8C47700ECADAF /* SwipingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FB322D8C47600ECADAF /* SwipingCollectionViewController.swift */; };
+		15088FDE22D8C47700ECADAF /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FB522D8C47600ECADAF /* QRCodeReader.swift */; };
+		15088FDF22D8C47700ECADAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15088FB622D8C47600ECADAF /* LaunchScreen.storyboard */; };
+		15088FE022D8C47700ECADAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15088FB822D8C47600ECADAF /* Main.storyboard */; };
+		15088FE122D8C47700ECADAF /* RegisteredSocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FBB22D8C47600ECADAF /* RegisteredSocialProfile.swift */; };
+		15088FE222D8C47700ECADAF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FBC22D8C47600ECADAF /* ProfileViewController.swift */; };
+		15088FE322D8C47700ECADAF /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FBE22D8C47600ECADAF /* SocialMediaViewController.swift */; };
+		15088FE422D8C47700ECADAF /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FBF22D8C47600ECADAF /* SocialViewController.swift */; };
+		15088FE522D8C47700ECADAF /* SocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC022D8C47600ECADAF /* SocialProfile.swift */; };
+		15088FE622D8C47700ECADAF /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC222D8C47600ECADAF /* SigninViewController.swift */; };
+		15088FE722D8C47700ECADAF /* GitHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC422D8C47600ECADAF /* GitHubViewController.swift */; };
+		15088FE822D8C47700ECADAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC522D8C47600ECADAF /* AppDelegate.swift */; };
+		15088FE922D8C47700ECADAF /* LinkedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC622D8C47600ECADAF /* LinkedInViewController.swift */; };
+		15088FEA22D8C47700ECADAF /* LinkedInOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC822D8C47600ECADAF /* LinkedInOAuth.swift */; };
+		15088FEB22D8C47700ECADAF /* LinkedInIntegrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC922D8C47600ECADAF /* LinkedInIntegrate.swift */; };
+		15088FEC22D8C47700ECADAF /* LinkedinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCA22D8C47600ECADAF /* LinkedinViewController.swift */; };
+		15088FED22D8C47700ECADAF /* IntegrateLinkedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCC22D8C47600ECADAF /* IntegrateLinkedInViewController.swift */; };
+		15088FEE22D8C47700ECADAF /* ManuallyIntegrateLinkedin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCD22D8C47600ECADAF /* ManuallyIntegrateLinkedin.swift */; };
+		15088FEF22D8C47700ECADAF /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCE22D8C47600ECADAF /* ContactViewController.swift */; };
+		15088FF022D8C47700ECADAF /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCF22D8C47600ECADAF /* ButtonCollectionViewCell.swift */; };
+		15088FF122D8C47700ECADAF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FD122D8C47600ECADAF /* SignUpViewController.swift */; };
 		156EDC7322BD361A00101BFD /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDC7222BD361A00101BFD /* ContactsTableViewController.swift */; };
 		18F1750852B91B324B616FBD /* Pods_Xchanger2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE133709599B87907B7CDC63 /* Pods_Xchanger2_0UITests.framework */; };
 		64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */; };
@@ -63,6 +94,38 @@
 
 /* Begin PBXFileReference section */
 		037A930CDF176DF036400D0D /* Pods-Xchanger2.0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0Tests.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0Tests/Pods-Xchanger2.0Tests.release.xcconfig"; sourceTree = "<group>"; };
+		15088FA422D8C47600ECADAF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		15088FA522D8C47600ECADAF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		15088FA722D8C47600ECADAF /* ContainerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTableViewController.swift; sourceTree = "<group>"; };
+		15088FA822D8C47600ECADAF /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		15088FAA22D8C47600ECADAF /* InstagramWebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramWebController.swift; sourceTree = "<group>"; };
+		15088FAC22D8C47600ECADAF /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		15088FAD22D8C47600ECADAF /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		15088FAE22D8C47600ECADAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15088FB022D8C47600ECADAF /* Xchanger2_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Xchanger2_0.xcdatamodel; sourceTree = "<group>"; };
+		15088FB122D8C47600ECADAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		15088FB322D8C47600ECADAF /* SwipingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipingCollectionViewController.swift; sourceTree = "<group>"; };
+		15088FB522D8C47600ECADAF /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
+		15088FB722D8C47600ECADAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		15088FB922D8C47600ECADAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		15088FBB22D8C47600ECADAF /* RegisteredSocialProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisteredSocialProfile.swift; sourceTree = "<group>"; };
+		15088FBC22D8C47600ECADAF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		15088FBE22D8C47600ECADAF /* SocialMediaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialMediaViewController.swift; sourceTree = "<group>"; };
+		15088FBF22D8C47600ECADAF /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		15088FC022D8C47600ECADAF /* SocialProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialProfile.swift; sourceTree = "<group>"; };
+		15088FC222D8C47600ECADAF /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		15088FC422D8C47600ECADAF /* GitHubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubViewController.swift; sourceTree = "<group>"; };
+		15088FC522D8C47600ECADAF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15088FC622D8C47600ECADAF /* LinkedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedInViewController.swift; sourceTree = "<group>"; };
+		15088FC822D8C47600ECADAF /* LinkedInOAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedInOAuth.swift; sourceTree = "<group>"; };
+		15088FC922D8C47600ECADAF /* LinkedInIntegrate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedInIntegrate.swift; sourceTree = "<group>"; };
+		15088FCA22D8C47600ECADAF /* LinkedinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedinViewController.swift; sourceTree = "<group>"; };
+		15088FCC22D8C47600ECADAF /* IntegrateLinkedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegrateLinkedInViewController.swift; sourceTree = "<group>"; };
+		15088FCD22D8C47600ECADAF /* ManuallyIntegrateLinkedin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManuallyIntegrateLinkedin.swift; sourceTree = "<group>"; };
+		15088FCE22D8C47600ECADAF /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		15088FCF22D8C47600ECADAF /* ButtonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonCollectionViewCell.swift; sourceTree = "<group>"; };
+		15088FD122D8C47600ECADAF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		15088FD222D8C47600ECADAF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		156EDC7222BD361A00101BFD /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		4ACBA3ACF0B394FF3DB60832 /* Pods-Xchanger2.0UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0UITests.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0UITests/Pods-Xchanger2.0UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInOAuth.swift; sourceTree = "<group>"; };
@@ -137,6 +200,149 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15088FA222D8C47600ECADAF /* Xchanger2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				15088FA322D8C47600ECADAF /* Settings */,
+				15088FA522D8C47600ECADAF /* ViewController.swift */,
+				15088FA622D8C47600ECADAF /* SidebarMenu */,
+				15088FA922D8C47600ECADAF /* IntegrateInstagram */,
+				15088FAB22D8C47600ECADAF /* Contacts */,
+				15088FAE22D8C47600ECADAF /* Assets.xcassets */,
+				15088FAF22D8C47600ECADAF /* Xchanger2_0.xcdatamodeld */,
+				15088FB122D8C47600ECADAF /* GoogleService-Info.plist */,
+				15088FB222D8C47600ECADAF /* SwipingDashboard */,
+				15088FB422D8C47600ECADAF /* QR */,
+				15088FB622D8C47600ECADAF /* LaunchScreen.storyboard */,
+				15088FB822D8C47600ECADAF /* Main.storyboard */,
+				15088FBA22D8C47600ECADAF /* Dashboard */,
+				15088FBD22D8C47600ECADAF /* IntegrateSocialMedia */,
+				15088FC122D8C47600ECADAF /* SigninPage */,
+				15088FC322D8C47600ECADAF /* IntegrateGitHub */,
+				15088FC522D8C47600ECADAF /* AppDelegate.swift */,
+				15088FC622D8C47600ECADAF /* LinkedInViewController.swift */,
+				15088FC722D8C47600ECADAF /* LinkedinPage */,
+				15088FCB22D8C47600ECADAF /* IntegrateLinkedin */,
+				15088FCE22D8C47600ECADAF /* ContactViewController.swift */,
+				15088FCF22D8C47600ECADAF /* ButtonCollectionViewCell.swift */,
+				15088FD022D8C47600ECADAF /* SignUpPage */,
+				15088FD222D8C47600ECADAF /* Info.plist */,
+			);
+			name = Xchanger2.0;
+			sourceTree = "<group>";
+		};
+		15088FA322D8C47600ECADAF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				15088FA422D8C47600ECADAF /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		15088FA622D8C47600ECADAF /* SidebarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				15088FA722D8C47600ECADAF /* ContainerTableViewController.swift */,
+				15088FA822D8C47600ECADAF /* ContainerViewController.swift */,
+			);
+			path = SidebarMenu;
+			sourceTree = "<group>";
+		};
+		15088FA922D8C47600ECADAF /* IntegrateInstagram */ = {
+			isa = PBXGroup;
+			children = (
+				15088FAA22D8C47600ECADAF /* InstagramWebController.swift */,
+			);
+			path = IntegrateInstagram;
+			sourceTree = "<group>";
+		};
+		15088FAB22D8C47600ECADAF /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				15088FAC22D8C47600ECADAF /* ContactsViewController.swift */,
+				15088FAD22D8C47600ECADAF /* ContactsTableViewController.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		15088FB222D8C47600ECADAF /* SwipingDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				15088FB322D8C47600ECADAF /* SwipingCollectionViewController.swift */,
+			);
+			path = SwipingDashboard;
+			sourceTree = "<group>";
+		};
+		15088FB422D8C47600ECADAF /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				15088FB522D8C47600ECADAF /* QRCodeReader.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		15088FBA22D8C47600ECADAF /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				15088FBB22D8C47600ECADAF /* RegisteredSocialProfile.swift */,
+				15088FBC22D8C47600ECADAF /* ProfileViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		15088FBD22D8C47600ECADAF /* IntegrateSocialMedia */ = {
+			isa = PBXGroup;
+			children = (
+				15088FBE22D8C47600ECADAF /* SocialMediaViewController.swift */,
+				15088FBF22D8C47600ECADAF /* SocialViewController.swift */,
+				15088FC022D8C47600ECADAF /* SocialProfile.swift */,
+			);
+			path = IntegrateSocialMedia;
+			sourceTree = "<group>";
+		};
+		15088FC122D8C47600ECADAF /* SigninPage */ = {
+			isa = PBXGroup;
+			children = (
+				15088FC222D8C47600ECADAF /* SigninViewController.swift */,
+			);
+			path = SigninPage;
+			sourceTree = "<group>";
+		};
+		15088FC322D8C47600ECADAF /* IntegrateGitHub */ = {
+			isa = PBXGroup;
+			children = (
+				15088FC422D8C47600ECADAF /* GitHubViewController.swift */,
+			);
+			path = IntegrateGitHub;
+			sourceTree = "<group>";
+		};
+		15088FC722D8C47600ECADAF /* LinkedinPage */ = {
+			isa = PBXGroup;
+			children = (
+				15088FC822D8C47600ECADAF /* LinkedInOAuth.swift */,
+				15088FC922D8C47600ECADAF /* LinkedInIntegrate.swift */,
+				15088FCA22D8C47600ECADAF /* LinkedinViewController.swift */,
+			);
+			path = LinkedinPage;
+			sourceTree = "<group>";
+		};
+		15088FCB22D8C47600ECADAF /* IntegrateLinkedin */ = {
+			isa = PBXGroup;
+			children = (
+				15088FCC22D8C47600ECADAF /* IntegrateLinkedInViewController.swift */,
+				15088FCD22D8C47600ECADAF /* ManuallyIntegrateLinkedin.swift */,
+			);
+			path = IntegrateLinkedin;
+			sourceTree = "<group>";
+		};
+		15088FD022D8C47600ECADAF /* SignUpPage */ = {
+			isa = PBXGroup;
+			children = (
+				15088FD122D8C47600ECADAF /* SignUpViewController.swift */,
+			);
+			path = SignUpPage;
+			sourceTree = "<group>";
+		};
 		643BB8C622A9583D003C3E9A /* IntegrateLinkedin */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,11 +460,12 @@
 				64B385C7229B013200767E7F /* SigninPage */,
 				64B385C6229AD27C00767E7F /* WelcomePage */,
 				64B38595229AD22300767E7F /* AppDelegate.swift */,
-				64B38597229AD22300767E7F /* ViewController.swift */,
 				64B38599229AD22300767E7F /* Main.storyboard */,
+				64B38597229AD22300767E7F /* ViewController.swift */,
 				64B3859F229AD22500767E7F /* Assets.xcassets */,
 				64B385A1229AD22500767E7F /* LaunchScreen.storyboard */,
 				64B385A4229AD22500767E7F /* Info.plist */,
+				15088FA222D8C47600ECADAF /* Xchanger2.0 */,
 				649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */,
 				64B3859C229AD22300767E7F /* Xchanger2_0.xcdatamodeld */,
 			);
@@ -467,7 +674,11 @@
 				64B385A3229AD22500767E7F /* LaunchScreen.storyboard in Resources */,
 				649E20F5229F1CA400815AB7 /* GoogleService-Info.plist in Resources */,
 				64B385A0229AD22500767E7F /* Assets.xcassets in Resources */,
+				15088FE022D8C47700ECADAF /* Main.storyboard in Resources */,
 				64B3859B229AD22300767E7F /* Main.storyboard in Resources */,
+				15088FDF22D8C47700ECADAF /* LaunchScreen.storyboard in Resources */,
+				15088FDA22D8C47700ECADAF /* Assets.xcassets in Resources */,
+				15088FDC22D8C47700ECADAF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,29 +821,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */,
+				15088FE522D8C47700ECADAF /* SocialProfile.swift in Sources */,
+				15088FDB22D8C47700ECADAF /* Xchanger2_0.xcdatamodeld in Sources */,
+				15088FDE22D8C47700ECADAF /* QRCodeReader.swift in Sources */,
+				15088FE922D8C47700ECADAF /* LinkedInViewController.swift in Sources */,
 				64B385C9229B016600767E7F /* SigninViewController.swift in Sources */,
+				15088FD622D8C47700ECADAF /* ContainerViewController.swift in Sources */,
 				156EDC7322BD361A00101BFD /* ContactsTableViewController.swift in Sources */,
+				15088FE222D8C47700ECADAF /* ProfileViewController.swift in Sources */,
 				647AD52522B1C5E000C6D6A1 /* QRCodeReader.swift in Sources */,
 				647AD52B22B1CC8E00C6D6A1 /* ContactsViewController.swift in Sources */,
 				64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */,
+				15088FE322D8C47700ECADAF /* SocialMediaViewController.swift in Sources */,
 				64FEEC0C22CB9FF900888312 /* ManuallyIntegrateLinkedin.swift in Sources */,
 				647AD52222B1702500C6D6A1 /* ContainerTableViewController.swift in Sources */,
+				15088FEF22D8C47700ECADAF /* ContactViewController.swift in Sources */,
+				15088FE422D8C47700ECADAF /* SocialViewController.swift in Sources */,
+				15088FD422D8C47700ECADAF /* ViewController.swift in Sources */,
+				15088FD322D8C47700ECADAF /* SettingsViewController.swift in Sources */,
 				64B1027A22A7E4EE0040ADC8 /* GitHubViewController.swift in Sources */,
+				15088FE822D8C47700ECADAF /* AppDelegate.swift in Sources */,
 				64826DAD22AC65290047196A /* ProfileViewController.swift in Sources */,
+				15088FEA22D8C47700ECADAF /* LinkedInOAuth.swift in Sources */,
 				64CE946222A6AC7800E6A4C5 /* InstagramWebController.swift in Sources */,
 				649E20F3229CC69B00815AB7 /* SignUpViewController.swift in Sources */,
 				647AD52022B1700A00C6D6A1 /* ContainerViewController.swift in Sources */,
+				15088FED22D8C47700ECADAF /* IntegrateLinkedInViewController.swift in Sources */,
 				64B38598229AD22300767E7F /* ViewController.swift in Sources */,
 				6436B518229B67070031F7A1 /* LinkedInIntegrate.swift in Sources */,
 				64B38596229AD22300767E7F /* AppDelegate.swift in Sources */,
 				643BB8C822A9585E003C3E9A /* IntegrateLinkedInViewController.swift in Sources */,
+				15088FEE22D8C47700ECADAF /* ManuallyIntegrateLinkedin.swift in Sources */,
 				644A5044229F4B1000E59547 /* SocialViewController.swift in Sources */,
 				64E3819622C1A9990014C422 /* ContactViewController.swift in Sources */,
+				15088FE722D8C47700ECADAF /* GitHubViewController.swift in Sources */,
 				64D9DCA822BEF8FB0032E7E0 /* RegisteredSocialProfile.swift in Sources */,
 				64B3859E229AD22300767E7F /* Xchanger2_0.xcdatamodeld in Sources */,
+				15088FEB22D8C47700ECADAF /* LinkedInIntegrate.swift in Sources */,
+				15088FF022D8C47700ECADAF /* ButtonCollectionViewCell.swift in Sources */,
+				15088FF122D8C47700ECADAF /* SignUpViewController.swift in Sources */,
 				64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */,
+				15088FD722D8C47700ECADAF /* InstagramWebController.swift in Sources */,
 				647AD52922B1CC5F00C6D6A1 /* SettingsViewController.swift in Sources */,
+				15088FE122D8C47700ECADAF /* RegisteredSocialProfile.swift in Sources */,
+				15088FDD22D8C47700ECADAF /* SwipingCollectionViewController.swift in Sources */,
+				15088FD522D8C47700ECADAF /* ContainerTableViewController.swift in Sources */,
+				15088FE622D8C47700ECADAF /* SigninViewController.swift in Sources */,
+				15088FEC22D8C47700ECADAF /* LinkedinViewController.swift in Sources */,
 				644ED76622C6916000B3FEAA /* SwipingCollectionViewController.swift in Sources */,
+				15088FD822D8C47700ECADAF /* ContactsViewController.swift in Sources */,
+				15088FD922D8C47700ECADAF /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +906,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		15088FB622D8C47600ECADAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15088FB722D8C47600ECADAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		15088FB822D8C47600ECADAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15088FB922D8C47600ECADAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		64B38599229AD22300767E7F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -720,14 +974,16 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 1;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -781,8 +1037,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -808,8 +1066,9 @@
 			baseConfigurationReference = 86CEA1009F2743C9AF5697A6 /* Pods-Xchanger2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -820,8 +1079,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sowchange.app.Xchanger2-0";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boppApp.lynk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -832,8 +1092,9 @@
 			baseConfigurationReference = E0373A9F9D590C6A58E3D5A8 /* Pods-Xchanger2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -844,8 +1105,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sowchange.app.Xchanger2-0";
+				PRODUCT_BUNDLE_IDENTIFIER = com.boppApp.lynk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -857,8 +1119,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				INFOPLIST_FILE = Xchanger2.0Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -879,8 +1141,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				INFOPLIST_FILE = Xchanger2.0Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -900,8 +1162,8 @@
 			baseConfigurationReference = 4ACBA3ACF0B394FF3DB60832 /* Pods-Xchanger2.0UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				INFOPLIST_FILE = Xchanger2.0UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -921,8 +1183,8 @@
 			baseConfigurationReference = 712FEAE39A36019A4D068AA6 /* Pods-Xchanger2.0UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				INFOPLIST_FILE = Xchanger2.0UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -979,6 +1241,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		15088FAF22D8C47600ECADAF /* Xchanger2_0.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				15088FB022D8C47600ECADAF /* Xchanger2_0.xcdatamodel */,
+			);
+			currentVersion = 15088FB022D8C47600ECADAF /* Xchanger2_0.xcdatamodel */;
+			path = Xchanger2_0.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		64B3859C229AD22300767E7F /* Xchanger2_0.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
