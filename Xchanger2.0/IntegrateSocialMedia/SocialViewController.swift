@@ -81,43 +81,43 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         
         // Store what you could share with your contacts
-        ref.child("shares").child(Auth.auth().currentUser!.uid).child("email").setValue(true)
-        ref.child("shares").child(Auth.auth().currentUser!.uid).child("phone_number").setValue(true)
-        ref.child("shares").child(Auth.auth().currentUser!.uid).child("linkedin").setValue(true)
-        ref.child("shares").child(Auth.auth().currentUser!.uid).child("github").setValue(true)
-        ref.child("shares").child(Auth.auth().currentUser!.uid).child("instagram").setValue(true)
+     Database.database().reference().root.child("shares").child(Auth.auth().currentUser!.uid).child("email").setValue(true)
+    Database.database().reference().root.child("shares").child(Auth.auth().currentUser!.uid).child("phone_number").setValue(true)
+        Database.database().reference().root.child("shares").child(Auth.auth().currentUser!.uid).child("linkedin").setValue(true)
+        Database.database().reference().root.child("shares").child(Auth.auth().currentUser!.uid).child("github").setValue(true)
+        Database.database().reference().root.child("shares").child(Auth.auth().currentUser!.uid).child("instagram").setValue(true)
         
         // Sandbox User 1
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1").child("email").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1").child("email").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1").child("phone_number").setValue(true)
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1").child("linkedin").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1").child("phone_number").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1").child("linkedin").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1").child("github").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1").child("github").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1").child("instagram").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("1MGXWjBXY3h03c1FR042WFjYy2z1").child("instagram").setValue(true)
         
         // Sandbox User 2
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2").child("email").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2").child("email").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2").child("phone_number").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2").child("phone_number").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2").child("linkedin").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2").child("linkedin").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2").child("github").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2").child("github").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2").child("instagram").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("F1Q4OP4rUsgxcONPNnHCOKndolk2").child("instagram").setValue(true)
         
         // Sandbox User 3
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23").child("email").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23").child("email").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23").child("phone_number").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23").child("phone_number").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23").child("linkedin").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23").child("linkedin").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23").child("github").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23").child("github").setValue(true)
         
-    ref.child("available").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23").child("instagram").setValue(true)
+    Database.database().reference().root.child("available").child(Auth.auth().currentUser!.uid).child("1g6XdjW4YYaKlm1aExWPQmFMgn23").child("instagram").setValue(true)
         
         
         firstLogin = true
