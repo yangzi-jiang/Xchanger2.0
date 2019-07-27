@@ -3,62 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08EE2D1A193DD20C08D29346 /* Pods_Xchanger2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 760D7E430598ED131D6CDFB0 /* Pods_Xchanger2_0Tests.framework */; };
 		15088FD322D8C47700ECADAF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FA422D8C47600ECADAF /* SettingsViewController.swift */; };
 		15088FD422D8C47700ECADAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FA522D8C47600ECADAF /* ViewController.swift */; };
-		15088FD522D8C47700ECADAF /* ContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FA722D8C47600ECADAF /* ContainerTableViewController.swift */; };
 		15088FD622D8C47700ECADAF /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FA822D8C47600ECADAF /* ContainerViewController.swift */; };
-		15088FD722D8C47700ECADAF /* InstagramWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FAA22D8C47600ECADAF /* InstagramWebController.swift */; };
-		15088FD822D8C47700ECADAF /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FAC22D8C47600ECADAF /* ContactsViewController.swift */; };
-		15088FD922D8C47700ECADAF /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FAD22D8C47600ECADAF /* ContactsTableViewController.swift */; };
-		15088FDA22D8C47700ECADAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15088FAE22D8C47600ECADAF /* Assets.xcassets */; };
 		15088FDB22D8C47700ECADAF /* Xchanger2_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15088FAF22D8C47600ECADAF /* Xchanger2_0.xcdatamodeld */; };
-		15088FDC22D8C47700ECADAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15088FB122D8C47600ECADAF /* GoogleService-Info.plist */; };
 		15088FDD22D8C47700ECADAF /* SwipingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FB322D8C47600ECADAF /* SwipingCollectionViewController.swift */; };
 		15088FDE22D8C47700ECADAF /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FB522D8C47600ECADAF /* QRCodeReader.swift */; };
 		15088FDF22D8C47700ECADAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15088FB622D8C47600ECADAF /* LaunchScreen.storyboard */; };
 		15088FE022D8C47700ECADAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15088FB822D8C47600ECADAF /* Main.storyboard */; };
-		15088FE122D8C47700ECADAF /* RegisteredSocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FBB22D8C47600ECADAF /* RegisteredSocialProfile.swift */; };
 		15088FE222D8C47700ECADAF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FBC22D8C47600ECADAF /* ProfileViewController.swift */; };
 		15088FE322D8C47700ECADAF /* SocialMediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FBE22D8C47600ECADAF /* SocialMediaViewController.swift */; };
 		15088FE422D8C47700ECADAF /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FBF22D8C47600ECADAF /* SocialViewController.swift */; };
-		15088FE522D8C47700ECADAF /* SocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC022D8C47600ECADAF /* SocialProfile.swift */; };
-		15088FE622D8C47700ECADAF /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC222D8C47600ECADAF /* SigninViewController.swift */; };
-		15088FE722D8C47700ECADAF /* GitHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC422D8C47600ECADAF /* GitHubViewController.swift */; };
 		15088FE822D8C47700ECADAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC522D8C47600ECADAF /* AppDelegate.swift */; };
 		15088FE922D8C47700ECADAF /* LinkedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC622D8C47600ECADAF /* LinkedInViewController.swift */; };
 		15088FEA22D8C47700ECADAF /* LinkedInOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC822D8C47600ECADAF /* LinkedInOAuth.swift */; };
-		15088FEB22D8C47700ECADAF /* LinkedInIntegrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FC922D8C47600ECADAF /* LinkedInIntegrate.swift */; };
-		15088FEC22D8C47700ECADAF /* LinkedinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCA22D8C47600ECADAF /* LinkedinViewController.swift */; };
 		15088FED22D8C47700ECADAF /* IntegrateLinkedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCC22D8C47600ECADAF /* IntegrateLinkedInViewController.swift */; };
-		15088FEE22D8C47700ECADAF /* ManuallyIntegrateLinkedin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCD22D8C47600ECADAF /* ManuallyIntegrateLinkedin.swift */; };
 		15088FEF22D8C47700ECADAF /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCE22D8C47600ECADAF /* ContactViewController.swift */; };
 		15088FF022D8C47700ECADAF /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCF22D8C47600ECADAF /* ButtonCollectionViewCell.swift */; };
-		15088FF122D8C47700ECADAF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FD122D8C47600ECADAF /* SignUpViewController.swift */; };
 		156EDC7322BD361A00101BFD /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDC7222BD361A00101BFD /* ContactsTableViewController.swift */; };
-		18F1750852B91B324B616FBD /* Pods_Xchanger2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE133709599B87907B7CDC63 /* Pods_Xchanger2_0UITests.framework */; };
-		64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */; };
+		58CFB64A38D3256CD985497D /* Pods_Xchanger2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A81B80B28EFEBF558F685A /* Pods_Xchanger2_0UITests.framework */; };
 		6436B518229B67070031F7A1 /* LinkedInIntegrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */; };
-		643BB8C822A9585E003C3E9A /* IntegrateLinkedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643BB8C722A9585E003C3E9A /* IntegrateLinkedInViewController.swift */; };
-		644A5044229F4B1000E59547 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A5043229F4B1000E59547 /* SocialViewController.swift */; };
 		644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A5045229F4CF000E59547 /* SocialProfile.swift */; };
-		644ED76622C6916000B3FEAA /* SwipingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644ED76522C6916000B3FEAA /* SwipingCollectionViewController.swift */; };
-		647AD52022B1700A00C6D6A1 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD51F22B1700A00C6D6A1 /* ContainerViewController.swift */; };
 		647AD52222B1702500C6D6A1 /* ContainerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD52122B1702500C6D6A1 /* ContainerTableViewController.swift */; };
-		647AD52522B1C5E000C6D6A1 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD52422B1C5E000C6D6A1 /* QRCodeReader.swift */; };
-		647AD52922B1CC5F00C6D6A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD52822B1CC5F00C6D6A1 /* SettingsViewController.swift */; };
 		647AD52B22B1CC8E00C6D6A1 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647AD52A22B1CC8E00C6D6A1 /* ContactsViewController.swift */; };
-		64826DAD22AC65290047196A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64826DAC22AC65290047196A /* ProfileViewController.swift */; };
 		649E20F3229CC69B00815AB7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649E20F2229CC69B00815AB7 /* SignUpViewController.swift */; };
 		649E20F5229F1CA400815AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */; };
 		649E20F6229F23FA00815AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */; };
 		649E20F7229F23FA00815AB7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */; };
 		64B1027A22A7E4EE0040ADC8 /* GitHubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1027922A7E4EE0040ADC8 /* GitHubViewController.swift */; };
-		64B38596229AD22300767E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B38595229AD22300767E7F /* AppDelegate.swift */; };
-		64B38598229AD22300767E7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B38597229AD22300767E7F /* ViewController.swift */; };
 		64B3859B229AD22300767E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64B38599229AD22300767E7F /* Main.storyboard */; };
 		64B3859E229AD22300767E7F /* Xchanger2_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64B3859C229AD22300767E7F /* Xchanger2_0.xcdatamodeld */; };
 		64B385A0229AD22500767E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64B3859F229AD22500767E7F /* Assets.xcassets */; };
@@ -69,10 +46,8 @@
 		64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B385CE229B15C500767E7F /* LinkedinViewController.swift */; };
 		64CE946222A6AC7800E6A4C5 /* InstagramWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CE946122A6AC7800E6A4C5 /* InstagramWebController.swift */; };
 		64D9DCA822BEF8FB0032E7E0 /* RegisteredSocialProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9DCA722BEF8FB0032E7E0 /* RegisteredSocialProfile.swift */; };
-		64E3819622C1A9990014C422 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E3819522C1A9990014C422 /* ContactViewController.swift */; };
 		64FEEC0C22CB9FF900888312 /* ManuallyIntegrateLinkedin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FEEC0B22CB9FF900888312 /* ManuallyIntegrateLinkedin.swift */; };
-		735D50ED3527AD28A150B523 /* Pods_Xchanger2_0Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA7B7E8B2EE999FB8DE7838 /* Pods_Xchanger2_0Tests.framework */; };
-		F1AA193ABA295BF798E5941B /* Pods_Xchanger2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1DFE47702CA7729025F38A1 /* Pods_Xchanger2_0.framework */; };
+		D31F8D452DB1947EA80E2B90 /* Pods_Xchanger2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF060BB74274B5F799D93EA7 /* Pods_Xchanger2_0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		037A930CDF176DF036400D0D /* Pods-Xchanger2.0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0Tests.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0Tests/Pods-Xchanger2.0Tests.release.xcconfig"; sourceTree = "<group>"; };
+		0CF83F95EBC78A00AD843AAA /* Pods-Xchanger2.0UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0UITests.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0UITests/Pods-Xchanger2.0UITests.release.xcconfig"; sourceTree = "<group>"; };
 		15088FA422D8C47600ECADAF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		15088FA522D8C47600ECADAF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15088FA722D8C47600ECADAF /* ContainerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTableViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +102,7 @@
 		15088FD122D8C47600ECADAF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		15088FD222D8C47600ECADAF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		156EDC7222BD361A00101BFD /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
-		4ACBA3ACF0B394FF3DB60832 /* Pods-Xchanger2.0UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0UITests.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0UITests/Pods-Xchanger2.0UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		39A81B80B28EFEBF558F685A /* Pods_Xchanger2_0UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xchanger2_0UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInOAuth.swift; sourceTree = "<group>"; };
 		6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInIntegrate.swift; sourceTree = "<group>"; };
 		643BB8C722A9585E003C3E9A /* IntegrateLinkedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrateLinkedInViewController.swift; sourceTree = "<group>"; };
@@ -163,13 +138,13 @@
 		64D9DCA722BEF8FB0032E7E0 /* RegisteredSocialProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredSocialProfile.swift; sourceTree = "<group>"; };
 		64E3819522C1A9990014C422 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactViewController.swift; path = Xchanger2.0/ContactViewController.swift; sourceTree = SOURCE_ROOT; };
 		64FEEC0B22CB9FF900888312 /* ManuallyIntegrateLinkedin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuallyIntegrateLinkedin.swift; sourceTree = "<group>"; };
-		712FEAE39A36019A4D068AA6 /* Pods-Xchanger2.0UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0UITests.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0UITests/Pods-Xchanger2.0UITests.release.xcconfig"; sourceTree = "<group>"; };
-		86CEA1009F2743C9AF5697A6 /* Pods-Xchanger2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0.debug.xcconfig"; sourceTree = "<group>"; };
-		8CA7B7E8B2EE999FB8DE7838 /* Pods_Xchanger2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xchanger2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D15C697A9FCA885FB6B36CE4 /* Pods-Xchanger2.0Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0Tests.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0Tests/Pods-Xchanger2.0Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		DE133709599B87907B7CDC63 /* Pods_Xchanger2_0UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xchanger2_0UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0373A9F9D590C6A58E3D5A8 /* Pods-Xchanger2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0.release.xcconfig"; sourceTree = "<group>"; };
-		E1DFE47702CA7729025F38A1 /* Pods_Xchanger2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xchanger2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A2D2118178023E97F26FE45 /* Pods-Xchanger2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0.debug.xcconfig"; sourceTree = "<group>"; };
+		760D7E430598ED131D6CDFB0 /* Pods_Xchanger2_0Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xchanger2_0Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EA987B7602F0142CFF3919D /* Pods-Xchanger2.0UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0UITests.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0UITests/Pods-Xchanger2.0UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD246C585E2DC4993530AE44 /* Pods-Xchanger2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0.release.xcconfig"; sourceTree = "<group>"; };
+		AD5D77486D9705844E62497E /* Pods-Xchanger2.0Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0Tests.debug.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0Tests/Pods-Xchanger2.0Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE89D19946192E0743896411 /* Pods-Xchanger2.0Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xchanger2.0Tests.release.xcconfig"; path = "Target Support Files/Pods-Xchanger2.0Tests/Pods-Xchanger2.0Tests.release.xcconfig"; sourceTree = "<group>"; };
+		DF060BB74274B5F799D93EA7 /* Pods_Xchanger2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xchanger2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1AA193ABA295BF798E5941B /* Pods_Xchanger2_0.framework in Frameworks */,
+				D31F8D452DB1947EA80E2B90 /* Pods_Xchanger2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				735D50ED3527AD28A150B523 /* Pods_Xchanger2_0Tests.framework in Frameworks */,
+				08EE2D1A193DD20C08D29346 /* Pods_Xchanger2_0Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F1750852B91B324B616FBD /* Pods_Xchanger2_0UITests.framework in Frameworks */,
+				58CFB64A38D3256CD985497D /* Pods_Xchanger2_0UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +402,7 @@
 				64B385B7229AD22500767E7F /* Xchanger2.0UITests */,
 				64B38593229AD22300767E7F /* Products */,
 				9313BA66F1E53EA6CE3F4CDC /* Pods */,
-				94A1C1D8F5CFD6D39055DB98 /* Frameworks */,
+				EDBFA52EDCC20E4B4301B1CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -444,6 +419,7 @@
 		64B38594229AD22300767E7F /* Xchanger2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				15088FA222D8C47600ECADAF /* Xchanger2.0 */,
 				644ED75E22C688AC00B3FEAA /* SwipingDashboard */,
 				64E3819422C1A9710014C422 /* SingleContact */,
 				647AD52722B1CC1200C6D6A1 /* Settings */,
@@ -465,7 +441,6 @@
 				64B3859F229AD22500767E7F /* Assets.xcassets */,
 				64B385A1229AD22500767E7F /* LaunchScreen.storyboard */,
 				64B385A4229AD22500767E7F /* Info.plist */,
-				15088FA222D8C47600ECADAF /* Xchanger2.0 */,
 				649E20F4229F1CA400815AB7 /* GoogleService-Info.plist */,
 				64B3859C229AD22300767E7F /* Xchanger2_0.xcdatamodeld */,
 			);
@@ -543,22 +518,22 @@
 		9313BA66F1E53EA6CE3F4CDC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				86CEA1009F2743C9AF5697A6 /* Pods-Xchanger2.0.debug.xcconfig */,
-				E0373A9F9D590C6A58E3D5A8 /* Pods-Xchanger2.0.release.xcconfig */,
-				D15C697A9FCA885FB6B36CE4 /* Pods-Xchanger2.0Tests.debug.xcconfig */,
-				037A930CDF176DF036400D0D /* Pods-Xchanger2.0Tests.release.xcconfig */,
-				4ACBA3ACF0B394FF3DB60832 /* Pods-Xchanger2.0UITests.debug.xcconfig */,
-				712FEAE39A36019A4D068AA6 /* Pods-Xchanger2.0UITests.release.xcconfig */,
+				6A2D2118178023E97F26FE45 /* Pods-Xchanger2.0.debug.xcconfig */,
+				AD246C585E2DC4993530AE44 /* Pods-Xchanger2.0.release.xcconfig */,
+				AD5D77486D9705844E62497E /* Pods-Xchanger2.0Tests.debug.xcconfig */,
+				BE89D19946192E0743896411 /* Pods-Xchanger2.0Tests.release.xcconfig */,
+				8EA987B7602F0142CFF3919D /* Pods-Xchanger2.0UITests.debug.xcconfig */,
+				0CF83F95EBC78A00AD843AAA /* Pods-Xchanger2.0UITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		94A1C1D8F5CFD6D39055DB98 /* Frameworks */ = {
+		EDBFA52EDCC20E4B4301B1CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E1DFE47702CA7729025F38A1 /* Pods_Xchanger2_0.framework */,
-				8CA7B7E8B2EE999FB8DE7838 /* Pods_Xchanger2_0Tests.framework */,
-				DE133709599B87907B7CDC63 /* Pods_Xchanger2_0UITests.framework */,
+				DF060BB74274B5F799D93EA7 /* Pods_Xchanger2_0.framework */,
+				760D7E430598ED131D6CDFB0 /* Pods_Xchanger2_0Tests.framework */,
+				39A81B80B28EFEBF558F685A /* Pods_Xchanger2_0UITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -570,11 +545,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64B385BD229AD22500767E7F /* Build configuration list for PBXNativeTarget "Xchanger2.0" */;
 			buildPhases = (
-				08712625E976E3C4382F33C1 /* [CP] Check Pods Manifest.lock */,
+				D1DD9A3240DA6FC8CC49359D /* [CP] Check Pods Manifest.lock */,
 				64B3858E229AD22300767E7F /* Sources */,
 				64B3858F229AD22300767E7F /* Frameworks */,
 				64B38590229AD22300767E7F /* Resources */,
-				D95119D351D85F808F1ED13F /* [CP] Embed Pods Frameworks */,
+				2F805E01BDDF2608AA7F25EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -589,7 +564,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64B385C0229AD22500767E7F /* Build configuration list for PBXNativeTarget "Xchanger2.0Tests" */;
 			buildPhases = (
-				99C60465B669FCCEFBF9461F /* [CP] Check Pods Manifest.lock */,
+				C6954ED553077A4F286918AE /* [CP] Check Pods Manifest.lock */,
 				64B385A5229AD22500767E7F /* Sources */,
 				64B385A6229AD22500767E7F /* Frameworks */,
 				64B385A7229AD22500767E7F /* Resources */,
@@ -608,7 +583,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64B385C3229AD22500767E7F /* Build configuration list for PBXNativeTarget "Xchanger2.0UITests" */;
 			buildPhases = (
-				F6206576740797306003B6F2 /* [CP] Check Pods Manifest.lock */,
+				BC73B49DF0E2B3065E062516 /* [CP] Check Pods Manifest.lock */,
 				64B385B0229AD22500767E7F /* Sources */,
 				64B385B1229AD22500767E7F /* Frameworks */,
 				64B385B2229AD22500767E7F /* Resources */,
@@ -630,7 +605,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Altan Tutar";
 				TargetAttributes = {
 					64B38591229AD22300767E7F = {
@@ -677,8 +652,6 @@
 				15088FE022D8C47700ECADAF /* Main.storyboard in Resources */,
 				64B3859B229AD22300767E7F /* Main.storyboard in Resources */,
 				15088FDF22D8C47700ECADAF /* LaunchScreen.storyboard in Resources */,
-				15088FDA22D8C47700ECADAF /* Assets.xcassets in Resources */,
-				15088FDC22D8C47700ECADAF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,97 +674,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		08712625E976E3C4382F33C1 /* [CP] Check Pods Manifest.lock */ = {
+		2F805E01BDDF2608AA7F25EF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Xchanger2.0-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		99C60465B669FCCEFBF9461F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Xchanger2.0Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D95119D351D85F808F1ED13F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xchanger2.0/Pods-Xchanger2.0-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6206576740797306003B6F2 /* [CP] Check Pods Manifest.lock */ = {
+		BC73B49DF0E2B3065E062516 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -813,6 +713,50 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C6954ED553077A4F286918AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Xchanger2.0Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1DD9A3240DA6FC8CC49359D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Xchanger2.0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -821,7 +765,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				644A5046229F4CF000E59547 /* SocialProfile.swift in Sources */,
-				15088FE522D8C47700ECADAF /* SocialProfile.swift in Sources */,
 				15088FDB22D8C47700ECADAF /* Xchanger2_0.xcdatamodeld in Sources */,
 				15088FDE22D8C47700ECADAF /* QRCodeReader.swift in Sources */,
 				15088FE922D8C47700ECADAF /* LinkedInViewController.swift in Sources */,
@@ -829,7 +772,6 @@
 				15088FD622D8C47700ECADAF /* ContainerViewController.swift in Sources */,
 				156EDC7322BD361A00101BFD /* ContactsTableViewController.swift in Sources */,
 				15088FE222D8C47700ECADAF /* ProfileViewController.swift in Sources */,
-				647AD52522B1C5E000C6D6A1 /* QRCodeReader.swift in Sources */,
 				647AD52B22B1CC8E00C6D6A1 /* ContactsViewController.swift in Sources */,
 				64B385CF229B15C500767E7F /* LinkedinViewController.swift in Sources */,
 				15088FE322D8C47700ECADAF /* SocialMediaViewController.swift in Sources */,
@@ -841,36 +783,15 @@
 				15088FD322D8C47700ECADAF /* SettingsViewController.swift in Sources */,
 				64B1027A22A7E4EE0040ADC8 /* GitHubViewController.swift in Sources */,
 				15088FE822D8C47700ECADAF /* AppDelegate.swift in Sources */,
-				64826DAD22AC65290047196A /* ProfileViewController.swift in Sources */,
 				15088FEA22D8C47700ECADAF /* LinkedInOAuth.swift in Sources */,
 				64CE946222A6AC7800E6A4C5 /* InstagramWebController.swift in Sources */,
 				649E20F3229CC69B00815AB7 /* SignUpViewController.swift in Sources */,
-				647AD52022B1700A00C6D6A1 /* ContainerViewController.swift in Sources */,
 				15088FED22D8C47700ECADAF /* IntegrateLinkedInViewController.swift in Sources */,
-				64B38598229AD22300767E7F /* ViewController.swift in Sources */,
 				6436B518229B67070031F7A1 /* LinkedInIntegrate.swift in Sources */,
-				64B38596229AD22300767E7F /* AppDelegate.swift in Sources */,
-				643BB8C822A9585E003C3E9A /* IntegrateLinkedInViewController.swift in Sources */,
-				15088FEE22D8C47700ECADAF /* ManuallyIntegrateLinkedin.swift in Sources */,
-				644A5044229F4B1000E59547 /* SocialViewController.swift in Sources */,
-				64E3819622C1A9990014C422 /* ContactViewController.swift in Sources */,
-				15088FE722D8C47700ECADAF /* GitHubViewController.swift in Sources */,
 				64D9DCA822BEF8FB0032E7E0 /* RegisteredSocialProfile.swift in Sources */,
 				64B3859E229AD22300767E7F /* Xchanger2_0.xcdatamodeld in Sources */,
-				15088FEB22D8C47700ECADAF /* LinkedInIntegrate.swift in Sources */,
 				15088FF022D8C47700ECADAF /* ButtonCollectionViewCell.swift in Sources */,
-				15088FF122D8C47700ECADAF /* SignUpViewController.swift in Sources */,
-				64329134229B40EA00EFFF9A /* LinkedInOAuth.swift in Sources */,
-				15088FD722D8C47700ECADAF /* InstagramWebController.swift in Sources */,
-				647AD52922B1CC5F00C6D6A1 /* SettingsViewController.swift in Sources */,
-				15088FE122D8C47700ECADAF /* RegisteredSocialProfile.swift in Sources */,
 				15088FDD22D8C47700ECADAF /* SwipingCollectionViewController.swift in Sources */,
-				15088FD522D8C47700ECADAF /* ContainerTableViewController.swift in Sources */,
-				15088FE622D8C47700ECADAF /* SigninViewController.swift in Sources */,
-				15088FEC22D8C47700ECADAF /* LinkedinViewController.swift in Sources */,
-				644ED76622C6916000B3FEAA /* SwipingCollectionViewController.swift in Sources */,
-				15088FD822D8C47700ECADAF /* ContactsViewController.swift in Sources */,
-				15088FD922D8C47700ECADAF /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1063,7 +984,7 @@
 		};
 		64B385BE229AD22500767E7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86CEA1009F2743C9AF5697A6 /* Pods-Xchanger2.0.debug.xcconfig */;
+			baseConfigurationReference = 6A2D2118178023E97F26FE45 /* Pods-Xchanger2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1089,7 +1010,7 @@
 		};
 		64B385BF229AD22500767E7F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0373A9F9D590C6A58E3D5A8 /* Pods-Xchanger2.0.release.xcconfig */;
+			baseConfigurationReference = AD246C585E2DC4993530AE44 /* Pods-Xchanger2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1115,7 +1036,7 @@
 		};
 		64B385C1229AD22500767E7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D15C697A9FCA885FB6B36CE4 /* Pods-Xchanger2.0Tests.debug.xcconfig */;
+			baseConfigurationReference = AD5D77486D9705844E62497E /* Pods-Xchanger2.0Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1137,7 +1058,7 @@
 		};
 		64B385C2229AD22500767E7F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 037A930CDF176DF036400D0D /* Pods-Xchanger2.0Tests.release.xcconfig */;
+			baseConfigurationReference = BE89D19946192E0743896411 /* Pods-Xchanger2.0Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1159,7 +1080,7 @@
 		};
 		64B385C4229AD22500767E7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4ACBA3ACF0B394FF3DB60832 /* Pods-Xchanger2.0UITests.debug.xcconfig */;
+			baseConfigurationReference = 8EA987B7602F0142CFF3919D /* Pods-Xchanger2.0UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;
@@ -1180,7 +1101,7 @@
 		};
 		64B385C5229AD22500767E7F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 712FEAE39A36019A4D068AA6 /* Pods-Xchanger2.0UITests.release.xcconfig */;
+			baseConfigurationReference = 0CF83F95EBC78A00AD843AAA /* Pods-Xchanger2.0UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Manual;

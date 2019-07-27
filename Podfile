@@ -15,6 +15,7 @@ target 'Xchanger2.0' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Alamofire'
+  pod 'IQKeyboardManagerSwift'
 
   target 'Xchanger2.0Tests' do
     inherit! :search_paths
