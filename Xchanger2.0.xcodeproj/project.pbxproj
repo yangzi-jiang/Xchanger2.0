@@ -25,6 +25,8 @@
 		15088FED22D8C47700ECADAF /* IntegrateLinkedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCC22D8C47600ECADAF /* IntegrateLinkedInViewController.swift */; };
 		15088FEF22D8C47700ECADAF /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCE22D8C47600ECADAF /* ContactViewController.swift */; };
 		15088FF022D8C47700ECADAF /* ButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15088FCF22D8C47600ECADAF /* ButtonCollectionViewCell.swift */; };
+		1532102422ED1B1F00610025 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649E20F2229CC69B00815AB7 /* SignUpViewController.swift */; };
+		1532102522ED1B2000610025 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649E20F2229CC69B00815AB7 /* SignUpViewController.swift */; };
 		156EDC7322BD361A00101BFD /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156EDC7222BD361A00101BFD /* ContactsTableViewController.swift */; };
 		58CFB64A38D3256CD985497D /* Pods_Xchanger2_0UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A81B80B28EFEBF558F685A /* Pods_Xchanger2_0UITests.framework */; };
 		6436B518229B67070031F7A1 /* LinkedInIntegrate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */; };
@@ -799,6 +801,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1532102422ED1B1F00610025 /* SignUpViewController.swift in Sources */,
 				64B385AE229AD22500767E7F /* Xchanger2_0Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -807,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1532102522ED1B2000610025 /* SignUpViewController.swift in Sources */,
 				64B385B9229AD22500767E7F /* Xchanger2_0UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
