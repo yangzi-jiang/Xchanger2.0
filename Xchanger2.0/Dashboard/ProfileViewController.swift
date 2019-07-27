@@ -22,6 +22,8 @@ var userLatitude = 0.0
 
 var vSpinner : UIView?
 
+var sideBarOpen = false;
+
 
 
 class ProfileViewController: UIViewController {
@@ -66,6 +68,8 @@ class ProfileViewController: UIViewController {
     
     let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: .alert)
     
+    
+    
 
     
     override func viewDidLoad() {
@@ -73,7 +77,17 @@ class ProfileViewController: UIViewController {
         
     AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
         
+      
         // See what is available to share for the current person
+        
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
         
         NotificationCenter.default.addObserver(self, selector: #selector(showSettings), name: NSNotification.Name("ShowSettings"), object: nil)
         
@@ -103,6 +117,7 @@ class ProfileViewController: UIViewController {
         myProfilePicture.layer.borderColor = UIColor.white.cgColor
         myProfilePicture.layer.cornerRadius = myProfilePicture.frame.size.width / 2
         myProfilePicture.clipsToBounds = true
+        
         
         
         
@@ -195,6 +210,8 @@ class ProfileViewController: UIViewController {
 //        NotificationCenter.default.addObserver(self, selector: #selector(dismissAlert), name: NSNotification.Name("ReleaseLoad"), object: nil)
         
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         // Lock Portrait Orientation
@@ -294,6 +311,7 @@ class ProfileViewController: UIViewController {
         } else {
             // Show alert letting the user know they have to turn this on
         }
+        
     }
     
     func checkLocationAuthorization(){
@@ -353,6 +371,18 @@ class ProfileViewController: UIViewController {
             linkedinTick.alpha = 1.0
             linkedin = true
             changeSharesChild(changed: "linkedin", boolValue: true)
+        }
+    }
+    
+    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+        
+        if (sender.direction == .left) {
+            print("Swipe Left")
+            
+        }
+        
+        if (sender.direction == .right) {
+            print("Swipe Right")
         }
     }
     
@@ -454,4 +484,22 @@ extension UIViewController {
             vSpinner = nil
         }
     }
+    
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+        if gesture.direction == .right {
+//        self.performSegue(withIdentifier: "camera", sender: self)
+            if (!sideBarOpen) { NotificationCenter.default.post(name: NSNotification.Name("ToggleBar"), object: nil)
+                self.showSpinner(onView: self.view)
+                sideBarOpen = true
+            }
+        }
+        else if gesture.direction == .left {
+            if (!sideBarOpen){ self.performSegue(withIdentifier: "camera", sender: self)
+            } else {
+                NotificationCenter.default.post(name: NSNotification.Name("ShowProfile"), object: nil)
+                sideBarOpen = false;
+            }
+        }
+    }
+
 }

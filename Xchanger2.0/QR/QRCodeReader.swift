@@ -27,6 +27,15 @@ class QRCodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGestureCamera))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGestureCamera))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        
         //begin my session
         let session = AVCaptureSession()
         
@@ -153,4 +162,12 @@ class QRCodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
         
     }
+    
+     @objc func handleGestureCamera(gesture: UISwipeGestureRecognizer) -> Void {
+        if gesture.direction == .right {
+            navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    
 }

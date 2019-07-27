@@ -19,6 +19,8 @@ class ContainerViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         NotificationCenter.default.addObserver(self, selector: #selector(toggleBar), name: NSNotification.Name("ToggleBar"), object: nil)
+        
+    
     }
     
     @objc func toggleBar(){
@@ -44,5 +46,17 @@ class ContainerViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.all)
         
+    }
+    
+    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+        
+        if (sender.direction == .left) {
+            print("Swipe Left")
+            
+        }
+        
+        if (sender.direction == .right) {
+            print("Swipe Right")
+        }
     }
 }
