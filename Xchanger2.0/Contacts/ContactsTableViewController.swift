@@ -38,7 +38,17 @@ class ContactsTableViewController: UITableViewController {
             if (self.myContacts.keys.count != 0){
                 // Call the completion handler
                 print("Here")
-                self.getUserNames(reference: nameReference)
+                print("From user names!")
+                var refHandle2 = nameReference.observe(DataEventType.value, with: { (snapshot) in
+                    let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+                    //print(type(of: self.myContacts))
+//                    self.myContacts.sorted(by:{$0.key > $1.key})
+                    for userID in self.myContacts.keys {
+                        self.finalNames[postDict[userID] as! String] = userID
+                    }
+                    
+                    self.tableView.reloadData()
+                })
             }
         })
         
@@ -51,21 +61,6 @@ class ContactsTableViewController: UITableViewController {
 //
     }
     
-    func getUserNames(reference: DatabaseReference){
-        print("From user names!")
-        let nameReference = ref.child("full_names")
-        
-       
-            var refHandle = nameReference.observe(DataEventType.value, with: { (snapshot) in
-                let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-                
-                for userID in self.myContacts.keys {
-                self.finalNames[postDict[userID] as! String] = userID
-                }
-                
-                self.tableView.reloadData()
-            })
-    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
