@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who do you want to be?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dn7-sZ-UyW">
-                                <rect key="frame" x="5" y="444" width="365" height="34.5"/>
+                                <rect key="frame" x="5" y="344" width="365" height="34.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Dn7-sZ-UyW" secondAttribute="height" multiplier="179:17" id="9DQ-v0-z2M"/>
                                 </constraints>
@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LmU-xC-6Ey">
-                                <rect key="frame" x="35" y="498.5" width="305" height="52"/>
+                                <rect key="frame" x="35" y="398.5" width="305" height="52"/>
                                 <color key="backgroundColor" red="0.83553799185050925" green="0.526665081145403" blue="0.57058347635403073" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LmU-xC-6Ey" secondAttribute="height" multiplier="59:10" id="Bfe-sa-AjK"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJI-pe-Bb2">
-                                <rect key="frame" x="35" y="565.5" width="305" height="51.5"/>
+                                <rect key="frame" x="35" y="465.5" width="305" height="51.5"/>
                                 <color key="backgroundColor" red="0.38203384051478761" green="0.74220147501998746" blue="0.69339814613362893" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AJI-pe-Bb2" secondAttribute="height" multiplier="59:10" id="vZZ-1y-3Jd"/>
@@ -64,7 +64,7 @@
                                 </variation>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration" translatesAutoresizingMaskIntoConstraints="NO" id="9Ff-Gb-0rK">
-                                <rect key="frame" x="5" y="15.5" width="365" height="412"/>
+                                <rect key="frame" x="179.5" y="309" width="16" height="18.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9Ff-Gb-0rK" secondAttribute="height" multiplier="365:412" id="Y7c-kk-AvQ"/>
                                 </constraints>
@@ -1046,8 +1046,6 @@
         <!--Profile View Controller-->
         <scene sceneID="gaD-66-RT4">
             <objects>
-                <exit id="QSf-Sh-xY7" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2it-1v-C2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="bkV-VP-Kst" customClass="ProfileViewController" customModule="Xchanger2_0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GsL-eZ-tpW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1328,6 +1326,8 @@
                         <segue destination="QSf-Sh-xY7" kind="unwind" identifier="unwind" unwindAction="unwindToVC1WithSegue:" id="uKB-Cm-jPz"/>
                     </connections>
                 </viewController>
+                <exit id="QSf-Sh-xY7" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2it-1v-C2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9753.6231884057979" y="1202.6785714285713"/>
         </scene>
@@ -1347,7 +1347,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ey-gj-q4Y">
-                                <rect key="frame" x="16" y="38.5" width="33" height="33"/>
+                                <rect key="frame" x="16" y="44" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9Ey-gj-q4Y" secondAttribute="height" multiplier="1:1" id="7eo-3r-DYK"/>
                                 </constraints>
@@ -1417,7 +1417,7 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGa-z5-TVC">
-                                <rect key="frame" x="16" y="38.5" width="33" height="33"/>
+                                <rect key="frame" x="16" y="44" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BGa-z5-TVC" secondAttribute="height" multiplier="1:1" id="Gku-xU-NUG"/>
                                 </constraints>

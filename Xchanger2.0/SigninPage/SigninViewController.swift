@@ -2,14 +2,14 @@
 //  SigninViewController.swift
 //  Xchanger2.0
 //
-//  Created by Altan Tutar on 5/26/19.
+//  Created by Altan Tutar and Yangzi Jiang on 5/26/19.
 //  Copyright © 2019 Altan Tutar. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-
+// Declare variables that will be used through the application
 var appUserID = ""
 var appProfilePicture = UIImage()
 var appGithubURL = String()
@@ -21,6 +21,7 @@ var appPhoneNumber = String()
 
 
 class SigninViewController: UIViewController {
+    
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
