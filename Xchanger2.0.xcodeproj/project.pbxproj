@@ -104,6 +104,7 @@
 		15088FD122D8C47600ECADAF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		15088FD222D8C47600ECADAF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		156EDC7222BD361A00101BFD /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		15E0DD9022FF9744003672EB /* Xchanger2.0.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Xchanger2.0.entitlements; sourceTree = "<group>"; };
 		39A81B80B28EFEBF558F685A /* Pods_Xchanger2_0UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xchanger2_0UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64329133229B40EA00EFFF9A /* LinkedInOAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInOAuth.swift; sourceTree = "<group>"; };
 		6436B517229B67070031F7A1 /* LinkedInIntegrate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedInIntegrate.swift; sourceTree = "<group>"; };
@@ -421,6 +422,7 @@
 		64B38594229AD22300767E7F /* Xchanger2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				15E0DD9022FF9744003672EB /* Xchanger2.0.entitlements */,
 				15088FA222D8C47600ECADAF /* Xchanger2.0 */,
 				644ED75E22C688AC00B3FEAA /* SwipingDashboard */,
 				64E3819422C1A9710014C422 /* SingleContact */,
@@ -612,6 +614,11 @@
 				TargetAttributes = {
 					64B38591229AD22300767E7F = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					64B385A8229AD22500767E7F = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -991,6 +998,7 @@
 			baseConfigurationReference = 6A2D2118178023E97F26FE45 /* Pods-Xchanger2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Xchanger2.0/Xchanger2.0.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MF26N3B7D;
@@ -1017,6 +1025,7 @@
 			baseConfigurationReference = AD246C585E2DC4993530AE44 /* Pods-Xchanger2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Xchanger2.0/Xchanger2.0.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8MF26N3B7D;
