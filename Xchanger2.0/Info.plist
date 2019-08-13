@@ -19,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>1.1.1</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -52,7 +52,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>This app requires the camera to scan another user&apos;s QR code in order to exchange contact information.</string>
+	<string>This app requires the camera to scan another user's QR code in order to exchange contact information.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app needs to your location to map where you meet someone. </string>
 	<key>NSPhotoLibraryUsageDescription</key>
