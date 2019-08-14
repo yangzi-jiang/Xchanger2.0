@@ -30,31 +30,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 
             Auth.auth().addStateDidChangeListener { [weak self] (_, user) in
-            if let user = user {
-                // user is already logged in
-                if (!didSignUp && !finishedSignUp){
-                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! ContainerViewController
-                    let navigationController = UINavigationController(rootViewController: newViewController)
-                    let appdelegate = UIApplication.shared.delegate as! AppDelegate
-                    appdelegate.window!.rootViewController = navigationController
+                if user != nil {
+                    // user is already logged in
+                    if (!didSignUp && !finishedSignUp){
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "dashboard") as! ContainerViewController
+                        let navigationController = UINavigationController(rootViewController: newViewController)
+                        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+                        appdelegate.window!.rootViewController = navigationController
+                    } else {
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "signUp") as! SocialViewController
+                        let navigationController = UINavigationController(rootViewController: newViewController)
+                        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+                        appdelegate.window!.rootViewController = navigationController
+
+                    }
+
                 } else {
+                    print("here1")
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "signUp") as! SocialViewController
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "firstPage") as! ViewController
                     let navigationController = UINavigationController(rootViewController: newViewController)
                     let appdelegate = UIApplication.shared.delegate as! AppDelegate
                     appdelegate.window!.rootViewController = navigationController
-
                 }
-
-            } else {
-                print("here1")
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "firstPage") as! ViewController
-                let navigationController = UINavigationController(rootViewController: newViewController)
-                let appdelegate = UIApplication.shared.delegate as! AppDelegate
-                appdelegate.window!.rootViewController = navigationController
-            }
         }
             return true
 

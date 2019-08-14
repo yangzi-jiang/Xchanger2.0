@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var InitialBackground: UIImageView!
     @IBOutlet weak var InitialQuestion: UILabel!
     @IBOutlet weak var SocialButterfly: UIButton!
-    @IBOutlet weak var EventPlanner: UIButton!
+//    @IBOutlet weak var EventPlanner: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,8 @@ class ViewController: UIViewController {
             SocialButterfly.titleLabel?.minimumScaleFactor = 0.5
             SocialButterfly.titleLabel?.adjustsFontSizeToFitWidth = true
     //        EventPlanner.titleLabel?.numberOfLines = 0;
-            EventPlanner.titleLabel?.minimumScaleFactor = 0.5
-            EventPlanner.titleLabel?.adjustsFontSizeToFitWidth = true
+//            EventPlanner.titleLabel?.minimumScaleFactor = 0.5
+//            EventPlanner.titleLabel?.adjustsFontSizeToFitWidth = true
         }
     }
     
