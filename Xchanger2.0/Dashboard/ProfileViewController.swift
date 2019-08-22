@@ -99,6 +99,8 @@ class ProfileViewController: UIViewController {
         
         
         // Create a QR Code with User ID
+        appUserID = Auth.auth().currentUser!.uid
+        print(appUserID)
         let data = appUserID.data(using: .ascii, allowLossyConversion: false)
         let filter = CIFilter(name: "CIQRCodeGenerator")
         filter?.setValue(data, forKey: "inputMessage")
@@ -216,6 +218,21 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // Lock Portrait Orientation
         AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+        
+        // Create a QR Code with User ID
+        appUserID = Auth.auth().currentUser!.uid
+        print(appUserID)
+        let data = appUserID.data(using: .ascii, allowLossyConversion: false)
+        let filter = CIFilter(name: "CIQRCodeGenerator")
+        filter?.setValue(data, forKey: "inputMessage")
+        let ciImage = filter?.outputImage
+        
+        let transform = CGAffineTransform(scaleX: 10, y: 10)
+        let transformImage = ciImage?.transformed(by: transform)
+        
+        let img = UIImage(ciImage: transformImage!)
+        
+        appQRCode = img
         
         if (appProfilePicture.size.height == 0.0 && appProfilePicture.size.width == 0.0){
             let reference = Storage.storage().reference().child("profile_pictures").child(Auth.auth().currentUser!.uid)

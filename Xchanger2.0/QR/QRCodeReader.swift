@@ -22,6 +22,7 @@ class QRCodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var video = AVCaptureVideoPreviewLayer ()
     
     
+    
     @IBOutlet weak var cameraPreview: UIView!
     
     override func viewDidLoad() {
@@ -35,23 +36,54 @@ class QRCodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
-        
         //begin my session
         let session = AVCaptureSession()
         
-        //capture my device
-        let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+                case .authorized: // The user has previously granted access to the camera.
+                    self.setupCamera(session: session)
+                
+                case .notDetermined: // The user has not yet been asked for camera access.
+                    print("not determined")
+                    AVCaptureDevice.requestAccess(for: .video) { granted in
+                        if granted {
+                            self.setupCamera(session: session)
+                        }
+                    }
+                
+                case .denied: // The user has previously denied access.
+                    AVCaptureDevice.requestAccess(for: .video) { granted in
+                        if granted {
+                            self.setupCamera(session: session)
+                        }
+                    }
+                    return
+                
+                case .restricted: // The user can't grant access due to restrictions.
+                    return
+        }
         
+       
+        
+        
+    }
+    
+    func setupCamera(session: AVCaptureSession){
+        
+        //        let captureDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .unspecified)
+        
+        //capture my device
+        let captureDevice = findDevice()
+        //
         //try to get the camerea
         do {
-            let input = try AVCaptureDeviceInput(device: captureDevice!)
+            let input = try AVCaptureDeviceInput(device: captureDevice)
             
             session.addInput(input)
         } catch {
             print("Error to initialize")
         }
         
-        //camera output
         let output = AVCaptureMetadataOutput()
         
         //start the session to recognize QR codes
@@ -59,24 +91,49 @@ class QRCodeReader: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
         
-        video = AVCaptureVideoPreviewLayer(session: session)
-        video.frame = cameraPreview.layer.bounds
-        cameraPreview.layer.addSublayer(video)
-        session.startRunning()
+        
+        DispatchQueue.main.async {
+            self.video = AVCaptureVideoPreviewLayer(session: session)
+            self.video.frame = self.cameraPreview.layer.bounds
+            self.cameraPreview.layer.addSublayer(self.video)
+            session.startRunning()
+        }
+        
+    }
+    
+    
+    func findDevice() -> AVCaptureDevice {
+        if let device = AVCaptureDevice.default(.builtInDualCamera,
+                                                for: .video, position: .back) {
+            return device
+        } else if let device = AVCaptureDevice.default(.builtInWideAngleCamera,
+                                                       for: .video, position: .back) {
+            print("here")
+            
+            return device
+        } else {
+            fatalError("Missing expected back camera device.")
+        }
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if(!recognized) {
          if metadataObjects != nil && metadataObjects.count != 0 {
             recognized = true
+            print("recognized QR")
             if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject {
+                print("there is an object")
                 if object.type == AVMetadataObject.ObjectType.qr {
-                    print(object.stringValue!)
+                    print("inside here")
+                    print(Auth.auth().currentUser!.uid)
+                    print(object.stringValue!) //no string value here?
                     
                     let generator = UIImpactFeedbackGenerator(style: .heavy)
                     
                     generator.impactOccurred()
                     let connectPersonId = object.stringValue!
+                    
+
                     
                     
                     // Update what the connected person could see

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key> NSCameraUsageDescription</key>
+	<string>This app requires the camera to scan another user's QR code in order to exchange contact information.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -52,7 +54,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>This app requires the camera to scan another user&apos;s QR code in order to exchange contact information.</string>
+	<string>This app requires the camera to scan another user's QR code in order to exchange contact information.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app needs to your location to map where you meet someone. </string>
 	<key>NSPhotoLibraryUsageDescription</key>
