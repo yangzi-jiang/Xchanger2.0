@@ -1008,7 +1008,7 @@
 				CODE_SIGN_ENTITLEMENTS = Xchanger2.0/Xchanger2.0.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1019,7 +1019,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lynkup.lynk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boppApp.lynk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1035,7 +1035,7 @@
 				CODE_SIGN_ENTITLEMENTS = Xchanger2.0/Xchanger2.0.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5WZ9W8QR73;
+				DEVELOPMENT_TEAM = 8MF26N3B7D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1046,7 +1046,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lynkup.lynk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.boppApp.lynk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
