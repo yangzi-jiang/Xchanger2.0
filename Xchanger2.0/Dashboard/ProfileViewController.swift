@@ -49,7 +49,7 @@ class ProfileViewController: UIViewController {
     
     let linkedinImage = #imageLiteral(resourceName: "Oval Copy 5")
     //    let googleImage = #imageLiteral(resourceName: "Oval Copy 3")
-    let instagramImage = #imageLiteral(resourceName: "instagram_PNG11")
+    let instagramImage = #imageLiteral(resourceName: "Instagram-outline")
     let githubImage = #imageLiteral(resourceName: "Oval Copy 4")
     
     //    let wechatImage = #imageLiteral(resourceName: "Oval Copy 6")
@@ -239,7 +239,7 @@ class ProfileViewController: UIViewController {
             
            
             reference.getData(maxSize: (1024 * 1024 * 1024)) { (data, error) in
-                if let error = error {
+                if error != nil {
                     print("works")
                 } else {
                     if let _data  = data {
