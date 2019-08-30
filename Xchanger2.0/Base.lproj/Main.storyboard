@@ -555,9 +555,10 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="industryPicker" destination="weO-Gp-HkK" id="lLw-5T-JSc"/>
-                        <outlet property="jobTitleField" destination="O6s-Hl-e4a" id="gsT-wf-9Ax"/>
+                        <outlet property="majorPicker" destination="weO-Gp-HkK" id="lLw-5T-JSc"/>
+                        <outlet property="position" destination="gHg-Pw-OnW" id="f6Q-hH-T0D"/>
                         <outlet property="socialProfiles" destination="ECe-ET-wRX" id="4h0-rl-xSp"/>
+                        <outlet property="studentOrg" destination="O6s-Hl-e4a" id="gsT-wf-9Ax"/>
                         <segue destination="X0m-g4-DQ3" kind="show" identifier="instagram" id="RBp-p6-ZSa"/>
                         <segue destination="96W-jy-ZEq" kind="show" identifier="github" id="33H-Sy-5CG"/>
                         <segue destination="RlN-SJ-uz4" kind="show" identifier="linkedin" id="hT7-6Q-v9z"/>
@@ -1615,7 +1616,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8X6-VA-y5R">
                                 <rect key="frame" x="30" y="105" width="99" height="19"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="8X6-VA-y5R" secondAttribute="height" multiplier="99:19" id="4Bu-3c-etQ"/>
+                                    <constraint firstAttribute="height" constant="19" id="NzR-Jt-Z0n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1640,7 +1641,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUN-vf-Zc4">
                                 <rect key="frame" x="30" y="175" width="105" height="19"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="aUN-vf-Zc4" secondAttribute="height" multiplier="105:19" id="I92-wy-uBj"/>
+                                    <constraint firstAttribute="height" constant="19" id="2ZL-QF-U1h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1662,10 +1663,10 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="If5-Tz-S1r">
-                                <rect key="frame" x="30" y="245" width="59" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Organization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="If5-Tz-S1r">
+                                <rect key="frame" x="30" y="245" width="146" height="19"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="If5-Tz-S1r" secondAttribute="height" multiplier="59:19" id="x0r-Ut-QWU"/>
+                                    <constraint firstAttribute="height" constant="19" id="kbJ-Jj-PNu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1716,6 +1717,9 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RaF-cj-DBR">
                                 <rect key="frame" x="30" y="315" width="39" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="jX6-00-Sjg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

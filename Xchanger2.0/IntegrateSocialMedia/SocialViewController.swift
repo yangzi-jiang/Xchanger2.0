@@ -30,7 +30,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     var selectedIndustry = String()
     
-    @IBOutlet weak var industryPicker: UIPickerView!
+    @IBOutlet weak var majorPicker: UIPickerView!
     
     @IBOutlet weak var socialProfiles: UICollectionView!
     
@@ -40,6 +40,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     var industries = ["Africana Studies", "Anthropology", "Arab Studies", "Art", "Biology", "Chemistry", "Chinese Studies", "Classics", "Communication Studies", "Computer Science", "East Asian Studies", "Economics", "English", "Environmental Studies", "French & Francophone Studies", "Gender & Sexuality Studies", "Genomics", "German Studies", "Hispanic Studies", "History", "Interdisplinary Studies", "Latin America Studies", "Mathematics", "Music", "Neuroscience", "Philosophy", "Physics", "Psychology", "Religion Studies", "Russian Studies", "Sociology", "Theatre", "Undecided"]
     
+   
 //    let facebookImage = #imageLiteral(resourceName: "Oval Copy-1")
     let linkedinImage = #imageLiteral(resourceName: "Oval Copy 5")
 //    let googleImage = #imageLiteral(resourceName: "Oval Copy 3")
@@ -50,9 +51,10 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var ref: DatabaseReference!
     
 
-    @IBOutlet weak var jobTitleField: UITextField!
+    @IBOutlet weak var studentOrg: UITextField!
     
-  
+    @IBOutlet weak var position: UITextField!
+    
     let userID = Auth.auth().currentUser!.uid
     
     override func viewDidLoad() {
@@ -119,8 +121,8 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         firstLogin = true
         
         // Setup the picker
-        industryPicker.delegate = self
-        industryPicker.dataSource = self
+        majorPicker.delegate = self
+        majorPicker.dataSource = self
         
         // Release the keyboard when tapping around
         self.hideKeyboardWhenTappedAround()
@@ -177,8 +179,8 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     }
     
-    func updateJobTitle(){
-        self.ref.child("job_titles/\(userID)").setValue(self.jobTitleField.text)
+    func updateStudentOrg(){
+        self.ref.child("job_titles/\(userID)").setValue(self.studentOrg.text)
     }
     
     //  Perform seque and change the url depending on what social media it is coming from 
@@ -193,7 +195,7 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
         
         self.updateIndustry()
-        self.updateJobTitle()
+        self.updateStudentOrg()
         
         if (githubConnected){
             let url = URL(string: "https://api.github.com/user")
