@@ -36,7 +36,9 @@ class SocialViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     var pictureArray = [UIImage] ()
     
-    var industries = ["Information Technology", "Marketing", "Human Resources", "Computer Software", "Financial Services", "Staffing and Recruiting", "Internet", "Management Consulting", "Telecommunications", "Retail"]
+//    var industries = ["Information Technology", "Marketing", "Human Resources", "Computer Software", "Financial Services", "Staffing and Recruiting", "Internet", "Management Consulting", "Telecommunications", "Retail"]
+    
+    var industries = ["Africana Studies", "Anthropology", "Arab Studies", "Art", "Biology", "Chemistry", "Chinese Studies", "Classics", "Communication Studies", "Computer Science", "East Asian Studies", "Economics", "English", "Environmental Studies", "French & Francophone Studies", "Gender & Sexuality Studies", "Genomics", "German Studies", "Hispanic Studies", "History", "Interdisplinary Studies", "Latin America Studies", "Mathematics", "Music", "Neuroscience", "Philosophy", "Physics", "Psychology", "Religion Studies", "Russian Studies", "Sociology", "Theatre", "Undecided"]
     
 //    let facebookImage = #imageLiteral(resourceName: "Oval Copy-1")
     let linkedinImage = #imageLiteral(resourceName: "Oval Copy 5")
