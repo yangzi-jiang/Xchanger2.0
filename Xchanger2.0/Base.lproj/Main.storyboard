@@ -630,7 +630,7 @@
                                 <rect key="frame" x="0.0" y="-58" width="375" height="725"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="sYa-Yr-uXN" kind="embed" id="6qd-xo-9p9"/>
+                                    <segue destination="cd6-Mx-HkR" kind="embed" id="g5f-ja-bCl"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -1846,7 +1846,7 @@
             <objects>
                 <viewController id="sYa-Yr-uXN" customClass="InstagramWebController" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3yU-u5-dyT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8BA-LA-WhC"/>
@@ -1854,7 +1854,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EpQ-dp-c8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4201" y="3592"/>
+            <point key="canvasLocation" x="3430" y="4594"/>
         </scene>
         <!--Manually Integrate Linkedin-->
         <scene sceneID="fiG-lq-iTb">
@@ -1978,7 +1978,7 @@ It’ll be an address that starts with www.linkedin.com/in.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0IB-rL-Saj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5533" y="1472"/>
+            <point key="canvasLocation" x="5854" y="2248"/>
         </scene>
         <!--Git Hub View Controller-->
         <scene sceneID="Wc9-ch-EPq">
@@ -2228,6 +2228,128 @@ It’ll be an address that starts with www.linkedin.com/in.
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9iu-mA-O0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976.79999999999995" y="167.73399014778326"/>
+        </scene>
+        <!--Manually Integrate Instagram-->
+        <scene sceneID="gAy-Re-rcL">
+            <objects>
+                <viewController id="cd6-Mx-HkR" customClass="ManuallyIntegrateInstagram" customModule="Xchanger2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nxy-lf-dt3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="725"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work in Progress" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oj8-7y-0Ox">
+                                <rect key="frame" x="12" y="30" width="351" height="35.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Oj8-7y-0Ox" secondAttribute="height" multiplier="347:35" id="ynM-CH-WQg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="29"/>
+                                <color key="textColor" red="0.2274509804" green="0.84705882349999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsd-t5-5GY">
+                                <rect key="frame" x="30" y="660" width="315" height="50"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.84705882349999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="OtY-Bg-edg"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="VwY-AA-Ft5"/>
+                                    <constraint firstAttribute="width" secondItem="Gsd-t5-5GY" secondAttribute="height" multiplier="63:10" id="Xga-Qk-9kE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="ADD YOUR INSTGRAM">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                </variation>
+                                <connections>
+                                    <action selector="restore:" destination="Hu2-40-eE3" eventType="touchUpInside" id="Q7w-7j-Dq6"/>
+                                    <action selector="startConnecting:" destination="Hu2-40-eE3" eventType="touchUpInside" id="kZ7-cv-1fv"/>
+                                    <action selector="updateYourLinkedin:" destination="cd6-Mx-HkR" eventType="touchUpInside" id="Opk-jf-vQV"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1VR-eq-iOV">
+                                <rect key="frame" x="-4" y="53" width="383" height="299"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQJ-hS-iov">
+                                        <rect key="frame" x="20" y="20" width="343" height="259"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Currently, we are missing the permission to pull your Instagram username automatically. We are working with Instagram to get this sorted out as soon as possible. To find your profile’s web address manually in the Instagram app or browser:
+1. Tap the Profile icon in the navigation bar.
+2. At the top navigation bar, you can see your Instagram name
+</string>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="GQJ-hS-iov" secondAttribute="trailing" constant="20" id="3lF-et-nnK"/>
+                                    <constraint firstItem="GQJ-hS-iov" firstAttribute="centerY" secondItem="1VR-eq-iOV" secondAttribute="centerY" id="6v9-35-27s"/>
+                                    <constraint firstAttribute="bottom" secondItem="GQJ-hS-iov" secondAttribute="bottom" constant="20" id="KDs-7b-AB1"/>
+                                    <constraint firstItem="GQJ-hS-iov" firstAttribute="top" secondItem="1VR-eq-iOV" secondAttribute="top" constant="20" id="tYH-Pb-C72"/>
+                                    <constraint firstItem="GQJ-hS-iov" firstAttribute="leading" secondItem="1VR-eq-iOV" secondAttribute="leading" constant="20" id="u7b-Qs-qRI"/>
+                                    <constraint firstItem="GQJ-hS-iov" firstAttribute="centerX" secondItem="1VR-eq-iOV" secondAttribute="centerX" id="vy1-cr-3xK"/>
+                                </constraints>
+                            </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bQa-kz-l4x">
+                                <rect key="frame" x="46.5" y="434" width="282.5" height="2"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.84705882349999995" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="oAP-6U-htv"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Instagram username goes here!  " adjustsFontSizeToFit="NO" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="5ep-H4-Kbt">
+                                <rect key="frame" x="46.5" y="402" width="282.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="cds-l0-oBP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="on9-Lo-AgI">
+                                <rect key="frame" x="16" y="369" width="114.5" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bQa-kz-l4x" firstAttribute="centerX" secondItem="Iw3-jA-Hw1" secondAttribute="centerX" id="0CK-vC-2r8"/>
+                            <constraint firstItem="bQa-kz-l4x" firstAttribute="top" secondItem="5ep-H4-Kbt" secondAttribute="bottom" constant="8" symbolic="YES" id="6ml-Cz-55u"/>
+                            <constraint firstItem="Iw3-jA-Hw1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Oj8-7y-0Ox" secondAttribute="trailing" id="8lK-vs-fBh"/>
+                            <constraint firstItem="Iw3-jA-Hw1" firstAttribute="top" secondItem="Oj8-7y-0Ox" secondAttribute="top" constant="-10" id="9E4-Vl-eib"/>
+                            <constraint firstItem="Oj8-7y-0Ox" firstAttribute="centerX" secondItem="Iw3-jA-Hw1" secondAttribute="centerX" id="BVt-uH-1DK"/>
+                            <constraint firstItem="Oj8-7y-0Ox" firstAttribute="leading" secondItem="Iw3-jA-Hw1" secondAttribute="leading" constant="12" id="F7r-EE-vrQ"/>
+                            <constraint firstItem="Iw3-jA-Hw1" firstAttribute="bottom" secondItem="Gsd-t5-5GY" secondAttribute="bottom" constant="15" id="JbB-zM-pxp"/>
+                            <constraint firstItem="Iw3-jA-Hw1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gsd-t5-5GY" secondAttribute="trailing" id="KgU-hF-cse"/>
+                            <constraint firstItem="1VR-eq-iOV" firstAttribute="top" secondItem="Iw3-jA-Hw1" secondAttribute="top" constant="33" id="OIo-IT-0sA"/>
+                            <constraint firstItem="1VR-eq-iOV" firstAttribute="leading" secondItem="Nxy-lf-dt3" secondAttribute="leadingMargin" constant="-20" id="POs-RF-nfl"/>
+                            <constraint firstItem="5ep-H4-Kbt" firstAttribute="centerX" secondItem="Iw3-jA-Hw1" secondAttribute="centerX" id="S48-WC-XQP"/>
+                            <constraint firstItem="on9-Lo-AgI" firstAttribute="leading" secondItem="Iw3-jA-Hw1" secondAttribute="leading" constant="16" id="S5d-uk-236"/>
+                            <constraint firstItem="5ep-H4-Kbt" firstAttribute="top" secondItem="on9-Lo-AgI" secondAttribute="bottom" priority="750" constant="14" id="UdE-QW-SdC"/>
+                            <constraint firstItem="Gsd-t5-5GY" firstAttribute="centerX" secondItem="Iw3-jA-Hw1" secondAttribute="centerX" id="YVx-5v-f3F"/>
+                            <constraint firstItem="Gsd-t5-5GY" firstAttribute="leading" secondItem="Iw3-jA-Hw1" secondAttribute="leading" constant="30" id="Z5P-e6-DGZ"/>
+                            <constraint firstItem="1VR-eq-iOV" firstAttribute="centerX" secondItem="Oj8-7y-0Ox" secondAttribute="centerX" id="aeA-fU-MBz"/>
+                            <constraint firstItem="Gsd-t5-5GY" firstAttribute="top" secondItem="bQa-kz-l4x" secondAttribute="bottom" constant="224" id="b9R-2A-eKA"/>
+                            <constraint firstItem="5ep-H4-Kbt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iw3-jA-Hw1" secondAttribute="leading" id="icn-Vw-0pj"/>
+                            <constraint firstItem="bQa-kz-l4x" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5ep-H4-Kbt" secondAttribute="leading" id="kVJ-Sa-BiW"/>
+                            <constraint firstItem="Iw3-jA-Hw1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="on9-Lo-AgI" secondAttribute="trailing" id="mdC-R7-lGG"/>
+                            <constraint firstItem="Iw3-jA-Hw1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5ep-H4-Kbt" secondAttribute="trailing" id="paf-5b-xF9"/>
+                            <constraint firstItem="on9-Lo-AgI" firstAttribute="top" secondItem="1VR-eq-iOV" secondAttribute="bottom" constant="17" id="xHG-Lc-a9O"/>
+                            <constraint firstItem="bQa-kz-l4x" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5ep-H4-Kbt" secondAttribute="trailing" id="xMK-BK-a60"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Iw3-jA-Hw1"/>
+                    </view>
+                    <connections>
+                        <outlet property="instagramUser" destination="5ep-H4-Kbt" id="oBC-Zy-hqS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqs-QU-cwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5321" y="4075"/>
         </scene>
     </scenes>
     <resources>
